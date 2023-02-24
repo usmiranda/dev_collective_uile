@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BK_Req_Email_and_BK_Plan_for_BKApproval</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+	ISCHANGED(Status),
+	ISPICKVAL(Status,&quot;Completed&quot;),
+	CONTAINS(Subject,&quot;Confirm Plan Approval&quot;),
+	OR(
+		NOT(ISPICKVAL(BK_Email__c,&quot;Sent&quot;)),
+		ISPICKVAL(BK_Plan__c,&quot;No Plan&quot;),
+		ISPICKVAL(BK_Plan__c,&quot;&quot;)
+	)
+)</errorConditionFormula>
+    <errorMessage>BK Plan and BK Email must be filled out for you to proceed</errorMessage>
+</ValidationRule>

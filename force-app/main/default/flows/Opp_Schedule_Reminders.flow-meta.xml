@@ -1,0 +1,563 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <processMetadataValues>
+            <name>textJson</name>
+            <value>
+                <stringValue>{&quot;mentions&quot;:[],&quot;message&quot;:&quot;{![Opportunity].Name} has been stuck in the {![Opportunity].StageName} stage of the {![Opportunity].Record_Type_Name__c} flow for {![Opportunity].Stage_Duration__c} days now. Please attend to this client.\n@[{![Opportunity].OwnerId}]&quot;}</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>myWaitEvent_myWait_myRule_1_event_0_SA1</name>
+        <label>OverDue Reminder - Chatter Post</label>
+        <locationX>100</locationX>
+        <locationY>200</locationY>
+        <actionName>chatterPost</actionName>
+        <actionType>chatterPost</actionType>
+        <connector>
+            <targetReference>myWaitEvent_myWait_myRule_1_event_0_postWaitExecutionAssignment</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>text</name>
+            <value>
+                <stringValue>{!myVariable_current.Name} has been stuck in the {!myVariable_current.StageName} stage of the {!myVariable_current.Record_Type_Name__c} flow for {!myVariable_current.Stage_Duration__c} days now. Please attend to this client.
+@[{!myVariable_current.OwnerId}]</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>type</name>
+        </inputParameters>
+        <inputParameters>
+            <name>subjectNameOrId</name>
+            <value>
+                <elementReference>myVariable_current.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>49.0</apiVersion>
+    <assignments>
+        <name>myWaitAssignment_myWait_myRule_1</name>
+        <label>myWaitAssignment_myWait_myRule_1</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>cancelWaits</assignToReference>
+            <operator>Add</operator>
+            <value>
+                <stringValue>myWait_myRule_1</stringValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>myDecision</targetReference>
+        </connector>
+    </assignments>
+    <assignments>
+        <name>myWaitEvent_myWait_myRule_1_event_0_postWaitExecutionAssignment</name>
+        <label>myWaitEvent_myWait_myRule_1_event_0_postWaitExecutionAssignment</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <assignmentItems>
+            <assignToReference>myWaitEvent_myWait_myRule_1_event_0_postActionExecutionVariable</assignToReference>
+            <operator>Assign</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </assignmentItems>
+        <connector>
+            <targetReference>myWait_myRule_1</targetReference>
+        </connector>
+    </assignments>
+    <decisions>
+        <processMetadataValues>
+            <name>index</name>
+            <value>
+                <numberValue>0.0</numberValue>
+            </value>
+        </processMetadataValues>
+        <name>myDecision</name>
+        <label>myDecision</label>
+        <locationX>50</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myRule_1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_1</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myRule_1_pmetdec</targetReference>
+            </connector>
+            <label>Over Due Reminders</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>myPreWaitDecision_myWait_myRule_1</name>
+        <label>myPreWaitDecision_myWait_myRule_1</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnector>
+            <targetReference>myWaitAssignment_myWait_myRule_1</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>default</defaultConnectorLabel>
+        <rules>
+            <name>myPreWaitRule_myWait_myRule_1</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_1</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myDecision</targetReference>
+            </connector>
+            <label>myPreWaitRule_myWait_myRule_1</label>
+        </rules>
+    </decisions>
+    <decisions>
+        <name>myRule_1_pmetdec</name>
+        <label>Previously Met Decision</label>
+        <locationX>100</locationX>
+        <locationY>100</locationY>
+        <defaultConnector>
+            <targetReference>myWait_myRule_1</targetReference>
+        </defaultConnector>
+        <defaultConnectorLabel>Not Previously Met</defaultConnectorLabel>
+        <rules>
+            <name>myRule_1_pmetnullrule</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>myVariable_old</leftValueReference>
+                <operator>IsNull</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myWait_myRule_1</targetReference>
+            </connector>
+            <label>Previously Met - Null</label>
+        </rules>
+        <rules>
+            <name>myRule_1_pmetrule</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>formula_myRule_1_pmetrule</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <label>Previously Met - Prev</label>
+        </rules>
+    </decisions>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>OR(
+         AND(
+
+                  ISPICKVAL([Opportunity].StageName , &quot;Verify Formation Details&quot;),
+                  [Opportunity].Stage_Duration__c  &gt;3
+                  ),
+         AND(
+                  ISPICKVAL([Opportunity].StageName  , &quot;Request Correction&quot;),
+                  [Opportunity].Stage_Duration__c  &gt;3
+                 ),
+        AND(
+                  ISPICKVAL([Opportunity].StageName  , &quot;File LLC&quot;),
+                  [Opportunity].Stage_Duration__c  &gt;7
+                 ),
+         AND(
+                  ISPICKVAL([Opportunity].StageName  , &quot;Email LLC Docs&quot;),
+                  [Opportunity].Stage_Duration__c  &gt;5
+                 ),
+         AND(
+                  ISPICKVAL([Opportunity].StageName  , &quot;Upload Operating Agreement&quot;),
+                  [Opportunity].Stage_Duration__c  &gt;4
+                 ),
+         AND(
+                  ISPICKVAL([Opportunity].StageName  , &quot;File EIN&quot;),
+                  [Opportunity].Stage_Duration__c  &gt;3
+                 ),
+        AND(
+                  ISPICKVAL([Opportunity].StageName  , &quot;Upload EIN Confirmation&quot;),
+                  [Opportunity].Stage_Duration__c  &gt;3
+                 ),
+         AND(
+                  ISPICKVAL([Opportunity].StageName  , &quot;Confirm Initial Contribution&quot;),
+                  [Opportunity].Stage_Duration__c  &gt;10
+                 ),
+         AND(
+                  ISPICKVAL([Opportunity].StageName  , &quot;Verify entity information&quot;),
+                  [Opportunity].Stage_Duration__c  &gt;4
+                 ),
+         AND(
+                  ISPICKVAL([Opportunity].StageName  , &quot;Request corrected info&quot;),
+                  [Opportunity].Stage_Duration__c  &gt;5
+                 ),
+
+         AND(
+                  ISPICKVAL([Opportunity].StageName  , &quot;Setup QB/Gusto&quot;),
+                  [Opportunity].Stage_Duration__c  &gt;7
+                 ),
+
+       AND(
+                 ISPICKVAL([Opportunity].StageName  , &quot;Confirm BK Call Scheduled&quot;),
+                 [Opportunity].Stage_Duration__c  &gt;5
+                ),
+       AND(
+                 ISPICKVAL([Opportunity].StageName  , &quot;Take BK Training Call&quot;),
+                 [Opportunity].Stage_Duration__c  &gt;20
+                ),
+       AND(
+                 ISPICKVAL([Opportunity].StageName  , &quot;Send Tax Onboarding Email&quot;),
+                 [Opportunity].Stage_Duration__c  &gt;7
+                ),
+        AND(
+                 ISPICKVAL([Opportunity].StageName  , &quot;Confirm Tax Call Scheduled&quot;),
+                 [Opportunity].Stage_Duration__c  &gt;5
+                ),
+        AND(
+                 ISPICKVAL([Opportunity].StageName  , &quot;Take Tax Kick off Call&quot;),
+                 [Opportunity].Stage_Duration__c  &gt;20
+                )
+)</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_1</name>
+        <dataType>Boolean</dataType>
+        <expression>OR(
+         AND(
+
+                  ISPICKVAL({!myVariable_current.StageName} , &quot;Verify Formation Details&quot;),
+                  {!myVariable_current.Stage_Duration__c}  &gt;3
+                  ),
+         AND(
+                  ISPICKVAL({!myVariable_current.StageName}  , &quot;Request Correction&quot;),
+                  {!myVariable_current.Stage_Duration__c}  &gt;3
+                 ),
+        AND(
+                  ISPICKVAL({!myVariable_current.StageName}  , &quot;File LLC&quot;),
+                  {!myVariable_current.Stage_Duration__c}  &gt;7
+                 ),
+         AND(
+                  ISPICKVAL({!myVariable_current.StageName}  , &quot;Email LLC Docs&quot;),
+                  {!myVariable_current.Stage_Duration__c}  &gt;5
+                 ),
+         AND(
+                  ISPICKVAL({!myVariable_current.StageName}  , &quot;Upload Operating Agreement&quot;),
+                  {!myVariable_current.Stage_Duration__c}  &gt;4
+                 ),
+         AND(
+                  ISPICKVAL({!myVariable_current.StageName}  , &quot;File EIN&quot;),
+                  {!myVariable_current.Stage_Duration__c}  &gt;3
+                 ),
+        AND(
+                  ISPICKVAL({!myVariable_current.StageName}  , &quot;Upload EIN Confirmation&quot;),
+                  {!myVariable_current.Stage_Duration__c}  &gt;3
+                 ),
+         AND(
+                  ISPICKVAL({!myVariable_current.StageName}  , &quot;Confirm Initial Contribution&quot;),
+                  {!myVariable_current.Stage_Duration__c}  &gt;10
+                 ),
+         AND(
+                  ISPICKVAL({!myVariable_current.StageName}  , &quot;Verify entity information&quot;),
+                  {!myVariable_current.Stage_Duration__c}  &gt;4
+                 ),
+         AND(
+                  ISPICKVAL({!myVariable_current.StageName}  , &quot;Request corrected info&quot;),
+                  {!myVariable_current.Stage_Duration__c}  &gt;5
+                 ),
+
+         AND(
+                  ISPICKVAL({!myVariable_current.StageName}  , &quot;Setup QB/Gusto&quot;),
+                  {!myVariable_current.Stage_Duration__c}  &gt;7
+                 ),
+
+       AND(
+                 ISPICKVAL({!myVariable_current.StageName}  , &quot;Confirm BK Call Scheduled&quot;),
+                 {!myVariable_current.Stage_Duration__c}  &gt;5
+                ),
+       AND(
+                 ISPICKVAL({!myVariable_current.StageName}  , &quot;Take BK Training Call&quot;),
+                 {!myVariable_current.Stage_Duration__c}  &gt;20
+                ),
+       AND(
+                 ISPICKVAL({!myVariable_current.StageName}  , &quot;Send Tax Onboarding Email&quot;),
+                 {!myVariable_current.Stage_Duration__c}  &gt;7
+                ),
+        AND(
+                 ISPICKVAL({!myVariable_current.StageName}  , &quot;Confirm Tax Call Scheduled&quot;),
+                 {!myVariable_current.Stage_Duration__c}  &gt;5
+                ),
+        AND(
+                 ISPICKVAL({!myVariable_current.StageName}  , &quot;Take Tax Kick off Call&quot;),
+                 {!myVariable_current.Stage_Duration__c}  &gt;20
+                )
+)</expression>
+    </formulas>
+    <formulas>
+        <processMetadataValues>
+            <name>originalFormula</name>
+            <value>
+                <stringValue>OR(
+         AND(
+
+                  ISPICKVAL([Opportunity].StageName , &quot;Verify Formation Details&quot;),
+                  [Opportunity].Stage_Duration__c  &gt;3
+                  ),
+         AND(
+                  ISPICKVAL([Opportunity].StageName  , &quot;Request Correction&quot;),
+                  [Opportunity].Stage_Duration__c  &gt;3
+                 ),
+        AND(
+                  ISPICKVAL([Opportunity].StageName  , &quot;File LLC&quot;),
+                  [Opportunity].Stage_Duration__c  &gt;7
+                 ),
+         AND(
+                  ISPICKVAL([Opportunity].StageName  , &quot;Email LLC Docs&quot;),
+                  [Opportunity].Stage_Duration__c  &gt;5
+                 ),
+         AND(
+                  ISPICKVAL([Opportunity].StageName  , &quot;Upload Operating Agreement&quot;),
+                  [Opportunity].Stage_Duration__c  &gt;4
+                 ),
+         AND(
+                  ISPICKVAL([Opportunity].StageName  , &quot;File EIN&quot;),
+                  [Opportunity].Stage_Duration__c  &gt;3
+                 ),
+        AND(
+                  ISPICKVAL([Opportunity].StageName  , &quot;Upload EIN Confirmation&quot;),
+                  [Opportunity].Stage_Duration__c  &gt;3
+                 ),
+         AND(
+                  ISPICKVAL([Opportunity].StageName  , &quot;Confirm Initial Contribution&quot;),
+                  [Opportunity].Stage_Duration__c  &gt;10
+                 ),
+         AND(
+                  ISPICKVAL([Opportunity].StageName  , &quot;Verify entity information&quot;),
+                  [Opportunity].Stage_Duration__c  &gt;4
+                 ),
+         AND(
+                  ISPICKVAL([Opportunity].StageName  , &quot;Request corrected info&quot;),
+                  [Opportunity].Stage_Duration__c  &gt;5
+                 ),
+
+         AND(
+                  ISPICKVAL([Opportunity].StageName  , &quot;Setup QB/Gusto&quot;),
+                  [Opportunity].Stage_Duration__c  &gt;7
+                 ),
+
+       AND(
+                 ISPICKVAL([Opportunity].StageName  , &quot;Confirm BK Call Scheduled&quot;),
+                 [Opportunity].Stage_Duration__c  &gt;5
+                ),
+       AND(
+                 ISPICKVAL([Opportunity].StageName  , &quot;Take BK Training Call&quot;),
+                 [Opportunity].Stage_Duration__c  &gt;20
+                ),
+       AND(
+                 ISPICKVAL([Opportunity].StageName  , &quot;Send Tax Onboarding Email&quot;),
+                 [Opportunity].Stage_Duration__c  &gt;7
+                ),
+        AND(
+                 ISPICKVAL([Opportunity].StageName  , &quot;Confirm Tax Call Scheduled&quot;),
+                 [Opportunity].Stage_Duration__c  &gt;5
+                ),
+        AND(
+                 ISPICKVAL([Opportunity].StageName  , &quot;Take Tax Kick off Call&quot;),
+                 [Opportunity].Stage_Duration__c  &gt;20
+                )
+)</stringValue>
+            </value>
+        </processMetadataValues>
+        <name>formula_myRule_1_pmetrule</name>
+        <dataType>Boolean</dataType>
+        <expression>OR(
+         AND(
+
+                  ISPICKVAL({!myVariable_old.StageName} , &quot;Verify Formation Details&quot;),
+                  {!myVariable_old.Stage_Duration__c}  &gt;3
+                  ),
+         AND(
+                  ISPICKVAL({!myVariable_old.StageName}  , &quot;Request Correction&quot;),
+                  {!myVariable_old.Stage_Duration__c}  &gt;3
+                 ),
+        AND(
+                  ISPICKVAL({!myVariable_old.StageName}  , &quot;File LLC&quot;),
+                  {!myVariable_old.Stage_Duration__c}  &gt;7
+                 ),
+         AND(
+                  ISPICKVAL({!myVariable_old.StageName}  , &quot;Email LLC Docs&quot;),
+                  {!myVariable_old.Stage_Duration__c}  &gt;5
+                 ),
+         AND(
+                  ISPICKVAL({!myVariable_old.StageName}  , &quot;Upload Operating Agreement&quot;),
+                  {!myVariable_old.Stage_Duration__c}  &gt;4
+                 ),
+         AND(
+                  ISPICKVAL({!myVariable_old.StageName}  , &quot;File EIN&quot;),
+                  {!myVariable_old.Stage_Duration__c}  &gt;3
+                 ),
+        AND(
+                  ISPICKVAL({!myVariable_old.StageName}  , &quot;Upload EIN Confirmation&quot;),
+                  {!myVariable_old.Stage_Duration__c}  &gt;3
+                 ),
+         AND(
+                  ISPICKVAL({!myVariable_old.StageName}  , &quot;Confirm Initial Contribution&quot;),
+                  {!myVariable_old.Stage_Duration__c}  &gt;10
+                 ),
+         AND(
+                  ISPICKVAL({!myVariable_old.StageName}  , &quot;Verify entity information&quot;),
+                  {!myVariable_old.Stage_Duration__c}  &gt;4
+                 ),
+         AND(
+                  ISPICKVAL({!myVariable_old.StageName}  , &quot;Request corrected info&quot;),
+                  {!myVariable_old.Stage_Duration__c}  &gt;5
+                 ),
+
+         AND(
+                  ISPICKVAL({!myVariable_old.StageName}  , &quot;Setup QB/Gusto&quot;),
+                  {!myVariable_old.Stage_Duration__c}  &gt;7
+                 ),
+
+       AND(
+                 ISPICKVAL({!myVariable_old.StageName}  , &quot;Confirm BK Call Scheduled&quot;),
+                 {!myVariable_old.Stage_Duration__c}  &gt;5
+                ),
+       AND(
+                 ISPICKVAL({!myVariable_old.StageName}  , &quot;Take BK Training Call&quot;),
+                 {!myVariable_old.Stage_Duration__c}  &gt;20
+                ),
+       AND(
+                 ISPICKVAL({!myVariable_old.StageName}  , &quot;Send Tax Onboarding Email&quot;),
+                 {!myVariable_old.Stage_Duration__c}  &gt;7
+                ),
+        AND(
+                 ISPICKVAL({!myVariable_old.StageName}  , &quot;Confirm Tax Call Scheduled&quot;),
+                 {!myVariable_old.Stage_Duration__c}  &gt;5
+                ),
+        AND(
+                 ISPICKVAL({!myVariable_old.StageName}  , &quot;Take Tax Kick off Call&quot;),
+                 {!myVariable_old.Stage_Duration__c}  &gt;20
+                )
+)</expression>
+    </formulas>
+    <interviewLabel>Opp_Schedule_Reminders-7_InterviewLabel</interviewLabel>
+    <label>Opp: Schedule Reminders</label>
+    <processMetadataValues>
+        <name>ObjectType</name>
+        <value>
+            <stringValue>Opportunity</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>ObjectVariable</name>
+        <value>
+            <elementReference>myVariable_current</elementReference>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OldObjectVariable</name>
+        <value>
+            <elementReference>myVariable_old</elementReference>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>TriggerType</name>
+        <value>
+            <stringValue>onAllChanges</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>Workflow</processType>
+    <startElementReference>myPreWaitDecision_myWait_myRule_1</startElementReference>
+    <status>Active</status>
+    <variables>
+        <name>cancelWaits</name>
+        <dataType>String</dataType>
+        <isCollection>true</isCollection>
+        <isInput>false</isInput>
+        <isOutput>true</isOutput>
+    </variables>
+    <variables>
+        <name>myVariable_current</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>true</isOutput>
+        <objectType>Opportunity</objectType>
+    </variables>
+    <variables>
+        <name>myVariable_old</name>
+        <dataType>SObject</dataType>
+        <isCollection>false</isCollection>
+        <isInput>true</isInput>
+        <isOutput>false</isOutput>
+        <objectType>Opportunity</objectType>
+    </variables>
+    <variables>
+        <name>myWaitEvent_myWait_myRule_1_event_0_postActionExecutionVariable</name>
+        <dataType>Boolean</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <booleanValue>false</booleanValue>
+        </value>
+    </variables>
+    <waits>
+        <name>myWait_myRule_1</name>
+        <label>myWait_myRule_1</label>
+        <locationX>0</locationX>
+        <locationY>0</locationY>
+        <defaultConnectorLabel>defaultLabel</defaultConnectorLabel>
+        <waitEvents>
+            <processMetadataValues>
+                <name>inputParameterType</name>
+                <value>
+                    <stringValue>now</stringValue>
+                </value>
+            </processMetadataValues>
+            <name>myWaitEvent_myWait_myRule_1_event_0</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>myWaitEvent_myWait_myRule_1_event_0_postActionExecutionVariable</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <booleanValue>false</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>myWaitEvent_myWait_myRule_1_event_0_SA1</targetReference>
+            </connector>
+            <eventType>AlarmEvent</eventType>
+            <inputParameters>
+                <name>AlarmTime</name>
+                <value>
+                    <elementReference>$Flow.InterviewStartTime</elementReference>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>TimeOffsetUnit</name>
+                <value>
+                    <stringValue>Hours</stringValue>
+                </value>
+            </inputParameters>
+            <inputParameters>
+                <name>TimeOffset</name>
+                <value>
+                    <numberValue>0.0</numberValue>
+                </value>
+            </inputParameters>
+            <label>myWaitEvent_myWait_myRule_1_event_0</label>
+        </waitEvents>
+    </waits>
+</Flow>

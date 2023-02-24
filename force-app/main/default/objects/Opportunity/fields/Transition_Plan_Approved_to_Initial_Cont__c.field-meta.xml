@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Transition_Plan_Approved_to_Initial_Cont__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(NOT(ISBLANK( Running_Start_Date__c )), Running_Start_Date__c - DATEVALUE( Setup_QBO_at__c ),Null)</formula>
+    <inlineHelpText>--&gt; How long does it take to enter running flow (from onboarding flow)</inlineHelpText>
+    <label>Transition Plan Approved to Initial Cont</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

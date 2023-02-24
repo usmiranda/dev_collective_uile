@@ -1,0 +1,822 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Post_Payment</fullName>
+    <active>true</active>
+    <businessProcess>Post-Payment</businessProcess>
+    <label>Post-Payment</label>
+    <picklistValues>
+        <picklist>Churn_Sub_Types__c</picklist>
+        <values>
+            <fullName>Can%27t Accommodate Member Request</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cannot Support - Accounting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cannot Support - Corporation %2F MMLLC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cannot Support - Employees</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cannot Support - Hypergrowth</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cannot Support - Software</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cannot Support - State</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cannot Support - Tax</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closing Business</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Competitive Service Better Fit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Declining Business%2FRevenue%2FIncome</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dissatisfied with Communication Times %2F Process</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Initial Expectations Not Properly Set</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Malicious Member</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Member Not Cooperating</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Negative Online Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Feedback %2F No Details Provided %2F Unresponsive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Personal Reasons</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Product Value</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quality %2F Accuracy</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quality %2F Accuracy - Accounting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quality %2F Accuracy - Onboarding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quality %2F Accuracy - Tax</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Quality %2F Accuracy - Timing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>System Issue%28s%29 %2F Bugs %2F Security Concerns</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Too Much Administration for Member</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Took Job</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wanted Entity Setup</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wants Higher Touch Service</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Churn_Type__c</picklist>
+        <values>
+            <fullName>Member Stuck</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Churn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Qualified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Regrettable</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Structural</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Closed_Lost_Reason__c</picklist>
+        <values>
+            <fullName>Bad Fit %28Accrual Accounting Needed%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bad Fit %28Crypto%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bad Fit %28Employees%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bad Fit %28Foreign Assets %3E50k%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bad Fit %28Inventory%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bad Fit %28Low Self-Employed Profit%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bad Fit %28Multiple Businesses%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bad Fit %28Non-citizen%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bad Fit %28Out of Compliance%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bad Fit %28Passive Income%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bad Fit %28Sales Tax%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bad Fit %28Took W-2 Job%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bad Fit %28Unfiled Tax Returns%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bad Fit %28Unsupported Entity - C-Corp%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bad Fit %28Unsupported Entity - MM LLC%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bad Fit %28Unsupported Entity - PC%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bad Fit %28Unsupported Entity - PLLC%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bad Fit %28Unsupported Profession%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bad Fit %28Unsupported State%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Interested %28Price Too High%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Interested %28Remain LLC%2FSP%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Interested %28Using Local CPA%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Interested %28Using Other FinTech Services%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stopped Communicating</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Closing_LLC__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Email_Sequence_Request__c</picklist>
+        <values>
+            <fullName>Pause</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reengage</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>ForecastCategoryName</picklist>
+        <values>
+            <fullName>Best Case</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Closed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Commit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Omitted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pipeline</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Kickoff_Stage__c</picklist>
+        <values>
+            <fullName>Approve Plan</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Complete Questionnaire</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Started</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Reschedule Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Schedule Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Take Call</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Last_BK_Check_Outcome__c</picklist>
+        <values>
+            <fullName>Decent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Great</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Missing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unusable</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LeadSource</picklist>
+        <values>
+            <fullName>Advertisement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BDR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>BossCon</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employee Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Google AdWords</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Google Search</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Influencer</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LinkedIn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Member Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Purchased List</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TikTok</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webinar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Website</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Word of Mouth</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Member_Flags__c</picklist>
+        <values>
+            <fullName>1040 Opt Out</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>1040 Opt Out - PY Unfiled Returns</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Declined Bookkeeping</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Don%27t Touch QBO</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dormant Member Churn Candidate</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Foreign Activity Acknowledgement Received</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Incidental Sales Tax</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Re-Domesticating</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>VIP</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Plan__c</picklist>
+        <values>
+            <fullName>LLC -%3E SC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Remain C-Corp SC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Remain SC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SP -%3E SC</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Pre_Call__c</picklist>
+        <values>
+            <fullName>Connected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Did Not Connect</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Voicemail</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Remediation_Status__c</picklist>
+        <values>
+            <fullName>Churn Risk</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Client Moving - New State</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Missed Quarterly Check ins</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Onboarding Stalled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Payment Problem</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unhappy Client</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Source__c</picklist>
+        <values>
+            <fullName>Advertisement</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Customer Event</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employee Referral</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Google AdWords</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Partner</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Purchased List</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Trade Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webinar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Website</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sub_Stage_Reason__c</picklist>
+        <values>
+            <fullName>Accrual Accounting Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bad Online Review</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Considering self-employment</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Crypto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Dislikes all-inclusive</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Employees</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Foreign Assets %3E%2450k</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inventory</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Job requires PLLC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Looking for next project</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Low Self-Employed Profit</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Multiple Businesses</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Non-Citizen</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Interested %28ITR not included%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Passive Income</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Price Too High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sales Tax</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Took W-2 Job</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unfiled Tax Returns</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unsupported Entity - Inc%2E%2FS-Corp</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unsupported Entity - MM LLC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unsupported Profession</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unsupported State</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Using other FinTech Services</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wants to Remain - LLC%2FSole-P%2F1099</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Wants to Use Local CPA</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Sub_Stage__c</picklist>
+        <values>
+            <fullName>Call Canceled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call Rescheduled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call Scheduled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Could not close</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disqualified</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Ready</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tax_Return_Status__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tax_Return_Type__c</picklist>
+        <values>
+            <fullName>BTR</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>ITR</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Transition_Plan_Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Correcting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Started</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Started</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Submitted</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Formation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>New Business</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Onboarding</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Running</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Takeover</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Zoom_Call_Outcome__c</picklist>
+        <values>
+            <fullName>Bad Fit %28Complex Tax situations%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bad Fit %28Low Income%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bad Fit %28Other%2C Refer To Notes%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bad Fit %28State not supported%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bad Fit %28has a Corp%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Follow Up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Lost Contact</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Interested</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Send Onboarding Email</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

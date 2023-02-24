@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Collective</letterhead>
+    <name>End of WEEK Push for LLC/SP *Onboarding fee waived*</name>
+    <style>freeForm</style>
+    <subject>Save $700 on Membership- Offer ends this Friday!</subject>
+    <textOnly>Hi {!Opportunity.First_Name__c},
+
+I want to make sure you don&apos;t miss out on this new and exclusive offer! If you join this Friday by midnight, you&apos;ll get 50% off the first 2 months ($299), and we&apos;ll also waive the onboarding fee ($399), a total of $700 savings!
+
+Use code LASTCHANCE at checkout with this link: {!Opportunity.Signup_Link__c}. Let me know if you have any questions.
+
+
+Join us as a member today!
+
+Best,
+{!User.Name}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

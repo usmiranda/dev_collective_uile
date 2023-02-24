@@ -1,0 +1,11 @@
+Hey Greg/Hamad,
+
+{!Account.Name} just paid, but is still stuck in new business.  Can you please go take a look at the opportunity? 
+
+Account: {!Account.Link}
+Opportunity:  {!Opportunity.Link}
+
+
+
+Thanks,
+Ops Team

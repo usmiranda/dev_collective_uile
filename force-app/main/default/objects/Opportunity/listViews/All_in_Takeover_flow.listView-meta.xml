@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>All_in_Takeover_flow</fullName>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>Plan__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Record_Type_Name__c</field>
+        <operation>equals</operation>
+        <value>Takeover</value>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.STAGE_NAME</field>
+        <operation>notEqual</operation>
+        <value>Pending,Monthly Check,Offboarding,Churned</value>
+    </filters>
+    <filters>
+        <field>Business_Solution_Advisor__c</field>
+        <operation>equals</operation>
+    </filters>
+    <filters>
+        <field>OPPORTUNITY.RECORDTYPE</field>
+        <operation>equals</operation>
+        <value>Opportunity.Takeover</value>
+    </filters>
+    <label>All Takeover Opps</label>
+</ListView>

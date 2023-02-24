@@ -1,0 +1,287 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Churn_Sub_Types__c</fullName>
+    <externalId>false</externalId>
+    <label>Churn Sub-Types</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Churn_Type__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Can&apos;t Accommodate Member Request</fullName>
+                <default>false</default>
+                <label>Can&apos;t Accommodate Member Request</label>
+            </value>
+            <value>
+                <fullName>Cannot Support - Accounting</fullName>
+                <default>false</default>
+                <label>Cannot Support - Accounting</label>
+            </value>
+            <value>
+                <fullName>Cannot Support - Corporation / MMLLC</fullName>
+                <default>false</default>
+                <label>Cannot Support - Corporation / MMLLC</label>
+            </value>
+            <value>
+                <fullName>Cannot Support - Employees</fullName>
+                <default>false</default>
+                <label>Cannot Support - Employees</label>
+            </value>
+            <value>
+                <fullName>Cannot Support - Hypergrowth</fullName>
+                <default>false</default>
+                <label>Cannot Support - Hypergrowth</label>
+            </value>
+            <value>
+                <fullName>Cannot Support - Software</fullName>
+                <default>false</default>
+                <label>Cannot Support - Software</label>
+            </value>
+            <value>
+                <fullName>Cannot Support - State</fullName>
+                <default>false</default>
+                <label>Cannot Support - State</label>
+            </value>
+            <value>
+                <fullName>Cannot Support - Tax</fullName>
+                <default>false</default>
+                <label>Cannot Support - Tax</label>
+            </value>
+            <value>
+                <fullName>Closing Business</fullName>
+                <default>false</default>
+                <label>Closing Business</label>
+            </value>
+            <value>
+                <fullName>Competitive Service Better Fit</fullName>
+                <default>false</default>
+                <label>Competitive Service Better Fit</label>
+            </value>
+            <value>
+                <fullName>Declining Business/Revenue/Income</fullName>
+                <default>false</default>
+                <label>Declining Business/Revenue/Income</label>
+            </value>
+            <value>
+                <fullName>Dissatisfied with Communication Times / Process</fullName>
+                <default>false</default>
+                <label>Dissatisfied with Communication Times / Process</label>
+            </value>
+            <value>
+                <fullName>Initial Expectations Not Properly Set</fullName>
+                <default>false</default>
+                <label>Initial Expectations Not Properly Set</label>
+            </value>
+            <value>
+                <fullName>Took Job</fullName>
+                <default>false</default>
+                <label>Took Job</label>
+            </value>
+            <value>
+                <fullName>Malicious Member</fullName>
+                <default>false</default>
+                <label>Malicious Member</label>
+            </value>
+            <value>
+                <fullName>Member Not Cooperating</fullName>
+                <default>false</default>
+                <label>Member Not Cooperating</label>
+            </value>
+            <value>
+                <fullName>Negative Online Review</fullName>
+                <default>false</default>
+                <label>Negative Online Review</label>
+            </value>
+            <value>
+                <fullName>No Feedback / No Details Provided / Unresponsive</fullName>
+                <default>false</default>
+                <label>No Feedback / No Details Provided / Unresponsive</label>
+            </value>
+            <value>
+                <fullName>Personal Reasons</fullName>
+                <default>false</default>
+                <label>Personal Reasons</label>
+            </value>
+            <value>
+                <fullName>Product Value</fullName>
+                <default>false</default>
+                <label>Product Value</label>
+            </value>
+            <value>
+                <fullName>Quality / Accuracy</fullName>
+                <default>false</default>
+                <label>Quality / Accuracy</label>
+            </value>
+            <value>
+                <fullName>Quality / Accuracy - Accounting</fullName>
+                <default>false</default>
+                <label>Quality / Accuracy - Accounting</label>
+            </value>
+            <value>
+                <fullName>Quality / Accuracy - Onboarding</fullName>
+                <default>false</default>
+                <label>Quality / Accuracy - Onboarding</label>
+            </value>
+            <value>
+                <fullName>Quality / Accuracy - Tax</fullName>
+                <default>false</default>
+                <label>Quality / Accuracy - Tax</label>
+            </value>
+            <value>
+                <fullName>Quality / Accuracy - Timing</fullName>
+                <default>false</default>
+                <label>Quality / Accuracy - Timing</label>
+            </value>
+            <value>
+                <fullName>System Issue(s) / Bugs / Security Concerns</fullName>
+                <default>false</default>
+                <label>System Issue(s) / Bugs / Security Concerns</label>
+            </value>
+            <value>
+                <fullName>Too Much Administration for Member</fullName>
+                <default>false</default>
+                <label>Too Much Administration for Member</label>
+            </value>
+            <value>
+                <fullName>Wants Higher Touch Service</fullName>
+                <default>false</default>
+                <label>Wants Higher Touch Service</label>
+            </value>
+            <value>
+                <fullName>Wanted Entity Setup</fullName>
+                <default>false</default>
+                <label>Wanted Entity Setup</label>
+            </value>
+            <value>
+                <fullName>Tax Related</fullName>
+                <default>false</default>
+                <isActive>false</isActive>
+                <label>Tax Related</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Regrettable</controllingFieldValue>
+            <valueName>Competitive Service Better Fit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regrettable</controllingFieldValue>
+            <valueName>Dissatisfied with Communication Times / Process</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regrettable</controllingFieldValue>
+            <valueName>Initial Expectations Not Properly Set</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regrettable</controllingFieldValue>
+            <controllingFieldValue>Structural</controllingFieldValue>
+            <valueName>Member Not Cooperating</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regrettable</controllingFieldValue>
+            <valueName>Negative Online Review</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regrettable</controllingFieldValue>
+            <valueName>No Feedback / No Details Provided / Unresponsive</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regrettable</controllingFieldValue>
+            <valueName>Product Value</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regrettable</controllingFieldValue>
+            <valueName>Quality / Accuracy</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regrettable</controllingFieldValue>
+            <valueName>Quality / Accuracy - Accounting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regrettable</controllingFieldValue>
+            <valueName>Quality / Accuracy - Onboarding</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regrettable</controllingFieldValue>
+            <valueName>Quality / Accuracy - Tax</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regrettable</controllingFieldValue>
+            <valueName>Quality / Accuracy - Timing</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regrettable</controllingFieldValue>
+            <valueName>System Issue(s) / Bugs / Security Concerns</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regrettable</controllingFieldValue>
+            <valueName>Too Much Administration for Member</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regrettable</controllingFieldValue>
+            <valueName>Wants Higher Touch Service</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Regrettable</controllingFieldValue>
+            <valueName>Wanted Entity Setup</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Structural</controllingFieldValue>
+            <valueName>Can&apos;t Accommodate Member Request</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Structural</controllingFieldValue>
+            <valueName>Cannot Support - Accounting</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Structural</controllingFieldValue>
+            <valueName>Cannot Support - Corporation / MMLLC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Structural</controllingFieldValue>
+            <valueName>Cannot Support - Employees</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Structural</controllingFieldValue>
+            <valueName>Cannot Support - Hypergrowth</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Structural</controllingFieldValue>
+            <valueName>Cannot Support - Software</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Structural</controllingFieldValue>
+            <valueName>Cannot Support - State</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Structural</controllingFieldValue>
+            <valueName>Cannot Support - Tax</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Structural</controllingFieldValue>
+            <valueName>Closing Business</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Structural</controllingFieldValue>
+            <valueName>Declining Business/Revenue/Income</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Structural</controllingFieldValue>
+            <valueName>Took Job</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Structural</controllingFieldValue>
+            <valueName>Malicious Member</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Structural</controllingFieldValue>
+            <valueName>Personal Reasons</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

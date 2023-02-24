@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TTAX_Req_Tax_Return_Needed_on_Authorize</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISPICKVAL(Status,&quot;Completed&quot;),
+CONTAINS(Subject,&quot;Authorize |&quot;),
+ISCHANGED(Status),
+ISPICKVAL( Tax_Return_Needed__c,&quot;&quot;)
+)</errorConditionFormula>
+    <errorMessage>Please complete the Tax Return Needed field</errorMessage>
+</ValidationRule>

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BusinessProcess xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Running_B</fullName>
+    <isActive>true</isActive>
+    <values>
+        <fullName>Churned</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Clean Ups</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Closed Lost</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Confirm Plan Approval</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Monthly Check</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Offboarding</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Pending</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Perform Tax Check</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Review Client</fullName>
+        <default>false</default>
+    </values>
+    <values>
+        <fullName>Send QE Payment Follow Up</fullName>
+        <default>false</default>
+    </values>
+</BusinessProcess>

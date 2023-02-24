@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Opportunity__c</fullName>
+    <deleteConstraint>SetNull</deleteConstraint>
+    <externalDeveloperName>sfopportunityid</externalDeveloperName>
+    <externalId>false</externalId>
+    <isFilteringDisabled>false</isFilteringDisabled>
+    <isNameField>false</isNameField>
+    <isSortingDisabled>false</isSortingDisabled>
+    <label>Opportunity</label>
+    <referenceTo>Opportunity</referenceTo>
+    <relationshipLabel>DropboxFiles</relationshipLabel>
+    <relationshipName>DropboxFiles</relationshipName>
+    <required>false</required>
+    <type>Lookup</type>
+</CustomField>

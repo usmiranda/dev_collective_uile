@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ONB_Req_Transition_Plan_Submitted_on_KO</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+	CONTAINS(Subject,&quot;Take Kickoff Call&quot;),
+	ISPICKVAL(Status,&quot;Completed&quot;),
+	ISCHANGED(Status),
+	NOT(ISPICKVAL(Transition_Plan_Submitted__c,&quot;Yes&quot;))
+)</errorConditionFormula>
+    <errorMessage>Please fill out the Transition Plan Submitted field to proceed</errorMessage>
+</ValidationRule>

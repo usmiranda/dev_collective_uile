@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <description>This is used to process outbound message events and send them to Django for now</description>
+        <name>Send_Platform_Event_Details_to_Handler</name>
+        <label>Send Platform Event Details to Handler</label>
+        <locationX>175</locationX>
+        <locationY>596</locationY>
+        <actionName>OutboundMessage</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>eventType</name>
+            <value>
+                <elementReference>$Record.Type__c</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.Task_Id__c</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>52.0</apiVersion>
+    <decisions>
+        <name>Check_For_intro_Call_completed</name>
+        <label>Check For intro Call completed</label>
+        <locationX>167</locationX>
+        <locationY>355</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Check_if_type_is_Intro_Call_Completed</name>
+            <conditionLogic>or</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>com_collective_member_taxadvisorupdated</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>com_collective_sfdc_task_completed</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.Type__c</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>com_collective_primaryopp_updated</stringValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_Platform_Event_Details_to_Handler</targetReference>
+            </connector>
+            <label>Check if type is Intro Call Completed</label>
+        </rules>
+    </decisions>
+    <description>Event Handler Used to Process Outbound Event Platform events</description>
+    <environments>Default</environments>
+    <interviewLabel>Outbound Message Event Handler {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Outbound Message Event Handler</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>49</locationX>
+        <locationY>51</locationY>
+        <connector>
+            <targetReference>Check_For_intro_Call_completed</targetReference>
+        </connector>
+        <object>Outbound_Message__e</object>
+        <triggerType>PlatformEvent</triggerType>
+    </start>
+    <status>Active</status>
+</Flow>

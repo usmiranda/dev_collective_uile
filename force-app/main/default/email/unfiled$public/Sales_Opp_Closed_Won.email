@@ -1,0 +1,21 @@
+<html>
+<head>
+</head>
+<body>
+<div class="title-area"><a aria-current="page" class="custom-logo-link" href="https://www.collective.com/" rel="home"><picture class="custom-logo"> <source sizes="(max-width: 320px) 100vw, 320px" srcset="https://www.collective.com/wp-content/uploads/2021/05/cropped-collective-logo.png.webp 320w, https://www.collective.com/wp-content/uploads/2021/05/cropped-collective-logo-300x75.png.webp 300w" type="image/webp" /> <img alt="Collective Hub" height="80" sizes="(max-width: 320px) 100vw, 320px" src="https://www.collective.com/wp-content/uploads/2021/05/cropped-collective-logo.png" srcset="https://www.collective.com/wp-content/uploads/2021/05/cropped-collective-logo.png 320w, https://www.collective.com/wp-content/uploads/2021/05/cropped-collective-logo-300x75.png 300w" width="320" /> </picture> </a></div>
+</body>
+</html>
+<title>The Opportunity was CLOSED WON!!!</title>
+<p>Hello!</p>
+
+<p>The Opportunity: <i>{!Opportunity.Name}</i> belonging to {!Opportunity.OwnerFullName} was Closed Won.</p>
+
+<p>Stage: {!Opportunity.StageName}<br />
+Plan: {!Opportunity.Plan__c} <br />
+Lead Source: {!Opportunity.LeadSource} <br />
+Comments: {!Opportunity.Description} - {!Opportunity.Lost_Reason_Detail__c}<br /></p>
+
+<p>You can check more details here: {!Opportunity.Lighting_URL__c}</p>
+
+<p><br />
+SFDC Team</p>

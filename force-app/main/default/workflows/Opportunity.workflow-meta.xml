@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <alerts>
+        <fullName>Client_Stuck_in_New_Business</fullName>
+        <description>Client Stuck in New Business</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>OPs</recipient>
+            <type>group</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>unfiled$public/Member_Stuck_in_New_Business</template>
+    </alerts>
+    <alerts>
+        <fullName>Client_Win_Notice_NHP_665</fullName>
+        <description>Client Win Notice - NHP-665</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>OPs</recipient>
+            <type>group</type>
+        </recipients>
+        <recipients>
+            <recipient>admin@collective.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>alenah.brunswick@collective.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>atif@collective.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>bhedrick@collective.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>bugra@collective.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>ckauffelt@collective.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>cray@collective.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>dbonelli@collective.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>emullins@collective.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jacob@collective.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jeff@collective.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jm@collective.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>karmen@collective.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>lrobinson@collective.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>machanzar@collective.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>marketing@collective.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>michael@collective.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>sconde@collective.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>taresh@collective.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>unfiled$public/Win_Notice_Email</template>
+    </alerts>
+    <alerts>
+        <fullName>Opportunity_Closed_Won</fullName>
+        <description>Opportunity_Closed_Won</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>csantos@collective.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>jacob@collective.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>sconde@collective.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>umiranda@collective.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Sales_Opp_Closed_Won</template>
+    </alerts>
+    <alerts>
+        <fullName>Opportunity_Stage_Updates</fullName>
+        <ccEmails>newbiz@collective.com, marketing@collective.com</ccEmails>
+        <description>Opportunity_Stage_Updates</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>csantos@collective.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>sconde@collective.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>umiranda@collective.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>CurrentUser</senderType>
+        <template>unfiled$public/Sales_Opp_Stage_Update</template>
+    </alerts>
+    <alerts>
+        <fullName>Transition_Plan_Submitted</fullName>
+        <description>Transition Plan Submitted</description>
+        <protected>false</protected>
+        <recipients>
+            <recipient>jacob@collective.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
+            <recipient>sfdcautomation@collective.com</recipient>
+            <type>user</type>
+        </recipients>
+        <senderType>DefaultWorkflowUser</senderType>
+        <template>unfiled$public/Transition_Plan_Submitted</template>
+    </alerts>
+    <fieldUpdates>
+        <fullName>Priority_Score_Update</fullName>
+        <field>Opp_Priority_Score__c</field>
+        <formula>IF(CASESAFEID( RecordTypeId ) = &apos;0126g0000001y5pAAA&apos;,1,
+IF(CASESAFEID( RecordTypeId ) = &apos;0126g0000001y5zAAA&apos;,2,
+IF(CASESAFEID( RecordTypeId ) = &apos;0126g0000003gSuAAI&apos;,3,
+IF(CASESAFEID( RecordTypeId ) = &apos;0126g0000003c3WAAQ&apos;,4,
+IF(CASESAFEID( RecordTypeId ) = &apos;0126g0000002TGjAAM&apos;,5,
+0
+)))))</formula>
+        <name>Priority Score Update</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Running_Start_Stamp</fullName>
+        <field>Running_Start_Date__c</field>
+        <formula>TODAY()</formula>
+        <name>Running Start Stamp</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Onboarding_Accounting_Advisor</fullName>
+        <field>Onboarding_Accounting_Advisor__c</field>
+        <formula>Accounting_Advisor__r.FirstName &amp; &quot; &quot; &amp;  Accounting_Advisor__r.LastName</formula>
+        <name>Update Onboarding Accounting Advisor</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Update_Opp_Amount_Field</fullName>
+        <field>Amount</field>
+        <formula>IF( TEXT(Type) = &quot;New Business&quot;, 199, 0 )</formula>
+        <name>Update Opp Amount Field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>emoji</fullName>
+        <field>Test_Field__c</field>
+        <formula>IF( ISPICKVAL(StageName,&quot;Offboarding&quot;),
+	&quot;👋&quot;,&quot;&quot;
+)
+&amp; IF( TEXT(Remediation_Status__c) &lt;&gt; &quot;&quot;,
+	&quot;👁️👄👁️&quot;, &quot;&quot;
+)
+&amp; IF(
+	OR(
+		CASESAFEID( RecordTypeId )  = &apos;0126g0000001y5uAAA&apos;,
+		CASESAFEID( RecordTypeId ) = &apos;0126g000000228rAAA&apos;,
+		CASESAFEID( RecordTypeId ) = &apos;0126g0000001y5zAAA&apos;
+		
+	),
+	&quot;🚀&quot;, &quot;&quot;
+)
+&amp; IF(CASESAFEID( RecordTypeId ) = &apos;0126g0000002TGjAAM&apos;,
+	&quot;🅰️&quot;, &quot;&quot;
+)
+&amp; IF(CASESAFEID( RecordTypeId ) = &apos;0125x000000QOmRAAW&apos;,
+	&quot;🅱️&quot;, &quot;&quot;
+)
+
+
+
+&amp; IF(
+	 INCLUDES(Member_Flags__c,&quot;Don&apos;t Touch QBO&quot;),
+	 &quot;🇩&quot;,&quot;&quot;
+)
+
+&amp; IF(
+	 INCLUDES(Member_Flags__c,&quot;VIP&quot;),
+	 &quot;🤩&quot;,&quot;&quot;
+)</formula>
+        <name>emoji</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <outboundMessages>
+        <fullName>HS_OB_Msg_Churn</fullName>
+        <apiVersion>56.0</apiVersion>
+        <endpointUrl>https://hooks.zapier.com/hooks/catch/13510657/bp7ytoa/</endpointUrl>
+        <fields>Email__c</fields>
+        <fields>Id</fields>
+        <fields>Offboarding_Date__c</fields>
+        <fields>Offboarding_Initiated_Date__c</fields>
+        <fields>StageName</fields>
+        <includeSessionId>true</includeSessionId>
+        <integrationUser>sfdcautomation@collective.com</integrationUser>
+        <name>HS OB Msg Churn</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <outboundMessages>
+        <fullName>HS_Ob_Msg_Opp</fullName>
+        <apiVersion>55.0</apiVersion>
+        <endpointUrl>https://hooks.zapier.com/hooks/catch/10968837/b0u8v5n/</endpointUrl>
+        <fields>Churn_Sub_Types__c</fields>
+        <fields>Churn_Type__c</fields>
+        <fields>Confirm_Payment_At__c</fields>
+        <fields>Email__c</fields>
+        <fields>Id</fields>
+        <fields>Name</fields>
+        <fields>Offboarding_Date__c</fields>
+        <fields>Offboarding_Initiated_Date__c</fields>
+        <fields>Plan__c</fields>
+        <fields>RecordTypeId</fields>
+        <fields>StageName</fields>
+        <fields>Sub_Stage_Reason__c</fields>
+        <fields>Sub_Stage__c</fields>
+        <includeSessionId>false</includeSessionId>
+        <integrationUser>sfdcautomation@collective.com</integrationUser>
+        <name>HS Ob Msg Opp</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <rules>
+        <fullName>Emoji Update</fullName>
+        <actions>
+            <name>emoji</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.Plan__c</field>
+            <operation>notEqual</operation>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Opp Pirority Score</fullName>
+        <actions>
+            <name>Priority_Score_Update</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <criteriaItems>
+            <field>Opportunity.RecordTypeId</field>
+            <operation>notEqual</operation>
+            <value></value>
+        </criteriaItems>
+        <description>Marking Opp Priority according to Record Type ID</description>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+    <rules>
+        <fullName>Opp%3A Churn</fullName>
+        <actions>
+            <name>HS_OB_Msg_Churn</name>
+            <type>OutboundMessage</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>1 OR 2</booleanFilter>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Offboarding</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Churned</value>
+        </criteriaItems>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Opp%3A Fill in Amount</fullName>
+        <actions>
+            <name>Update_Opp_Amount_Field</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <description>This populates the amount field with a default value if it is blank.  $199 for new business opps, and 0 for other opps.</description>
+        <formula>ISBLANK(Amount)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Populate Accounting Advisor</fullName>
+        <active>false</active>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Rebuild Books</value>
+        </criteriaItems>
+        <description>Populate Accounting Advisor in Onboarding</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Populate Onboarding Accounting Advisor</fullName>
+        <actions>
+            <name>Update_Onboarding_Accounting_Advisor</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>false</active>
+        <booleanFilter>1 OR 2 OR 3</booleanFilter>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Rebuild Books</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Setup Accounting Software</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Take Training Call</value>
+        </criteriaItems>
+        <description>Populate Onboarding Accounting Advisor with the Onboarding Accountant</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+    <rules>
+        <fullName>Populate Onboarding Accounting Advisor backup</fullName>
+        <active>false</active>
+        <booleanFilter>1 OR 2 OR 3</booleanFilter>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Rebuild Books</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Setup Accounting Software</value>
+        </criteriaItems>
+        <criteriaItems>
+            <field>Opportunity.StageName</field>
+            <operation>equals</operation>
+            <value>Take Training Call</value>
+        </criteriaItems>
+        <description>Populate Onboarding Accounting Advisor with the Onboarding Accountant</description>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

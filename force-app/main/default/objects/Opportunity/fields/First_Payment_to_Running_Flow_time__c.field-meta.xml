@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>First_Payment_to_Running_Flow_time__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(NOT(ISBLANK( Running_Start_Date__c )), Running_Start_Date__c - First_Payment_Date__c  ,Null)</formula>
+    <inlineHelpText>--&gt; How long does it take to enter running flow (from first payment)</inlineHelpText>
+    <label>First Payment to Running Flow time</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

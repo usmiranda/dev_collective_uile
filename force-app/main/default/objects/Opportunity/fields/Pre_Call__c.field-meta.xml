@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Pre_Call__c</fullName>
+    <description>requested via ticket ON-1935 to improve the efficiency on Sales efforts</description>
+    <externalId>false</externalId>
+    <label>Pre-Call</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Voicemail</fullName>
+                <default>false</default>
+                <label>Voicemail</label>
+            </value>
+            <value>
+                <fullName>Connected</fullName>
+                <default>false</default>
+                <label>Connected</label>
+            </value>
+            <value>
+                <fullName>Did Not Connect</fullName>
+                <default>false</default>
+                <label>Did Not Connect</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

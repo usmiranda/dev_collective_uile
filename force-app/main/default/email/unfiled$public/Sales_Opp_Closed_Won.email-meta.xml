@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>This template will handle information from Opportunity, whenever the Stage, Sub-Stage and Substage-Reason are there.</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Sales_Opp_Closed_Won</name>
+    <style>none</style>
+    <subject>Sales Opportunity: CLOSED WON!</subject>
+    <textOnly>Hello!  The Opportunity {!Opportunity.Name} was updated:  
+
+Stage: {!Opportunity.StageName}
+Sub-Stage: {!Opportunity.Sub_Stage__c} 
+Sub-Stage Reason: {!Opportunity.Sub_Stage_Reason__c}
+
+  You can check more details here: {!Opportunity.Lighting_URL__c} 
+
+
+  SFDC Team</textOnly>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

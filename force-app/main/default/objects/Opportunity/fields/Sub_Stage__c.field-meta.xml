@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Stage__c</fullName>
+    <externalId>false</externalId>
+    <label>Sub-Stage</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <controllingField>StageName</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Call Canceled</fullName>
+                <default>false</default>
+                <label>Call Canceled</label>
+            </value>
+            <value>
+                <fullName>Call Rescheduled</fullName>
+                <default>false</default>
+                <label>Call Rescheduled</label>
+            </value>
+            <value>
+                <fullName>Call Scheduled</fullName>
+                <default>false</default>
+                <label>Call Scheduled</label>
+            </value>
+            <value>
+                <fullName>Collective needs to confirm info</fullName>
+                <default>false</default>
+                <label>Collective needs to confirm info</label>
+            </value>
+            <value>
+                <fullName>Could not close</fullName>
+                <default>false</default>
+                <label>Could not close</label>
+            </value>
+            <value>
+                <fullName>Disqualified</fullName>
+                <default>false</default>
+                <label>Disqualified</label>
+            </value>
+            <value>
+                <fullName>Finalizing Upcoming Client contract</fullName>
+                <default>false</default>
+                <label>Finalizing Upcoming Client contract</label>
+            </value>
+            <value>
+                <fullName>Needs time to review materials</fullName>
+                <default>false</default>
+                <label>Needs time to review materials</label>
+            </value>
+            <value>
+                <fullName>Needs to talk to spouse/partner</fullName>
+                <default>false</default>
+                <label>Needs to talk to spouse/partner</label>
+            </value>
+            <value>
+                <fullName>Never Responded</fullName>
+                <default>false</default>
+                <label>Never Responded</label>
+            </value>
+            <value>
+                <fullName>No Show</fullName>
+                <default>false</default>
+                <label>No Show</label>
+            </value>
+            <value>
+                <fullName>Not Ready</fullName>
+                <default>false</default>
+                <label>Not Ready</label>
+            </value>
+            <value>
+                <fullName>Prospect needs to provide more info</fullName>
+                <default>false</default>
+                <label>Prospect needs to provide more info</label>
+            </value>
+            <value>
+                <fullName>Re-domesticating LLC</fullName>
+                <default>false</default>
+                <label>Re-domesticating LLC</label>
+            </value>
+            <value>
+                <fullName>Reviewing with financial advisor</fullName>
+                <default>false</default>
+                <label>Reviewing with financial advisor</label>
+            </value>
+            <value>
+                <fullName>Shopping Around</fullName>
+                <default>false</default>
+                <label>Shopping Around</label>
+            </value>
+            <value>
+                <fullName>Traveling</fullName>
+                <default>false</default>
+                <label>Traveling</label>
+            </value>
+            <value>
+                <fullName>Trying to Schedule</fullName>
+                <default>false</default>
+                <label>Trying to Schedule</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Scheduling</controllingFieldValue>
+            <valueName>Call Canceled</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Scheduling</controllingFieldValue>
+            <valueName>Call Rescheduled</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Scheduling</controllingFieldValue>
+            <valueName>Call Scheduled</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Scheduling</controllingFieldValue>
+            <valueName>Never Responded</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Scheduling</controllingFieldValue>
+            <valueName>No Show</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Scheduling</controllingFieldValue>
+            <valueName>Trying to Schedule</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Could not close</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Disqualified</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Closed Lost</controllingFieldValue>
+            <valueName>Not Ready</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Follow Up</controllingFieldValue>
+            <valueName>Collective needs to confirm info</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Follow Up</controllingFieldValue>
+            <valueName>Finalizing Upcoming Client contract</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Follow Up</controllingFieldValue>
+            <valueName>Needs time to review materials</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Follow Up</controllingFieldValue>
+            <valueName>Needs to talk to spouse/partner</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Follow Up</controllingFieldValue>
+            <valueName>Prospect needs to provide more info</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Follow Up</controllingFieldValue>
+            <valueName>Re-domesticating LLC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Follow Up</controllingFieldValue>
+            <valueName>Reviewing with financial advisor</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Follow Up</controllingFieldValue>
+            <valueName>Shopping Around</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Follow Up</controllingFieldValue>
+            <valueName>Traveling</valueName>
+        </valueSettings>
+    </valueSet>
+</CustomField>

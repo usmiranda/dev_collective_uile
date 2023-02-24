@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>First_Payment_to_Kickoff_Call_Time__c</fullName>
+    <externalId>false</externalId>
+    <formula>Kickoff_Call_Date__c -  First_Payment_Date__c</formula>
+    <inlineHelpText>--&gt; How long until they complete kickoff call (KO call minus First Payment)</inlineHelpText>
+    <label>First Payment to Kickoff Call Time</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

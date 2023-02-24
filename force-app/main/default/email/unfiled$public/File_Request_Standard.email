@@ -1,0 +1,16 @@
+Hello {!Dropbox_File_Request__c.Contact_Name__c},
+<br/>
+<p>{!Dropbox_File_Request__c.Subject__c}
+<br/><br/>
+Please use the provided, secure DropBox link below to upload the requested files
+<br/>
+<center>
+{!Dropbox_File_Request__c.Request_Url__c}
+</center>
+</p>
+
+Thank you,
+<br/>
+{!Dropbox_File_Request__c.MRM__c}
+<br/><br/>
+Sincerely The Collective Team

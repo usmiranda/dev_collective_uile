@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FieldSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Duplicate_Opp_fields</fullName>
+    <description>duplicates</description>
+    <displayedFields>
+        <field>Amount</field>
+        <isFieldManaged>false</isFieldManaged>
+        <isRequired>false</isRequired>
+    </displayedFields>
+    <label>Duplicate Opp fields</label>
+</FieldSet>

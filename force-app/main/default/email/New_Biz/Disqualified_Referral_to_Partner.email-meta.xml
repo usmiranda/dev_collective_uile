@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Collective</letterhead>
+    <name>Disqualified - Referral to Partner</name>
+    <style>freeForm</style>
+    <subject>Collective may not be a fit - but we&apos;re still here for you!</subject>
+    <textOnly>Hi {!Opportunity.First_Name__c},
+
+It was a pleasure speaking with you, and I enjoyed hearing about your business.
+
+While Collective wouldn&apos;t be able to service you, I would still like to provide you with some referrals. Below you&apos;ll find a couple of companies we&apos;ve heard some good things about:
+
+Taxfyle.com - Formation and tax filing services - and you even get preferred pricing as a Collective referral!
+Bench.co - Bookkeeping services designed for small businesses
+
+Know someone in your network who would benefit from Collective&apos;s services? Take 30 seconds and join our referral program and share the word! If you refer someone and they become a member, you&apos;ll get $400, and they&apos;ll get one month at 50% off.  NO CAP ON PAYOUTS!
+
+Best,
+{!User.Name}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

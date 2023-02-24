@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NB_Req_Call_Outcome_on_Intro_Call</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+	OR(	
+		CONTAINS(Subject,&quot;Take Intro Call&quot;),
+		CONTAINS(Subject,&quot;Follow Up&quot;)
+	),
+	NOT(CONTAINS(Subject,&quot;QE Payment&quot;)),
+        NOT(CONTAINS(Subject,&quot;Take Training Call Follow Up&quot;)),
+	NOT(CONTAINS(Subject,&quot;Email&quot;)),
+	ISPICKVAL(Status,&quot;Completed&quot;),
+	OR(
+		ISPICKVAL(Intro_Call_Outcome__c,&quot;&quot;),
+		AND(
+			ISPICKVAL(Intro_Call_Outcome__c,&quot;Send Onboarding Email&quot;),
+			ISPICKVAL(Plan__c,&quot;&quot;)
+		)
+	)
+)</errorConditionFormula>
+    <errorMessage>To move forward, please fill out a Call Outcome and Plan fields</errorMessage>
+</ValidationRule>

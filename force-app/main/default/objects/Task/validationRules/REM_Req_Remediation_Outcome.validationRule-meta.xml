@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>REM_Req_Remediation_Outcome</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+	Remediation_Status__c != &quot;&quot;,
+        Remediation_Status__c != &quot;Client Moving - New State&quot;,
+	ISPICKVAL(Remediation_Outcome__c,&quot;&quot;),
+	ISCHANGED(Status),
+	ISPICKVAL(Status,&quot;Completed&quot;),
+        Remediation_Override__c = &quot;&quot;
+)</errorConditionFormula>
+    <errorMessage>If this is a remediation task, please fill out the Remediation Outcome field</errorMessage>
+</ValidationRule>

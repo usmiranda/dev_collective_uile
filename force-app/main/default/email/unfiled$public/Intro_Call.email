@@ -1,0 +1,21 @@
+Hey there,
+
+{!Task.LastModifiedBy} just completed an intro call with {!Account.Name}. Below are the results from the call:
+
+Lead Name: {!Contact.LastName}
+Call Outcome: {!Task.Intro_Call_Outcome__c}
+Email: {!Task.Contact_Email__c}
+Profession: {!Task.Profession__c}
+Lead Source: {!Task.Lead_Source__c}
+Problem they’re looking to solve: {!Task.Problem_they_re_looking_to_solve__c}
+Comments: {!Task.Description}
+
+
+{!Task.Questionnaire_Details__c}
+
+{!Opportunity.Link}
+{!Task.Link}
+
+
+thanks!
+Ops Team
