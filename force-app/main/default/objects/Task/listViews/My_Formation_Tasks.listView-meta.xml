@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>My_Formation_Tasks</fullName>
+    <columns>Priority_Score__c</columns>
+    <columns>SUBJECT</columns>
+    <columns>CORE.USERS.FULL_NAME</columns>
+    <columns>DUE_DATE</columns>
+    <columns>Current_Opp_Stage__c</columns>
+    <columns>Opportunity__c</columns>
+    <columns>Account__c</columns>
+    <filterScope>Mine</filterScope>
+    <filters>
+        <field>Process_Type__c</field>
+        <operation>equals</operation>
+        <value>Formation</value>
+    </filters>
+    <label>My Formation Tasks</label>
+</ListView>

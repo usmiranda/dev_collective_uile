@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>LLC_Info_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>LLC Info Status</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Needs Additional Info</fullName>
+                <default>false</default>
+                <label>Needs Additional Info</label>
+            </value>
+            <value>
+                <fullName>Info Complete - No Updates</fullName>
+                <default>false</default>
+                <label>Info Complete - No Updates</label>
+            </value>
+            <value>
+                <fullName>Info Complete - Only DB Updates</fullName>
+                <default>false</default>
+                <label>Info Complete - Only DB Updates</label>
+            </value>
+            <value>
+                <fullName>Info Complete - Only File Updates</fullName>
+                <default>false</default>
+                <label>Info Complete - Only File Updates</label>
+            </value>
+            <value>
+                <fullName>Info Complete -DB &amp; File Updates</fullName>
+                <default>false</default>
+                <label>Info Complete -DB &amp; File Updates</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

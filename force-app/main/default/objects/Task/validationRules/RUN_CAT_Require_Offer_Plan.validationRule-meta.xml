@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RUN_CAT_Require_Offer_Plan</fullName>
+    <active>true</active>
+    <description>https://hyketeam.atlassian.net/browse/NHP-1375
+https://docs.google.com/document/d/11un4UvcBBR2vWDl5kQy14k_sqzVqyVCaXhJlNuUSdyA/edit?pli=1#</description>
+    <errorConditionFormula>AND(
+ISCHANGED(Status),
+ISPICKVAL(Status,&quot;Completed&quot;),
+CONTAINS(Subject,&quot;Categorize Transactions&quot;),
+ISPICKVAL(Books_Bank_Reconcile__c,&quot;No&quot;),
+OR(
+
+ISPICKVAL(  Offer_BK_Plan__c  ,&quot;&quot;),
+ISBLANK(Description ),
+ISBLANK(Reconciliation_Discrepancy__c),
+(Reconciliation_Discrepancy__c = 0)
+)
+)</errorConditionFormula>
+    <errorMessage>Please fill in Offer BK Plan, Comments and Reconciliation Discrepancy Details</errorMessage>
+</ValidationRule>

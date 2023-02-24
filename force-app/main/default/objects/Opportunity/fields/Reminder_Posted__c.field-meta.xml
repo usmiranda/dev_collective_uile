@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Reminder_Posted__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>Checkbox for Overdue Reminders | if Opp is more than allowed days in existing stage</description>
+    <externalId>false</externalId>
+    <label>Reminder Posted</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Checkbox</type>
+</CustomField>

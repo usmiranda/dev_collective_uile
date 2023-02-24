@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lead_Source_for_CP_FU</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISCHANGED( StageName ),
+ISBLANK(TEXT( LeadSource )),
+OR(
+ISPICKVAL( StageName , &apos;Confirm Payment&apos;),
+ISPICKVAL( StageName , &apos;Follow Up&apos;)
+))</errorConditionFormula>
+    <errorMessage>Please select Lead Source to proceed</errorMessage>
+</ValidationRule>

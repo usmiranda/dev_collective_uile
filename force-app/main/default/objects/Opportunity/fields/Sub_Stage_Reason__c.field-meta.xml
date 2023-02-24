@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Stage_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Sub-Stage Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <controllingField>Sub_Stage__c</controllingField>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Accrual Accounting Needed</fullName>
+                <default>false</default>
+                <label>Accrual Accounting Needed</label>
+            </value>
+            <value>
+                <fullName>Bad Fit</fullName>
+                <default>false</default>
+                <label>Bad Fit</label>
+            </value>
+            <value>
+                <fullName>Bad Online Review</fullName>
+                <default>false</default>
+                <label>Bad Online Review</label>
+            </value>
+            <value>
+                <fullName>Considering self-employment</fullName>
+                <default>false</default>
+                <label>Considering self-employment</label>
+            </value>
+            <value>
+                <fullName>Crypto</fullName>
+                <default>false</default>
+                <label>Crypto</label>
+            </value>
+            <value>
+                <fullName>Dislikes all-inclusive</fullName>
+                <default>false</default>
+                <label>Dislikes all-inclusive</label>
+            </value>
+            <value>
+                <fullName>Employees</fullName>
+                <default>false</default>
+                <label>Employees</label>
+            </value>
+            <value>
+                <fullName>Foreign Assets &gt;$50k</fullName>
+                <default>false</default>
+                <label>Foreign Assets &gt;$50k</label>
+            </value>
+            <value>
+                <fullName>Inventory</fullName>
+                <default>false</default>
+                <label>Inventory</label>
+            </value>
+            <value>
+                <fullName>Job requires PLLC</fullName>
+                <default>false</default>
+                <label>Job requires PLLC</label>
+            </value>
+            <value>
+                <fullName>Looking for next project</fullName>
+                <default>false</default>
+                <label>Looking for next project</label>
+            </value>
+            <value>
+                <fullName>Low Self-Employed Profit</fullName>
+                <default>false</default>
+                <label>Low Self-Employed Profit</label>
+            </value>
+            <value>
+                <fullName>Multiple Businesses</fullName>
+                <default>false</default>
+                <label>Multiple Businesses</label>
+            </value>
+            <value>
+                <fullName>Non-Citizen</fullName>
+                <default>false</default>
+                <label>Non-Citizen</label>
+            </value>
+            <value>
+                <fullName>Passive Income</fullName>
+                <default>false</default>
+                <label>Passive Income</label>
+            </value>
+            <value>
+                <fullName>Price Too High</fullName>
+                <default>false</default>
+                <label>Price Too High</label>
+            </value>
+            <value>
+                <fullName>Sales Tax</fullName>
+                <default>false</default>
+                <label>Sales Tax</label>
+            </value>
+            <value>
+                <fullName>Stopped Responding</fullName>
+                <default>false</default>
+                <label>Stopped Responding</label>
+            </value>
+            <value>
+                <fullName>Took W-2 Job</fullName>
+                <default>false</default>
+                <label>Took W-2 Job</label>
+            </value>
+            <value>
+                <fullName>Unfiled Tax Returns</fullName>
+                <default>false</default>
+                <label>Unfiled Tax Returns</label>
+            </value>
+            <value>
+                <fullName>Unsupported Entity - Inc./S-Corp</fullName>
+                <default>false</default>
+                <label>Unsupported Entity - Inc./S-Corp</label>
+            </value>
+            <value>
+                <fullName>Unsupported Entity - MM LLC</fullName>
+                <default>false</default>
+                <label>Unsupported Entity - MM LLC</label>
+            </value>
+            <value>
+                <fullName>Unsupported Profession</fullName>
+                <default>false</default>
+                <label>Unsupported Profession</label>
+            </value>
+            <value>
+                <fullName>Unsupported State</fullName>
+                <default>false</default>
+                <label>Unsupported State</label>
+            </value>
+            <value>
+                <fullName>Using other FinTech Services</fullName>
+                <default>false</default>
+                <label>Using other FinTech Services</label>
+            </value>
+            <value>
+                <fullName>Wants to Remain - LLC/Sole-P/1099</fullName>
+                <default>false</default>
+                <label>Wants to Remain - LLC/Sole-P/1099</label>
+            </value>
+            <value>
+                <fullName>Wants to Use Local CPA</fullName>
+                <default>false</default>
+                <label>Wants to Use Local CPA</label>
+            </value>
+            <value>
+                <fullName>Not Interested (ITR not included)</fullName>
+                <default>false</default>
+                <label>Not Interested (ITR not included)</label>
+            </value>
+        </valueSetDefinition>
+        <valueSettings>
+            <controllingFieldValue>Not Ready</controllingFieldValue>
+            <valueName>Considering self-employment</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Not Ready</controllingFieldValue>
+            <valueName>Looking for next project</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Could not close</controllingFieldValue>
+            <valueName>Bad Online Review</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Could not close</controllingFieldValue>
+            <valueName>Price Too High</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Could not close</controllingFieldValue>
+            <valueName>Stopped Responding</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Could not close</controllingFieldValue>
+            <valueName>Using other FinTech Services</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Could not close</controllingFieldValue>
+            <valueName>Wants to Remain - LLC/Sole-P/1099</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Could not close</controllingFieldValue>
+            <valueName>Wants to Use Local CPA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Could not close</controllingFieldValue>
+            <valueName>Not Interested (ITR not included)</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Accrual Accounting Needed</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Bad Fit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Crypto</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Employees</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Foreign Assets &gt;$50k</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Inventory</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Job requires PLLC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Low Self-Employed Profit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Multiple Businesses</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Non-Citizen</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Passive Income</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Sales Tax</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Took W-2 Job</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Unfiled Tax Returns</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Unsupported Entity - Inc./S-Corp</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Unsupported Entity - MM LLC</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Unsupported Profession</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Unsupported State</valueName>
+        </valueSettings>
+    </valueSet>
+    <visibleLines>5</visibleLines>
+</CustomField>

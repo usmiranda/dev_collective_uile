@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Intro_Date__c</fullName>
+    <description>How long until they become paying member</description>
+    <externalId>false</externalId>
+    <formula>IF(AND( NOT(ISBLANK(First_Payment_Date__c)), NOT(ISBLANK(Intro_Call_Completed_Date__c))),First_Payment_Date__c - DATEVALUE( Intro_Call_Completed_Date__c),Null)</formula>
+    <inlineHelpText>How long until they become paying member</inlineHelpText>
+    <label>Paying Member Time</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

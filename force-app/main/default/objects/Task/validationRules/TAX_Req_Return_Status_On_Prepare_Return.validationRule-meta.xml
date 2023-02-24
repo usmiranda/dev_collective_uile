@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TAX_Req_Return_Status_On_Prepare_Return</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+	ISCHANGED(Status),
+	ISPICKVAL(Status,&quot;Completed&quot;),
+	CONTAINS(Subject,&quot;Prepare Tax Return&quot;),
+	NOT(ISPICKVAL( Tax_Return_Status__c,&quot;Completed&quot;))
+)</errorConditionFormula>
+    <errorMessage>Please fill out the Tax Return Status field with the appropriate value</errorMessage>
+</ValidationRule>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Require_Signup_Link</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+	ISBLANK(Signup_Link__c),
+	RecordType.Name = &apos;Sales&apos;,
+	$User.Email &lt;&gt; &apos;eng+api@collective.com&apos;,
+	OR(
+		ISPICKVAL(StageName , &apos;Confirm Payment&apos;) ,
+		AND(
+			ISPICKVAL(StageName ,&apos;Follow Up&apos;),
+			NOT(ISPICKVAL(Sub_Stage__c ,&apos;Prospect needs to provide more info&apos;)),
+			NOT(ISPICKVAL(Sub_Stage__c ,&apos;Re-domesticating LLC&apos;))
+		)
+	)
+)</errorConditionFormula>
+    <errorMessage>Please generate the Signup Link before updating</errorMessage>
+</ValidationRule>

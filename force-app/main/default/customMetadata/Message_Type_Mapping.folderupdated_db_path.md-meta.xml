@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomMetadata xmlns="http://soap.sforce.com/2006/04/metadata" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+    <label>folderupdated_db_path</label>
+    <protected>false</protected>
+    <values>
+        <field>External_Field_Name__c</field>
+        <value xsi:type="xsd:string">dropbox_path</value>
+    </values>
+    <values>
+        <field>Message_Type__c</field>
+        <value xsi:type="xsd:string">com_collective_member_folderupdated</value>
+    </values>
+    <values>
+        <field>Salesforce_API_Name__c</field>
+        <value xsi:type="xsd:string">Dropbox_Path__c</value>
+    </values>
+    <values>
+        <field>sObject_Outbound_Only__c</field>
+        <value xsi:nil="true"/>
+    </values>
+</CustomMetadata>

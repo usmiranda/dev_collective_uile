@@ -1,0 +1,11 @@
+Hi {!Opportunity.First_Name__c},
+
+I want to make sure you don't miss out on this new and exclusive offer! If you join this Friday by midnight, you'll get 50% off the first 2 months = $300 savings! 
+
+Use code LASTCHANCE at checkout with this link: {!Opportunity.Signup_Link__c}.  Let me know if you have any questions.
+
+
+Join us as a member today!
+
+Best,
+{!Opportunity.OwnerFirstName}

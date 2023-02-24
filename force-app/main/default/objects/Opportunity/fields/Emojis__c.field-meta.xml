@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Emojis__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( ISPICKVAL(StageName,&quot;Offboarding&quot;),
+	&quot;👋&quot;,&quot;&quot;
+)
+&amp; IF( TEXT(Remediation_Status__c) &lt;&gt; &quot;&quot;,
+	&quot;👁️👄👁️&quot;, &quot;&quot;
+)
+&amp; IF(
+	OR(
+		Record_Type_Name__c = &apos;Formation&apos;,
+		Record_Type_Name__c = &apos;Takeover&apos;,
+		Record_Type_Name__c = &apos;Onboarding&apos;,
+		Record_Type_Name__c = &apos;Training&apos;
+	),
+	&quot;🚀&quot;, &quot;&quot;
+)
+&amp; IF(Record_Type_Name__c = &apos;Running_A&apos;,
+	&quot;🅰️&quot;, &quot;&quot;
+)
+&amp; IF(Record_Type_Name__c = &apos;Running_B&apos;,
+	&quot;🅱️&quot;, &quot;&quot;
+)
+
+&amp; IF(Record_Type_Name__c = &apos;Tax Return&apos;,
+	&quot;&quot;, &quot;&quot;
+)
+&amp; IF(
+	 INCLUDES(Member_Flags__c,&quot;Check Member Notes&quot;),
+	 &quot; 🔍🇳 &quot;,&quot;&quot;
+)
+&amp; IF(
+	 INCLUDES(Member_Flags__c,&quot;Don&apos;t Touch QBO&quot;),
+	 &quot;🇩&quot;,&quot;&quot;
+)
+&amp; IF(
+	 INCLUDES(Member_Flags__c,&quot;Prefers Email&quot;),
+	 &quot;📠&quot;,&quot;&quot;
+)
+&amp; IF(
+	 INCLUDES(Member_Flags__c,&quot;VIP&quot;),
+	 &quot;🤩&quot;,&quot;&quot;
+)</formula>
+    <label>Emojis</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

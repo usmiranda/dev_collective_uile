@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionCalls>
+        <name>Post_Stage_Updates</name>
+        <label>Post_Stage_Updates</label>
+        <locationX>1260</locationX>
+        <locationY>443</locationY>
+        <actionName>slackv2__invokePostMessage</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>message</name>
+            <value>
+                <elementReference>opp_stage_updates</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>messageDestinationId</name>
+            <value>
+                <stringValue>a025x00000mDpLJAA0</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Send_Closed_Won_Notice</name>
+        <label>Send_Closed_Won_Notice</label>
+        <locationX>947</locationX>
+        <locationY>553</locationY>
+        <actionName>Opportunity.Opportunity_Closed_Won</actionName>
+        <actionType>emailAlert</actionType>
+        <connector>
+            <targetReference>Slack_Post_Won_Message</targetReference>
+        </connector>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>SObjectRowId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <actionCalls>
+        <name>Slack_Post_Won_Message</name>
+        <label>Slack: Post Won Message</label>
+        <locationX>953</locationX>
+        <locationY>743</locationY>
+        <actionName>slackv2__invokePostMessage</actionName>
+        <actionType>apex</actionType>
+        <flowTransactionModel>CurrentTransaction</flowTransactionModel>
+        <inputParameters>
+            <name>message</name>
+            <value>
+                <elementReference>ClosedWonMessage</elementReference>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>messageDestinationId</name>
+            <value>
+                <stringValue>a025x00000mDpyJAAS</stringValue>
+            </value>
+        </inputParameters>
+        <inputParameters>
+            <name>recordId</name>
+            <value>
+                <elementReference>$Record.Id</elementReference>
+            </value>
+        </inputParameters>
+    </actionCalls>
+    <apiVersion>54.0</apiVersion>
+    <constants>
+        <name>SalesRecType</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Sales</stringValue>
+        </value>
+    </constants>
+    <decisions>
+        <name>Decision</name>
+        <label>Decision</label>
+        <locationX>936</locationX>
+        <locationY>351</locationY>
+        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
+        <rules>
+            <name>Opp_Stage_Update</name>
+            <conditionLogic>(1 AND 5 AND(2 OR 3 OR 4))</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>SalesRecType</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Confirm Payment</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Follow Up</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Closed Lost</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$User.Email</leftValueReference>
+                <operator>NotEqualTo</operator>
+                <rightValue>
+                    <elementReference>eng_api_email</elementReference>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Post_Stage_Updates</targetReference>
+            </connector>
+            <label>Stage Update</label>
+        </rules>
+        <rules>
+            <name>Closed_Won</name>
+            <conditionLogic>and</conditionLogic>
+            <conditions>
+                <leftValueReference>$Record.RecordType.DeveloperName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <elementReference>SalesRecType</elementReference>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>EqualTo</operator>
+                <rightValue>
+                    <stringValue>Closed Won</stringValue>
+                </rightValue>
+            </conditions>
+            <conditions>
+                <leftValueReference>$Record.StageName</leftValueReference>
+                <operator>IsChanged</operator>
+                <rightValue>
+                    <booleanValue>true</booleanValue>
+                </rightValue>
+            </conditions>
+            <connector>
+                <targetReference>Send_Closed_Won_Notice</targetReference>
+            </connector>
+            <label>Closed Won</label>
+        </rules>
+    </decisions>
+    <environments>Default</environments>
+    <formulas>
+        <name>ClosedWonMessage</name>
+        <dataType>String</dataType>
+        <expression>&quot;Closed Won Opportunity !!!&quot; + BR() &amp;
+&quot;Closed By: &quot; + {!$Record.Owner.FirstName} +&quot; &quot; + {!$Record.Owner.LastName} + BR() &amp;
+&quot;Close Date: &quot;+ TEXT({!$Record.First_Payment_Date__c}) + BR() &amp;
+&quot;Lead Source: &quot; + TEXT({!$Record.LeadSource}) + BR() &amp;
+&quot;State of Business: &quot; + {!$Record.Account.State_of_Business__c} + BR() &amp;
+&quot;Description: &quot; + {!$Record.Description}</expression>
+    </formulas>
+    <formulas>
+        <name>opp_stage_updates</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Name} + &quot; is moved from &quot; + 
+TEXT({!$Record__Prior.StageName}) + &quot; to &quot; + TEXT({!$Record.StageName}) + BR() &amp;
+&quot;Sub Stage: &quot;  + TEXT({!$Record.Sub_Stage__c}) + BR() &amp;
+&quot;Sub Stage Reason: &quot; + 
+IF ( INCLUDES ( {!$Record.Sub_Stage_Reason__c} , &quot;Considering self-employment&quot;),&quot;Considering self-employment - &quot;,null)&amp;
+IF ( INCLUDES ( {!$Record.Sub_Stage_Reason__c} , &quot;Looking for next project&quot;),&quot;Looking for next project - &quot;,null)&amp;
+IF ( INCLUDES ( {!$Record.Sub_Stage_Reason__c} , &quot;Wants to Remain - LLC/Sole-P/1099&quot;),&quot;Wants to Remain - LLC/Sole-P/1099 - &quot;,null)&amp;
+IF ( INCLUDES ( {!$Record.Sub_Stage_Reason__c} , &quot;Wants to Use Local CPA&quot;),&quot;Wants to Use Local CPA - &quot;,null)&amp;
+IF ( INCLUDES ( {!$Record.Sub_Stage_Reason__c} , &quot;Using other FinTech Services&quot;),&quot;Using other FinTech Services - &quot;,null)&amp;
+IF ( INCLUDES ( {!$Record.Sub_Stage_Reason__c} , &quot;Price Too High&quot;),&quot;Price Too High - &quot;,null)&amp;
+IF ( INCLUDES ( {!$Record.Sub_Stage_Reason__c} , &quot;Unsupported Entity - Inc./S-Corp&quot;),&quot;Unsupported Entity - Inc./S-Corp - &quot;,null)&amp;
+IF ( INCLUDES ( {!$Record.Sub_Stage_Reason__c} , &quot;Unsupported Entity - MM LLC&quot;),&quot;Unsupported Entity - MM LLC - &quot;,null)&amp;
+IF ( INCLUDES ( {!$Record.Sub_Stage_Reason__c} , &quot;Job requires PLLC&quot;),&quot;Job requires PLLC - &quot;,null)&amp;
+IF ( INCLUDES ( {!$Record.Sub_Stage_Reason__c} , &quot;Unsupported State&quot;),&quot;Unsupported State - &quot;,null)&amp;
+IF ( INCLUDES ( {!$Record.Sub_Stage_Reason__c} , &quot;Low Self-Employed Profit&quot;),&quot;Low Self-Employed Profit - &quot;,null)&amp;
+IF ( INCLUDES ( {!$Record.Sub_Stage_Reason__c} , &quot;Unfiled Tax Returns&quot;),&quot;Unfiled Tax Returns - &quot;,null)&amp;
+IF ( INCLUDES ( {!$Record.Sub_Stage_Reason__c} , &quot;Unsupported Profession&quot;),&quot;Unsupported Profession - &quot;,null)&amp;
+IF ( INCLUDES ( {!$Record.Sub_Stage_Reason__c} , &quot;Sales Tax&quot;),&quot;Sales Tax - &quot;,null)&amp;
+IF ( INCLUDES ( {!$Record.Sub_Stage_Reason__c} , &quot;Non-Citizen&quot;),&quot;Non-Citizen - &quot;,null)&amp;
+IF ( INCLUDES ( {!$Record.Sub_Stage_Reason__c} , &quot;Employees&quot;),&quot;Employees - &quot;,null)&amp;
+IF ( INCLUDES ( {!$Record.Sub_Stage_Reason__c} , &quot;Foreign Assets &gt;$50k&quot;),&quot;Foreign Assets &gt;$50k - &quot;,null)&amp;
+IF ( INCLUDES ( {!$Record.Sub_Stage_Reason__c} , &quot;Inventory&quot;),&quot;Inventory - &quot;,null)&amp;
+IF ( INCLUDES ( {!$Record.Sub_Stage_Reason__c} , &quot;Passive Income&quot;),&quot;Passive Income - &quot;,null)&amp;
+IF ( INCLUDES ( {!$Record.Sub_Stage_Reason__c} , &quot;Took W-2 Job&quot;),&quot;Took W-2 Job - &quot;,null)&amp;
+IF ( INCLUDES ( {!$Record.Sub_Stage_Reason__c} , &quot;Crypto&quot;),&quot;Crypto - &quot;,null)&amp;
+IF ( INCLUDES ( {!$Record.Sub_Stage_Reason__c} , &quot;Accrual Accounting Needed&quot;),&quot;Accrual Accounting Needed - &quot;,null)&amp;
+IF ( INCLUDES ( {!$Record.Sub_Stage_Reason__c} , &quot;Multiple Businesses&quot;),&quot;Multiple Businesses - &quot;,null)&amp;
+IF ( INCLUDES ( {!$Record.Sub_Stage_Reason__c} , &quot;Considering self-employment&quot;),&quot;Considering self-employment - &quot;,null)&amp;
+IF ( INCLUDES ( {!$Record.Sub_Stage_Reason__c} , &quot;Dislikes all-inclusive&quot;),&quot;Dislikes all-inclusive - &quot;,null)&amp;
+IF ( INCLUDES ( {!$Record.Sub_Stage_Reason__c} , &quot;Stopped Responding&quot;),&quot;Stopped Responding - &quot;,null)&amp;
+IF ( INCLUDES ( {!$Record.Sub_Stage_Reason__c} , &quot;Bad Fit&quot;),&quot;Bad Fit - &quot;,null)  + BR() &amp;
+&quot;Lead Source: &quot; + TEXT({!$Record.LeadSource}) + BR() &amp;
+&quot;Description: &quot; + {!$Record.Description}</expression>
+    </formulas>
+    <interviewLabel>Sales Opportunity - Stage Change Email {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Sales Opportunity - Stage Change Email</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <start>
+        <locationX>1112</locationX>
+        <locationY>49</locationY>
+        <connector>
+            <targetReference>Decision</targetReference>
+        </connector>
+        <filterLogic>or</filterLogic>
+        <filters>
+            <field>StageName</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+    <textTemplates>
+        <name>email_template_opp_changed</name>
+        <isViewedAsPlainText>false</isViewedAsPlainText>
+        <text>&lt;p&gt;Hello!&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;The Opportunity {!$Record.Name} belonging to {!$Record.Owner.Name} was updated.&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;Stage: {!$Record.StageName}&lt;/p&gt;&lt;p&gt;Sub-Stage: {!$Record.Sub_Stage__c}&lt;/p&gt;&lt;p&gt;Sub-Stage Reason: {!$Record.Sub_Stage_Reason__c}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;You can check more details here: {!$Record.Lighting_URL__c}&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;&lt;p&gt;SFDC Team&lt;/p&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;</text>
+    </textTemplates>
+    <variables>
+        <name>eng_api_email</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>eng+api@collective.com</stringValue>
+        </value>
+    </variables>
+    <variables>
+        <name>recipients_email</name>
+        <dataType>String</dataType>
+        <isCollection>false</isCollection>
+        <isInput>false</isInput>
+        <isOutput>false</isOutput>
+        <value>
+            <stringValue>umiranda@collective.com</stringValue>
+        </value>
+    </variables>
+</Flow>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Plan_needed_for_Manual_Stage_Change</fullName>
+    <active>true</active>
+    <description>https://collectivehub.atlassian.net/browse/ON-1119</description>
+    <errorConditionFormula>AND(
+ISCHANGED( StageName ),
+ISPICKVAL(PRIORVALUE( StageName) , &apos;Scheduling&apos;),
+ISPICKVAL( Plan__c,&quot;&quot; ),
+NOT( $Permission.Manual_Opp_Plan_Update )
+
+)</errorConditionFormula>
+    <errorMessage>Please select the Plan to proceed</errorMessage>
+</ValidationRule>

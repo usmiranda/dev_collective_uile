@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ListView xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Remedaition_Opps</fullName>
+    <columns>OPPORTUNITY.NAME</columns>
+    <columns>Remediation_Status__c</columns>
+    <columns>Record_Type_Name__c</columns>
+    <columns>OPPORTUNITY.STAGE_NAME</columns>
+    <columns>CORE.USERS.ALIAS</columns>
+    <columns>Time_in_Remediation__c</columns>
+    <filterScope>Everything</filterScope>
+    <filters>
+        <field>Remediation_Status__c</field>
+        <operation>equals</operation>
+        <value>Payment Problem,Missed Quarterly Check ins,Onboarding Stalled,Unhappy Client,Churn Risk</value>
+    </filters>
+    <label>Remedaition Opps</label>
+</ListView>

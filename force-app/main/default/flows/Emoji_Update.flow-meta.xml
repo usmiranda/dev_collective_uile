@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>53.0</apiVersion>
+    <formulas>
+        <name>Emoji</name>
+        <dataType>String</dataType>
+        <expression>IF( ISPICKVAL({!$Record.StageName},&quot;Offboarding&quot;),
+	&quot;👋&quot;,&quot;&quot;
+)
+&amp; IF( TEXT({!$Record.Remediation_Status__c}) &lt;&gt; &quot;&quot;,
+	&quot;👁️👄👁️&quot;, &quot;&quot;
+)
+&amp; IF(
+	OR(
+		CASESAFEID( {!$Record.RecordType.Id} )  = &apos;0126g0000001y5uAAA&apos;,
+		CASESAFEID( {!$Record.RecordType.Id} ) = &apos;0126g000000228rAAA&apos;,
+		CASESAFEID( {!$Record.RecordType.Id}) = &apos;0126g0000001y5zAAA&apos;
+		
+	),
+	&quot;🚀&quot;, &quot;&quot;
+)
+&amp; IF(CASESAFEID( {!$Record.RecordType.Id}) = &apos;0126g0000002TGjAAM&apos;,
+	&quot;🅰️&quot;, &quot;&quot;
+)
+&amp; IF(CASESAFEID( {!$Record.RecordType.Id} ) = &apos;0125x000000QOmRAAW&apos;,
+	&quot;🅱️&quot;, &quot;&quot;
+)
+&amp; IF(
+	 INCLUDES({!$Record.Member_Flags__c},&quot;Don&apos;t Touch QBO&quot;),
+	 &quot;🇩&quot;,&quot;&quot;
+)
+
+&amp; IF(
+	 INCLUDES({!$Record.Member_Flags__c},&quot;VIP&quot;),
+	 &quot;🤩&quot;,&quot;&quot;
+)</expression>
+    </formulas>
+    <interviewLabel>Emoji Update {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>Emoji Update</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Emoji_Update</name>
+        <label>Emoji Update</label>
+        <locationX>242</locationX>
+        <locationY>340</locationY>
+        <inputAssignments>
+            <field>Test_Field__c</field>
+            <value>
+                <elementReference>Emoji</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>50</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Emoji_Update</targetReference>
+        </connector>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>StageName</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordBeforeSave</triggerType>
+    </start>
+    <status>Obsolete</status>
+</Flow>

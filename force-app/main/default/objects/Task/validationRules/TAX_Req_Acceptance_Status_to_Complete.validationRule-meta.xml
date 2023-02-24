@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TAX_Req_Acceptance_Status_to_Complete</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+	ISCHANGED(Status),
+	ISPICKVAL(Status,&quot;Completed&quot;),
+	CONTAINS(Subject,&quot;Confirm Acceptance&quot;),
+	OR(
+		AND(
+			NOT(ISPICKVAL(Return_in_Dropbox__c,&quot;Saved&quot;)),
+			ISPICKVAL(Acceptance_Status__c,&quot;Accepted&quot;)
+		),
+		ISPICKVAL(Acceptance_Status__c,&quot;&quot;)
+	)
+)</errorConditionFormula>
+    <errorMessage>To Complete, Returns in Dropbox must be Saved and Acceptance Status must be Accepted</errorMessage>
+</ValidationRule>

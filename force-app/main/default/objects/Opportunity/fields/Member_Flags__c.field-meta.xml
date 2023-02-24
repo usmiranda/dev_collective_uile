@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Member_Flags__c</fullName>
+    <externalId>false</externalId>
+    <label>Member Flags</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Declined Bookkeeping</fullName>
+                <default>false</default>
+                <label>Declined Bookkeeping</label>
+            </value>
+            <value>
+                <fullName>Don&apos;t Touch QBO</fullName>
+                <default>false</default>
+                <label>Don&apos;t Touch QBO</label>
+            </value>
+            <value>
+                <fullName>VIP</fullName>
+                <default>false</default>
+                <label>VIP</label>
+            </value>
+            <value>
+                <fullName>Incidental Sales Tax</fullName>
+                <default>false</default>
+                <label>Incidental Sales Tax</label>
+            </value>
+            <value>
+                <fullName>1040 Opt Out</fullName>
+                <default>false</default>
+                <label>1040 Opt Out</label>
+            </value>
+            <value>
+                <fullName>1040 Opt Out - PY Unfiled Returns</fullName>
+                <default>false</default>
+                <label>1040 Opt Out - PY Unfiled Returns</label>
+            </value>
+            <value>
+                <fullName>Foreign Activity Acknowledgement Received</fullName>
+                <default>false</default>
+                <label>Foreign Activity Acknowledgement Received</label>
+            </value>
+            <value>
+                <fullName>Re-Domesticating</fullName>
+                <default>false</default>
+                <label>Re-Domesticating</label>
+            </value>
+            <value>
+                <fullName>Dormant Member Churn Candidate</fullName>
+                <default>false</default>
+                <label>Dormant Member Churn Candidate</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

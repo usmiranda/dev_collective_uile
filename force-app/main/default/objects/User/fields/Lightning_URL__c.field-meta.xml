@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Lightning_URL__c</fullName>
+    <externalId>false</externalId>
+    <formula>HYPERLINK(
+    &quot;https://hyke.lightning.force.com/lightning/r/USer/&quot; &amp; Id &amp; &quot;/view&quot;,&quot;https://hyke.lightning.force.com/lightning/r/USer/&quot; &amp; Id &amp; &quot;/view&quot;
+)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>Lightning URL</label>
+    <required>false</required>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

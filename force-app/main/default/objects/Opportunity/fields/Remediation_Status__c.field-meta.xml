@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Remediation_Status__c</fullName>
+    <externalId>false</externalId>
+    <label>Remediation Status</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Payment Problem</fullName>
+                <default>false</default>
+                <label>Payment Problem</label>
+            </value>
+            <value>
+                <fullName>Missed Quarterly Check ins</fullName>
+                <default>false</default>
+                <label>Missed Quarterly Check ins</label>
+            </value>
+            <value>
+                <fullName>Onboarding Stalled</fullName>
+                <default>false</default>
+                <label>Onboarding Stalled</label>
+            </value>
+            <value>
+                <fullName>Unhappy Client</fullName>
+                <default>false</default>
+                <label>Unhappy Client</label>
+            </value>
+            <value>
+                <fullName>Churn Risk</fullName>
+                <default>false</default>
+                <label>Churn Risk</label>
+            </value>
+            <value>
+                <fullName>Client Moving - New State</fullName>
+                <default>false</default>
+                <label>Client Moving - New State</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

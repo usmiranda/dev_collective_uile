@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>State_Abbreviation__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(LEn(BillingState)=2,
+BillingState,
+CASE(
+    BillingState,
+    &quot;California&quot;,&quot;CA&quot;,
+    &quot;Washington&quot;,&quot;WA&quot;,
+    &quot;Virginia&quot;,&quot;VA&quot;,
+    &quot;Massachusetts&quot;,&quot;MA&quot;,
+    &quot;Utah&quot;,&quot;UT&quot;,
+    &quot;Texas&quot;,&quot;TX&quot;,
+    &quot;Arizona&quot;,&quot;AZ&quot;,
+    &quot;Georgia&quot;,&quot;GA&quot;,
+    &quot;Florida&quot;,&quot;FL&quot;,
+    &quot;Pennsylvania&quot;,&quot;PA&quot;,
+    &quot;&quot;
+))</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>State Abbreviation</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

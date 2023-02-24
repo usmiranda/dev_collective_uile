@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>EIN_Filing_Outcome__c</fullName>
+    <externalId>false</externalId>
+    <label>EIN Filing Outcome</label>
+    <required>false</required>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Approved</fullName>
+                <default>false</default>
+                <label>Approved</label>
+            </value>
+            <value>
+                <fullName>Disapproved - Wrong Information</fullName>
+                <default>false</default>
+                <label>Disapproved - Wrong Information</label>
+            </value>
+            <value>
+                <fullName>Disapproved - Previous EIN Application</fullName>
+                <default>false</default>
+                <label>Disapproved - Previous EIN Application</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

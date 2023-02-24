@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Update_Citizenship_Field</fullName>
+        <field>Citizenship__c</field>
+        <formula>&quot;United States&quot;</formula>
+        <name>Update Citizenship Field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <outboundMessages>
+        <fullName>HS_OB_Msg_Contact</fullName>
+        <apiVersion>55.0</apiVersion>
+        <endpointUrl>https://hooks.zapier.com/hooks/catch/9428824/b0u8ngf/</endpointUrl>
+        <fields>AccountId</fields>
+        <fields>CaseSafe_ID__c</fields>
+        <fields>Citizenship__c</fields>
+        <fields>Do_Not_Contact__c</fields>
+        <fields>Email</fields>
+        <fields>Facebook__c</fields>
+        <fields>FirstName</fields>
+        <fields>Has_Ever_Attended_Webinar__c</fields>
+        <fields>Id</fields>
+        <fields>Instagram__c</fields>
+        <fields>LastName</fields>
+        <fields>LinkedIn__c</fields>
+        <fields>MobilePhone</fields>
+        <fields>Preferred_Name__c</fields>
+        <fields>Profit__c</fields>
+        <fields>Secondary_Email__c</fields>
+        <fields>Tc_Services_Type__c</fields>
+        <fields>Tc_State__c</fields>
+        <includeSessionId>true</includeSessionId>
+        <integrationUser>sfdcautomation@collective.com</integrationUser>
+        <name>HS OB Msg Contact</name>
+        <protected>false</protected>
+        <useDeadLetterQueue>false</useDeadLetterQueue>
+    </outboundMessages>
+    <rules>
+        <fullName>Contact%3A Rename Citizenship Field</fullName>
+        <actions>
+            <name>Update_Citizenship_Field</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>AND(
+     Citizenship__c  &lt;&gt; &quot; &quot;,
+
+    OR(
+       Citizenship__c = &quot;U.S&quot;,
+       Citizenship__c = &quot;U.S.A&quot;,
+       Citizenship__c = &quot;American&quot;, 
+       Citizenship__c = &quot;US&quot;,
+       Citizenship__c = &quot;USA&quot;,
+       Citizenship__c = &quot;United States of America&quot;,
+       Citizenship__c = &quot;America&quot;
+    )
+)</formula>
+        <triggerType>onCreateOrTriggeringUpdate</triggerType>
+    </rules>
+</Workflow>

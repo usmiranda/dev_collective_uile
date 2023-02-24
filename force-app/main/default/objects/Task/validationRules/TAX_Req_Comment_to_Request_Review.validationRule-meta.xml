@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TAX_Req_Comment_to_Request_Review</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISCHANGED(Tax_Return_Status__c),
+ISPICKVAL(Tax_Return_Status__c,&quot;Review Requested&quot;),
+ISBLANK( Description)
+)</errorConditionFormula>
+    <errorMessage>Please put your notes in the Comment field so Andrew knows what you need</errorMessage>
+</ValidationRule>

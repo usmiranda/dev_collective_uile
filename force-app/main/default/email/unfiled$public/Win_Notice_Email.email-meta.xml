@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>Win Notice - NHP-665</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>Win Notice Email</name>
+    <style>none</style>
+    <subject>{!Opportunity.Account} was just closed by {!Opportunity.Tax_Advisor__c} on {!Opportunity.First_Payment_Date__c}</subject>
+    <type>text</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

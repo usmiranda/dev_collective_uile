@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <description>USed for sending file requests to members</description>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <name>File Request Standard</name>
+    <style>none</style>
+    <subject>{!Dropbox_File_Request__c.Subject__c}</subject>
+    <type>custom</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

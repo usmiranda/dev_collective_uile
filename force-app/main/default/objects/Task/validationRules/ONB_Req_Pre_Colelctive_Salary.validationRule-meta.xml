@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ONB_Req_Pre_Colelctive_Salary</fullName>
+    <active>false</active>
+    <description>https://hyketeam.atlassian.net/browse/NHP-1036</description>
+    <errorConditionFormula>AND(
+ISCHANGED( Status ),
+ISPICKVAL( Opportunity__r.Plan__c ,&quot;SP -&gt; SC&quot;),
+ISPICKVAL(Status,&quot;Completed&quot;), 
+CONTAINS( Subject ,&quot;Setup Accounting Software&quot;),
+OR(
+ISBLANK( Pre_Collective_Income__c ),
+Pre_Collective_Income__c = 0
+)
+)</errorConditionFormula>
+    <errorMessage>Please put in Pre-Collective Income</errorMessage>
+</ValidationRule>

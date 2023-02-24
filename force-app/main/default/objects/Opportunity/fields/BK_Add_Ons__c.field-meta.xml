@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BK_Add_Ons__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(INCLUDES( Account.BK_Add_Ons__c ,&quot;Additional accounts to reconcile&quot;),&quot;Additional accounts to reconcile&quot;,Null)&amp;
+IF(INCLUDES( Account.BK_Add_Ons__c ,&quot;Transaction volume over maximum&quot;),&quot;Transaction volume over maximum&quot;,Null)&amp;&quot; | &quot;&amp;
+IF(INCLUDES( Account.BK_Add_Ons__c ,&quot;Inputting customer invoices, sending reminders&quot;),&quot;Inputting customer invoices, sending reminders&quot;,Null)&amp;&quot; | &quot;&amp;
+IF(INCLUDES( Account.BK_Add_Ons__c ,&quot;Bill payments&quot;),&quot;Bill payments&quot;,Null)</formula>
+    <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+    <label>BK Add-Ons</label>
+    <required>false</required>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Text</type>
+    <unique>false</unique>
+</CustomField>

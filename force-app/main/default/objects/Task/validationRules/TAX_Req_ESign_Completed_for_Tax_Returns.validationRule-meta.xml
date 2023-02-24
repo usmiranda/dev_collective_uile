@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>TAX_Req_ESign_Completed_for_Tax_Returns</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+	ISCHANGED(Status),
+	ISPICKVAL(Status,&quot;Completed&quot;),
+	CONTAINS(Subject,&quot;Confirm ESignature&quot;),
+	NOT(ISPICKVAL( Intuit_ESignature_Status__c, &quot;Received&quot;))
+)</errorConditionFormula>
+    <errorMessage>Please fill out the Intuit ESignature Status field to continue. It should be marked as &quot;Received&quot;</errorMessage>
+</ValidationRule>

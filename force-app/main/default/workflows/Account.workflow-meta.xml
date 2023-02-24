@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Workflow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldUpdates>
+        <fullName>Fix_Billing_Street</fullName>
+        <field>BillingStreet</field>
+        <formula>SUBSTITUTE(BillingStreet, &quot;DriveApt/Unit &quot;, &quot;#&quot;)</formula>
+        <name>Fix Billing Street</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Fix_Home_Address</fullName>
+        <field>Home_Address__c</field>
+        <formula>SUBSTITUTE(Home_Address__c, &quot;DriveApt/Unit &quot;, &quot;#&quot;)</formula>
+        <name>Fix Home Address</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>Formula</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>false</reevaluateOnChange>
+    </fieldUpdates>
+    <fieldUpdates>
+        <fullName>Tax_Pro_Opp_Field</fullName>
+        <field>Tax_Advisor__c</field>
+        <name>Tax Pro Opp Field</name>
+        <notifyAssignee>false</notifyAssignee>
+        <operation>LookupValue</operation>
+        <protected>false</protected>
+        <reevaluateOnChange>true</reevaluateOnChange>
+    </fieldUpdates>
+    <rules>
+        <fullName>Act%3A Fix Address</fullName>
+        <actions>
+            <name>Fix_Billing_Street</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <actions>
+            <name>Fix_Home_Address</name>
+            <type>FieldUpdate</type>
+        </actions>
+        <active>true</active>
+        <formula>OR(
+CONTAINS( BillingStreet ,&quot;DriveApt/Unit &quot;),
+CONTAINS( Home_Address__c ,&quot;DriveApt/Unit &quot;)
+)</formula>
+        <triggerType>onAllChanges</triggerType>
+    </rules>
+</Workflow>
