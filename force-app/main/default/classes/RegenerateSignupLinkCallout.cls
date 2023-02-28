@@ -6,7 +6,7 @@ public without sharing class RegenerateSignupLinkCallout {
         Connection_Settings__c acqFormAuth = Connection_Settings__c.getValues('AcquisitionFormRequest');
         String memberEmail = opp.Email__c;
         System.debug('memberEmail: ' + memberEmail);
-        System.debug('acqFormAuth: ' + acqFormAuth);
+        
         Http h = new Http();
         
         HttpRequest req = new HttpRequest();
