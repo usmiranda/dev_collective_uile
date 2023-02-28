@@ -2,8 +2,8 @@ name: Staging-Pull-Request-Deployment
 on:
   push:
     branches: [main]
-    #paths:
-    #  - "force-app/**"
+    paths:
+      - "force-app/**"
 jobs:
   StagingPullRequestDeployment:
     runs-on: ubuntu-latest
@@ -15,8 +15,9 @@ jobs:
       - name: Checking the branch and the package file
         run: |
           fullName=${{ github.head_ref || github.ref_name }}
+
           echo "Full branch name ${fullName}"
-          reducedName=$(echo $fullName | grep -o "${{github.head_ref}}")
+          reducedName=$(echo $fullName | grep -o "${{github.event.pull_request.head.label}}")
           echo "Reduced name" $reducedName
           finalBranchName=$(echo $reducedName | grep -o "/.*")
           finalBranchName=${finalBranchName:1}
