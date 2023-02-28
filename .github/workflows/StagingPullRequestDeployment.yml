@@ -60,7 +60,7 @@ jobs:
           SERVER_KEY_CERTIFICATE: ${{ secrets.SERVER_KEY_CERTIFICATE }}
         run: |
           echo "$SERVER_KEY_CERTIFICATE" > ./JWT/connectionFile
-          sfdx auth:jwt:grant -i $DEV_CONSUMER_KEY -f JWT/connectionFile -u $DEV_USER_ADMIN -s -r $DEV_INSTANCE_URL -a DeploymetOrg
+          sfdx auth:jwt:grant -i $DEV_CONSUMER_KEY -f JWT/connectionFile -u $DEV_USER_ADMIN -s -r $DEV_INSTANCE_URL -a DeploymentOrg
           rm -rf JWT
       - name: Removing existing older folder
         run: rm -rf Deploy
