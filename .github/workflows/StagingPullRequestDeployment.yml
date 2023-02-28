@@ -14,7 +14,8 @@ jobs:
           node-version: '14'
       - name: Checking the branch and the package file
         run: |
-          fullName=${{github.event.pull_request.head.label}}
+          fullName=${{ github.head_ref || github.ref_name }}
+
           echo "Full branch name ${fullName}"
           reducedName=$(echo $fullName | grep -o "${{github.event.pull_request.head.label}}")
           echo "Reduced name" $reducedName
