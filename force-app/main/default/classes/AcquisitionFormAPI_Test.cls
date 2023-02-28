@@ -26,7 +26,7 @@ public class AcquisitionFormAPI_Test {
     @testSetup static void setupData() {
         
         Account testAccount = New Account(Name = ACCOUNT_NAME, State_of_Business__c = 'California', Original_Entity_Type__c = 'SP -> SC', Tax_Calc_Discount_Code__c = 'ABCDEF0', Tax_Calculator_ID__c = '123456');
-        insert testAccount1;                
+        insert testAccount;                
         
         Contact testContact = New Contact(AccountId = testAccount.Id, FirstName = 'Test', LastName = 'Account', Email = 'testAccount@testing.net', Secondary_Email__c = 'testAccount1234@testing.net');
         insert testContact;
