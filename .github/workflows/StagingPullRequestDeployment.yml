@@ -23,7 +23,7 @@ jobs:
           echo "Final branch name: => " $finalBranchName
 
           packageFileName="manifest/package-$finalBranchName.xml"
-          echo "package File Name $packageFileName"
+          echo "package File Name: -> $packageFileName"
           echo "Checking if the package exists"
           if [[ -f $packageFileName  ]]; then
             echo "The package file exist, continuing the process!"
