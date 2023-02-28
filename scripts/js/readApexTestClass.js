@@ -1,76 +1,52 @@
-name: Staging-Pull-Request-Deployment
-on:
-  push:
-    branches: [main]
-    #paths:
-    #  - "force-app/**"
-jobs:
-  StagingPullRequestDeployment:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '14'
-      - name: Checking the branch and the package file
-        run: |
-          fullName=${{github.head_ref}}
-          echo "Full branch name ${fullName}"
-          reducedName=$(echo $fullName | grep -o "${{github.head_ref}}")
-          echo "Reduced name" $reducedName
-          finalBranchName=$(echo $reducedName | grep -o "/.*")
-          finalBranchName=${finalBranchName:1}
-          echo "Final branch name: => " $finalBranchName
+const path = require('path');
+const fs = require('fs');
+const xml2js = require('xml2js');
 
-          packageFileName="manifest/package-$finalBranchName.xml"
-          echo "package File Name $packageFileName"
-          echo "Checking if the package exists"
-          if [[ -f $packageFileName  ]]; then
-            echo "The package file exist, continuing the process!"
-          else
-            echo "The package file does not exist, the process will fail!"
-          fi
+async function getApexTestClass(manifestpath){
+    var classesPath = 'force-app/main/default/classes';
 
-          echo "PACKAGE_FILE_NAME=$packageFileName" >> $GITHUB_ENV;
-      - name: Install sfdx CLI
-        run: npm install sfdx-cli --global
-      - name: Check CLI the version
-        run: sfdx -v
-      - name: Installing xml2js
-        run: npm install xml2js
-      - name: Reading package test classes
-        run: |
-          SFDX_SPECIFIC_TEST_FOUND=$(node ./scripts/js/readApexTestClass.js "${{ env.PACKAGE_FILE_NAME }}");
-          echo "SFDX_SPECIFIC_TEST_FOUND=$SFDX_SPECIFIC_TEST_FOUND" >> $GITHUB_ENV;
-      - name: Defining the test command
-        run: |
-          if [ -z "${{ env.SFDX_SPECIFIC_TEST_FOUND }}" ]
-          then
-            echo "There is no test classes"
-            SFDX_RUN_TEST_LEVEL="-l NoTestRun"
-          else
-            SFDX_RUN_TEST_LEVEL="-l RunSpecifiedTests -r ${{ env.SFDX_SPECIFIC_TEST_FOUND }}"
-          fi
-          echo "SFDX_RUN_TEST_LEVEL=$SFDX_RUN_TEST_LEVEL" >> $GITHUB_ENV;
-      - name: Printing specific test classes found
-        run: |
-          echo "Specific test classes to run: ${{ env.SFDX_RUN_TEST_LEVEL }}"
-      - name: Login in the environment
-        env:
-          UAT_USER_ADMIN: ${{ secrets.UAT_USER_ADMIN }}
-          UAT_CONSUMER_KEY: ${{ secrets.UAT_CONSUMER_KEY }}
-          UAT_SANDBOX_INSTANCE_URL: ${{ secrets.UAT_SANDBOX_INSTANCE_URL }}
-          SERVER_KEY_CERTIFICATE: ${{ secrets.SERVER_KEY_CERTIFICATE }}
-        run: |
-          echo "$SERVER_KEY_CERTIFICATE" > ./JWT/connectionFile
-          sfdx auth:jwt:grant -i $UAT_CONSUMER_KEY -f JWT/connectionFile -u $UAT_USER_ADMIN -s -r $UAT_SANDBOX_INSTANCE_URL -a DeploymetOrg
-          rm -rf JWT
-      - name: Removing existing older folder
-        run: rm -rf Deploy
-      - name: Converting the package
-        run: sfdx force:source:convert -r force-app/ -d Deploy -x "${{ env.PACKAGE_FILE_NAME }}"
-      - name: Deploying the package file
-        if: github.event.pull_request.merged == true
-        run: |
-          echo "Doing the real deployment in the environment"
-          sfdx force:mdapi:deploy -d Deploy/ -w -1 ${{ env.SFDX_RUN_TEST_LEVEL }}
+    var parser = new xml2js.Parser();
+    var typeTmp = null;
+    var classes = null;
+    var classNameTmp = null;
+    var testClasses = [];
+    var xml = fs.readFileSync(manifestpath, "utf8");
+    var fileContentTmp = null;
+
+    parser.parseString(xml, function (err, result) {
+        for(var i in result.Package.types){
+            typeTmp = result.Package.types[i];
+            //console.log('typeTmp ', typeTmp)
+            if("ApexClass" === typeTmp.name[0]){
+                classes = typeTmp.members;
+                //console.log('classes ', classes)
+            }
+        }
+    });
+
+    if(classes){
+        for(var i = 0; i < classes.length; i++){
+            classNameTmp = classes[i];
+            classNameTmp+= 'Test'
+            //console.log('classNameTmp ', classNameTmp)
+            try {
+                fileContentTmp = fs.readFileSync(classesPath+"/"+classNameTmp+".cls", "utf8");
+                if(fileContentTmp.toLowerCase().includes("@istest")){
+                    testClasses.push(classNameTmp);
+                }
+              }
+              catch(err) {
+                //console.log('Test file not found',classesPath+"/"+classNameTmp+".cls")
+              }
+        }
+    }
+    
+    return testClasses.join(",");
+}
+//module.exports.SPECIFIC_TEST_FOUND = getApexTestClass();
+const args = process.argv.slice(2);
+var manifestpath = args[0];
+getApexTestClass(manifestpath).then((SFDX_SPECIFIC_TEST_FOUND) => {
+    console.log(SFDX_SPECIFIC_TEST_FOUND);
+    return SFDX_SPECIFIC_TEST_FOUND;
+  });
