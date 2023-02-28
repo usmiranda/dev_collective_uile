@@ -1,7 +1,7 @@
 name: Staging-Pull-Request-Deployment
 on:
   push:
-    branches: [main]
+    branches: [githubtest]
     paths:
       - "force-app/**"
 jobs:
@@ -17,7 +17,7 @@ jobs:
           echo "*github head_ref: ${{ github.head_ref}}" 
           echo "**github.ref: ${{ github.ref}}"
           echo "***github.ref_name: ${{ github.ref_name}}" 
-          fullName=${{ github.head_ref || github.ref || github.ref_name}}
+          fullName=${{github.ref_name}}
           echo "Full branch name ${fullName}"
           reducedName=$(echo $fullName | grep -o "${{github.event.pull_request.head.label}}")
           echo "Reduced name" $reducedName
@@ -59,13 +59,13 @@ jobs:
           echo "Specific test classes to run: ${{ env.SFDX_RUN_TEST_LEVEL }}"
       - name: Login in the environment
         env:
-          UAT_USER_ADMIN: ${{ secrets.UAT_USER_ADMIN }}
-          UAT_CONSUMER_KEY: ${{ secrets.UAT_CONSUMER_KEY }}
-          UAT_SANDBOX_INSTANCE_URL: ${{ secrets.UAT_SANDBOX_INSTANCE_URL }}
+          DEV_USER_ADMIN: ${{ secrets.DEV_USER_ADMIN }}
+          DEV_CONSUMER_KEY: ${{ secrets.DEV_CONSUMER_KEY }}
+          DEV_INSTANCE_URL: ${{ secrets.DEV_INSTANCE_URL }}
           SERVER_KEY_CERTIFICATE: ${{ secrets.SERVER_KEY_CERTIFICATE }}
         run: |
           echo "$SERVER_KEY_CERTIFICATE" > ./JWT/connectionFile
-          sfdx auth:jwt:grant -i $UAT_CONSUMER_KEY -f JWT/connectionFile -u $UAT_USER_ADMIN -s -r $UAT_SANDBOX_INSTANCE_URL -a DeploymetOrg
+          sfdx auth:jwt:grant -i $DEV_CONSUMER_KEY -f JWT/connectionFile -u $DEV_USER_ADMIN -s -r $DEV_INSTANCE_URL -a DeploymetOrg
           rm -rf JWT
       - name: Removing existing older folder
         run: rm -rf Deploy
