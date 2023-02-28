@@ -1,0 +1,9 @@
+<template>
+    <lightning-card  title="Dropbox URL">
+        <template if:true={record.data}>
+        <div class="slds-p-around_medium">
+            <p><b><lightning-formatted-url value={urlField} tooltip={urlField} target="_blank" label={partialURL}></lightning-formatted-url></b></p>
+        </div>
+        </template>  
+</lightning-card>
+</template>

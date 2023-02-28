@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BK_Add_ons__c</fullName>
+    <externalId>false</externalId>
+    <label>BK Add-ons</label>
+    <required>false</required>
+    <type>MultiselectPicklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Additional accounts to reconcile</fullName>
+                <default>false</default>
+                <label>Additional accounts to reconcile</label>
+            </value>
+            <value>
+                <fullName>Transaction volume over maximum</fullName>
+                <default>false</default>
+                <label>Transaction volume over maximum</label>
+            </value>
+            <value>
+                <fullName>Inputting customer invoices, sending reminders</fullName>
+                <default>false</default>
+                <label>Inputting customer invoices, sending reminders</label>
+            </value>
+            <value>
+                <fullName>Bill payments</fullName>
+                <default>false</default>
+                <label>Bill payments</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+    <visibleLines>4</visibleLines>
+</CustomField>

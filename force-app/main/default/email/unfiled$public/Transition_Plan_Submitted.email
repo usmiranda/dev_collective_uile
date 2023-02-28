@@ -1,0 +1,15 @@
+Hey Team,
+
+A transition plan has been submitted for {!Opportunity.Name}. Please see details below:
+
+Opportunity: {!Opportunity.Link}
+Transition Plan: {!Opportunity.Transition_Plan_Link__c}
+
+{!Opportunity.Misc_Notes__c}
+
+{!Opportunity.Email__c}
+
+Plan: {!Opportunity.Plan__c}
+
+Thanks,
+Ops Team

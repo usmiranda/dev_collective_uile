@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Allowable_Duration__c</fullName>
+    <externalId>false</externalId>
+    <formula>CASE( StageName ,
+&quot;Verify Formation Details&quot;,3,
+&quot;Request Correction&quot;, 3,
+&quot;File LLC&quot;, 7,
+&quot;Email LLC Docs&quot;, 5,
+&quot;Upload Operating Agreement&quot;, 4,
+&quot;File EIN&quot;, 3,
+&quot;Upload EIN Confirmation&quot;, 3,
+&quot;Confirm Initial Contribution&quot;, 10,
+&quot;Follow Up&quot; , 10,
+&quot;Confirm Payment&quot; , 10,
+&quot;Verify entity information&quot;, 4,
+&quot;Request corrected info&quot;, 5,
+&quot;QBO / Gusto / Email&quot;, 7,
+&quot;Confirm BK Call Scheduled&quot;, 5,
+&quot;Take BK Training Call&quot;, 20,
+&quot;Send Tax Onboarding Email&quot;, 7,
+&quot;Confirm Tax Call Scheduled&quot;, 5,
+&quot;Take Tax Kick off Call&quot;, 20,
+10
+)</formula>
+    <label>Allowable Duration</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

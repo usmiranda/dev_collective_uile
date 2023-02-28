@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Priority_Score__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF( ISPICKVAL(Status,&quot;Open&quot;),
+
+IF(Remediation_Status__c &lt;&gt; &quot;&quot;, 10,0)
++
+IF(
+   AND(
+       ISPICKVAL(Status, &quot;OPEN&quot;),
+       (Remediation_Status__c = &quot;Unhappy Client&quot;)
+        ),
+10,0
+  )
++
+ Opportunity__r.Opp_Priority_Score__c 
++
+IF(
+    Reporting_Task_Status__c = &quot;Overdue&quot;,5,0
+)
+
++
+IF(
+     ActivityDate = TODAY(),3,0
+)
+
++
+IF(
+     ActivityDate &gt; TODAY()+10,-10,0
+)
+,0)</formula>
+    <label>Priority Score</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

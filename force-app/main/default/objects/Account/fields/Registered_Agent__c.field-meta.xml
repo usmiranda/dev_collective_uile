@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Registered_Agent__c</fullName>
+    <externalId>false</externalId>
+    <label>Registered Agent</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>true</trackHistory>
+    <type>Picklist</type>
+    <valueSet>
+        <restricted>true</restricted>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>CSC</fullName>
+                <default>false</default>
+                <label>CSC</label>
+            </value>
+            <value>
+                <fullName>FICOSO</fullName>
+                <default>false</default>
+                <label>FICOSO</label>
+            </value>
+            <value>
+                <fullName>RASI</fullName>
+                <default>false</default>
+                <label>RASI</label>
+            </value>
+            <value>
+                <fullName>Other</fullName>
+                <default>false</default>
+                <label>Other</label>
+            </value>
+            <value>
+                <fullName>Other - Retain</fullName>
+                <default>false</default>
+                <label>Other - Retain</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

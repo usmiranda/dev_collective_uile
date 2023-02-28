@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Collective</letterhead>
+    <name>Follow Up with SavingsCalc</name>
+    <style>freeForm</style>
+    <subject>Calculate your self-employed savings with Collective  - following up on our conversation</subject>
+    <textOnly>Hi {!Opportunity.First_Name__c},
+
+I hope this message finds you well. I wanted to touch base with you to ensure you don&apos;t miss out on this exciting opportunity to take home more money with a Collective membership. 
+
+To help you make an informed decision, we have a savings calculator that can quickly run the numbers for you. You can access it here: https://content.collective.com/Collective-Savings-Calculator
+
+Ready to join? Simply follow this link to sign up: {!Opportunity.Signup_Link__c}.  And if you have any questions, please don&apos;t hesitate to ask. 
+
+We&apos;re thrilled to have you as a potential member and look forward to welcoming you to our community!
+
+Best,
+{!User.Name}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

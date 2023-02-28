@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Sub_Stage_Reason_for_Closed_Lost</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ISCHANGED( StageName ),
+ISPICKVAL(StageName ,&quot;Closed Lost&quot;),
+RecordType.DeveloperName = &quot;Sales&quot;,
+ISBLANK( Sub_Stage_Reason__c )
+
+)</errorConditionFormula>
+    <errorDisplayField>Sub_Stage_Reason__c</errorDisplayField>
+    <errorMessage>You cannot move to Closed Lost without Sub Stage and Sub Stage Reason.</errorMessage>
+</ValidationRule>

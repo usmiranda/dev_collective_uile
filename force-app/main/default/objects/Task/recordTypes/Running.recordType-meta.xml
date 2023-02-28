@@ -1,0 +1,675 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<RecordType xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Running</fullName>
+    <active>true</active>
+    <label>Running</label>
+    <picklistValues>
+        <picklist>Acceptance_Status__c</picklist>
+        <values>
+            <fullName>Accepted</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Rejected</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BK_Add_ons__c</picklist>
+        <values>
+            <fullName>Additional accounts to reconcile</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bill payments</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Inputting customer invoices%2C sending reminders</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Transaction volume over maximum</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BK_Check_Outcome__c</picklist>
+        <values>
+            <fullName>Decent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Great</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Missing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unknown</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Unusable</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BK_Email__c</picklist>
+        <values>
+            <fullName>Not Sent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>BK_Plan__c</picklist>
+        <values>
+            <fullName>Advanced</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Basic</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pending</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pro</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Books_Bank_Reconcile__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Categorization_Email__c</picklist>
+        <values>
+            <fullName>Not Sent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Categorization_Outcome__c</picklist>
+        <values>
+            <fullName>All Categorized</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bank Syncing Issue</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Missing information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Timing Issue</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Closing_LLC__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>EIN_Filing_Outcome__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disapproved - Previous EIN Application</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disapproved - Wrong Information</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Extension_Needed__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Follow_Up_Email__c</picklist>
+        <values>
+            <fullName>Not Sent</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Sent</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Intro_Call_Outcome__c</picklist>
+        <values>
+            <fullName>Bad Fit %28Accrual Accounting Needed%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bad Fit %28Crypto%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bad Fit %28Employees%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bad Fit %28Foreign Assets %3E50k%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bad Fit %28Inventory%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bad Fit %28Low Self-Employed Profit%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bad Fit %28Multiple Businesses%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bad Fit %28Non-citizen%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bad Fit %28Passive Income%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bad Fit %28Sales Tax%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bad Fit %28Took W-2 Job%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bad Fit %28Unfiled Tax Returns%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bad Fit %28Unsupported Entity - C-Corp%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bad Fit %28Unsupported Entity - MM LLC%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bad Fit %28Unsupported Entity - PC%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bad Fit %28Unsupported Entity - PLLC%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bad Fit %28Unsupported Profession%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Bad Fit %28Unsupported State%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Call Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Follow Up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Interested %28Price Too High%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Interested %28Remain LLC%2FSP%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Interested %28Using Local CPA%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Interested %28Using Other FinTech Services%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Send Onboarding Email</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Stopped Communicating</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Intuit_ESignature_Status__c</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Not Sent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LLC_Filing_Status__c</picklist>
+        <values>
+            <fullName>Approved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Disapproved</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>LLC_Info_Status__c</picklist>
+        <values>
+            <fullName>Info Complete - No Updates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Info Complete - Only DB Updates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Info Complete - Only File Updates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Info Complete -DB %26 File Updates</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Needs Additional Info</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Lead_Source__c</picklist>
+        <values>
+            <fullName>Billboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Blog post</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Current Member</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Facebook %2F Instagram AD</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>FinCon22</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Financial Advisor%2FCPA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Google Search</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Gusto</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>LinkedIn</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Online Group %28see notes%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other %28see notes%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Outbound</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Pinterest</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>TikTok</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Webinar</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Word of Mouth</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Offer_BK_Plan__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Recently Offered</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Payroll_Migration_Needed__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Plan__c</picklist>
+        <values>
+            <fullName>LLC -%3E SC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>NA</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Remain C-Corp SC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Remain SC</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>SP -%3E SC</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Priority</picklist>
+        <values>
+            <fullName>High</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Normal</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Problem_they_re_looking_to_solve__c</picklist>
+        <values>
+            <fullName>Bookkeeping</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other %28see notes%29</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>S-Corp Formation</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tax Return Filing</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Tax Savings</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Remediation_Email__c</picklist>
+        <values>
+            <fullName>Not Sent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Remediation_Outcome__c</picklist>
+        <values>
+            <fullName>Offboard</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Resolved</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Return_Summary_Status__c</picklist>
+        <values>
+            <fullName>Not Sent</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Sent</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Return_in_Dropbox__c</picklist>
+        <values>
+            <fullName>Not Saved</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Saved</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Send_Onboarding_Email__c</picklist>
+        <values>
+            <fullName>Not Sent</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Sent</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Status</picklist>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Open</fullName>
+            <default>true</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Subject</picklist>
+        <values>
+            <fullName>Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Send Letter</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Send Quote</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tax_Return_Needed__c</picklist>
+        <values>
+            <fullName>Not Needed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes%2C Skip BK</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes%2C with BK</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tax_Return_Status__c</picklist>
+        <values>
+            <fullName>Clearing Review Points</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Completed</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>In Progress</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Missing Information</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Review Requested</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Tax_Returns_Needed__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Training_Call_Outcome__c</picklist>
+        <values>
+            <fullName>Call Cancelled</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Follow Up</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>No Show</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Training Completed</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Transition_Plan_Submitted__c</picklist>
+        <values>
+            <fullName>No</fullName>
+            <default>true</default>
+        </values>
+        <values>
+            <fullName>Yes</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+    <picklistValues>
+        <picklist>Type</picklist>
+        <values>
+            <fullName>Call</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Meeting</fullName>
+            <default>false</default>
+        </values>
+        <values>
+            <fullName>Other</fullName>
+            <default>false</default>
+        </values>
+    </picklistValues>
+</RecordType>

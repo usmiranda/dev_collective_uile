@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>KO_Call_to_TP_Submitted__c</fullName>
+    <externalId>false</externalId>
+    <formula>IF(NOT(ISBLANK(Transition_Submitted__c)), (DATEVALUE(Transition_Submitted__c) - (Kickoff_Call_Date__c)),Null)</formula>
+    <inlineHelpText>--&gt; How long after kickoff does transition plan get submitted</inlineHelpText>
+    <label>KO Call to Transition Plan Submitted</label>
+    <precision>18</precision>
+    <required>false</required>
+    <scale>0</scale>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Number</type>
+    <unique>false</unique>
+</CustomField>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>NB_Require_Comments_for_Follow_Up_tasks</fullName>
+    <active>true</active>
+    <description>Create Validation Rule for Tasks Which Create Follow Up Tasks
+https://hyketeam.atlassian.net/browse/NHP-443</description>
+    <errorConditionFormula>AND(
+	ISPICKVAL(Intro_Call_Outcome__c,&quot;Follow Up&quot;),
+   	ISCHANGED(Status),
+   	ISPICKVAL(Status,&quot;Completed&quot;),
+	Description  = &quot;&quot;
+)</errorConditionFormula>
+    <errorMessage>Please post notes for Follow Up/ in Comments.
+Or,
+Please post notes for Foreign Registration/New LLC in Comments</errorMessage>
+</ValidationRule>

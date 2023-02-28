@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>BK_Req_BK_Plan_for_Review_Client</fullName>
+    <active>true</active>
+    <description>BK Plan should not be blank or Pending for Complete Review Client Task</description>
+    <errorConditionFormula>AND(
+ISCHANGED(Status),
+ISPICKVAL(Status,&quot;Completed&quot;),
+ 
+CONTAINS(Subject,&quot;Review Client&quot;), 
+OR(
+ISPICKVAL(BK_Plan__c ,&quot;Pending&quot;),
+ISPICKVAL(BK_Plan__c ,&quot;&quot;)
+)
+)</errorConditionFormula>
+    <errorMessage>Please select BK Plan before you proceed</errorMessage>
+</ValidationRule>

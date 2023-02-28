@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>ALL_Require_Confirm_Call_Date</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+ 	ISBLANK(Confirmed_Call_Date__c),
+ 	ISCHANGED(Status),
+ 	ISPICKVAL(Status,&quot;Completed&quot;),
+ 	OR(
+ 		CONTAINS(Subject,&quot;Reschedule Intro Call&quot;),
+ 		CONTAINS(Subject,&quot;Schedule Offboarding Call&quot;),
+ 		CONTAINS(Subject,&quot;Confirm Training Call Scheduled&quot;)
+ 	)
+ )</errorConditionFormula>
+    <errorMessage>Please filled out the Confirmed Call Date field with the date of the call</errorMessage>
+</ValidationRule>

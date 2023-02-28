@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Closed_Lost_Reason__c</fullName>
+    <externalId>false</externalId>
+    <label>Closed Lost Reason</label>
+    <required>false</required>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <trackTrending>false</trackTrending>
+    <type>Picklist</type>
+    <valueSet>
+        <valueSetDefinition>
+            <sorted>false</sorted>
+            <value>
+                <fullName>Bad Fit (Unsupported Entity - C-Corp)</fullName>
+                <default>false</default>
+                <label>Bad Fit (Unsupported Entity - C-Corp)</label>
+            </value>
+            <value>
+                <fullName>Bad Fit (Unsupported Entity - PLLC)</fullName>
+                <default>false</default>
+                <label>Bad Fit (Unsupported Entity - PLLC)</label>
+            </value>
+            <value>
+                <fullName>Bad Fit (Unsupported Entity - PC)</fullName>
+                <default>false</default>
+                <label>Bad Fit (Unsupported Entity - PC)</label>
+            </value>
+            <value>
+                <fullName>Bad Fit (Unsupported Entity - MM LLC)</fullName>
+                <default>false</default>
+                <label>Bad Fit (Unsupported Entity - MM LLC)</label>
+            </value>
+            <value>
+                <fullName>Bad Fit (Unsupported State)</fullName>
+                <default>false</default>
+                <label>Bad Fit (Unsupported State)</label>
+            </value>
+            <value>
+                <fullName>Bad Fit (Low Self-Employed Profit)</fullName>
+                <default>false</default>
+                <label>Bad Fit (Low Self-Employed Profit)</label>
+            </value>
+            <value>
+                <fullName>Bad Fit (Unfiled Tax Returns)</fullName>
+                <default>false</default>
+                <label>Bad Fit (Unfiled Tax Returns)</label>
+            </value>
+            <value>
+                <fullName>Bad Fit (Unsupported Profession)</fullName>
+                <default>false</default>
+                <label>Bad Fit (Unsupported Profession)</label>
+            </value>
+            <value>
+                <fullName>Bad Fit (Non-citizen)</fullName>
+                <default>false</default>
+                <label>Bad Fit (Non-citizen)</label>
+            </value>
+            <value>
+                <fullName>Bad Fit (Sales Tax)</fullName>
+                <default>false</default>
+                <label>Bad Fit (Sales Tax)</label>
+            </value>
+            <value>
+                <fullName>Bad Fit (Employees)</fullName>
+                <default>false</default>
+                <label>Bad Fit (Employees)</label>
+            </value>
+            <value>
+                <fullName>Bad Fit (Foreign Assets &gt;50k)</fullName>
+                <default>false</default>
+                <label>Bad Fit (Foreign Assets &gt;50k)</label>
+            </value>
+            <value>
+                <fullName>Bad Fit (Inventory)</fullName>
+                <default>false</default>
+                <label>Bad Fit (Inventory)</label>
+            </value>
+            <value>
+                <fullName>Bad Fit (Crypto)</fullName>
+                <default>false</default>
+                <label>Bad Fit (Crypto)</label>
+            </value>
+            <value>
+                <fullName>Bad Fit (Accrual Accounting Needed)</fullName>
+                <default>false</default>
+                <label>Bad Fit (Accrual Accounting Needed)</label>
+            </value>
+            <value>
+                <fullName>Bad Fit (Took W-2 Job)</fullName>
+                <default>false</default>
+                <label>Bad Fit (Took W-2 Job)</label>
+            </value>
+            <value>
+                <fullName>Bad Fit (Passive Income)</fullName>
+                <default>false</default>
+                <label>Bad Fit (Passive Income)</label>
+            </value>
+            <value>
+                <fullName>Bad Fit (Multiple Businesses)</fullName>
+                <default>false</default>
+                <label>Bad Fit (Multiple Businesses)</label>
+            </value>
+            <value>
+                <fullName>Bad Fit (Out of Compliance)</fullName>
+                <default>false</default>
+                <label>Bad Fit (Out of Compliance)</label>
+            </value>
+            <value>
+                <fullName>Stopped Communicating</fullName>
+                <default>false</default>
+                <label>Stopped Communicating</label>
+            </value>
+            <value>
+                <fullName>Not Interested (Price Too High)</fullName>
+                <default>false</default>
+                <label>Not Interested (Price Too High)</label>
+            </value>
+            <value>
+                <fullName>Not Interested (Using Local CPA)</fullName>
+                <default>false</default>
+                <label>Not Interested (Using Local CPA)</label>
+            </value>
+            <value>
+                <fullName>Not Interested (Using Other FinTech Services)</fullName>
+                <default>false</default>
+                <label>Not Interested (Using Other FinTech Services)</label>
+            </value>
+            <value>
+                <fullName>Not Interested (Remain LLC/SP)</fullName>
+                <default>false</default>
+                <label>Not Interested (Remain LLC/SP)</label>
+            </value>
+            <value>
+                <fullName>Not Interested (ITR not included)</fullName>
+                <default>false</default>
+                <label>Not Interested (ITR not included)</label>
+            </value>
+        </valueSetDefinition>
+    </valueSet>
+</CustomField>

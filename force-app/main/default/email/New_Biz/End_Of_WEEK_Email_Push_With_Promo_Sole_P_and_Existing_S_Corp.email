@@ -1,0 +1,6 @@
+<table border="0" cellpadding="5" width="550" cellspacing="5" height="400" >
+<tr valign="top" height="400" >
+<td tEditID="c1r1" style=" background-color:#FFFFFF; bEditID:r3st1; color:#000000; bLabel:main; font-size:12pt; font-family:arial;" aEditID="c1r1" locked="0" >
+<![CDATA[<font style="" face="Verdana, Helvetica, sans-serif" size="2">Hi {!Opportunity.First_Name__c},<br><br>I want to make sure you don't miss out on this new and exclusive offer!<b style="">&nbsp;If you join this Friday by midnight, you'll g</b><b style="">et 50% off the first 2 months = $300 savings!&nbsp;</b><br><br>Use code <b style="">LASTCHANCE</b><b style="">&nbsp;</b>at checkout with this link: <strong style=""><span style="color:#2980b9;"><u>{!Opportunity.Signup_Link__c}</u></span></strong>.&nbsp; Let me know if you have any questions.<br><br><br>Join us as a member today!<br><br>Best,<br>{!User.Name}&nbsp;</font>]]></td>
+</tr>
+</table>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>Self_checkout_member__c</fullName>
+    <defaultValue>false</defaultValue>
+    <description>This field will be set to true by backend if a member comes through self checkout</description>
+    <externalId>false</externalId>
+    <label>Self checkout member</label>
+    <trackFeedHistory>false</trackFeedHistory>
+    <trackHistory>false</trackHistory>
+    <type>Checkbox</type>
+</CustomField>

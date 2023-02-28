@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>RUN_Req_Estimate_and_Salary_on_Tax_Check</fullName>
+    <active>true</active>
+    <errorConditionFormula>AND(
+	ISCHANGED(Status),
+	ISPICKVAL(Status,&quot;Completed&quot;),
+	CONTAINS(Subject ,&quot;Perform Tax Check&quot;),
+	OR(
+		ISBLANK( Annual_Salary_High__c ),
+                ISBLANK( Annual_Salary_Low__c ),
+		ISBLANK(Quarterly_Estimate__c),
+		ISBLANK(Quarterly_Estimate_State__c)
+	)
+)</errorConditionFormula>
+    <errorMessage>Please fill out the Quarterly Estimate and the Annual Salary (High/Low) to proceed!</errorMessage>
+</ValidationRule>

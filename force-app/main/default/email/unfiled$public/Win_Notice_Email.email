@@ -1,0 +1,13 @@
+Great news team! 
+
+{!Opportunity.Account} was just closed by {!Opportunity.Tax_Advisor__c} on {!Opportunity.First_Payment_Date__c}!
+
+You can check out their details here:
+
+Account Link: {!Account.Link}
+Opportunity Link: {!Opportunity.Link} 
+
+Email: {!Opportunity.Email__c}
+State: {!Account.BillingState}
+
+Ops Team

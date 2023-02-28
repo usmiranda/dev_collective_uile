@@ -1,0 +1,25 @@
+<template>
+    <!-- Invoke a Screen flow in LWC -->
+    <lightning-card>
+        <lightning-layout>
+            <div class="slds-p-around_medium">
+                <lightning-button variant="brand" 
+                    label="Add Onboarding Fee"
+                    onclick={handleClick}>
+                </lightning-button>
+                <br/><br/>
+                <template if:true={progressStatus}>                    
+                    <p style="word-break: break-all">This will take a few seconds, please hold on</p>
+                </template>                       
+                <template if:true={boolResponseOk}>                    
+                    <p style="word-break: break-all">Adding Fee:</p>
+                    <p style="word-break: break-all">{responseRequest}</p>
+                </template>          
+                <template if:false={boolResponseOk}>                 
+                    <p style="word-break: break-all">{responseRequest}</p>
+                </template>                                         
+            </div>
+        </lightning-layout>
+    </lightning-card>
+
+</template>

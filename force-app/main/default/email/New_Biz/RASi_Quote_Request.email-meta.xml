@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<EmailTemplate xmlns="http://soap.sforce.com/2006/04/metadata">
+    <available>true</available>
+    <encodingKey>ISO-8859-1</encodingKey>
+    <letterhead>Collective</letterhead>
+    <name>RASi Quote Request</name>
+    <style>freeForm</style>
+    <subject>Request for Quote for Prospective Collective Member</subject>
+    <textOnly>Hi Jordan,
+
+I wanted to introduce you to {!Opportunity.First_Name__c}, owner of [LLC Name]. They need help with [type of service needed]. Please send them a quote so they can start moving forward.
+
+If either of you has any questions, please let me know. Thank you! :)
+
+Best,
+{!User.Name}</textOnly>
+    <type>html</type>
+    <uiType>Aloha</uiType>
+</EmailTemplate>

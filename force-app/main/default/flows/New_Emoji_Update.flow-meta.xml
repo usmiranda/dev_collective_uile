@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Flow xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>53.0</apiVersion>
+    <constants>
+        <name>RecordTypeTaxReturn</name>
+        <dataType>String</dataType>
+    </constants>
+    <constants>
+        <name>TaxReturn</name>
+        <dataType>String</dataType>
+        <value>
+            <stringValue>Tax Return</stringValue>
+        </value>
+    </constants>
+    <formulas>
+        <name>EmojiUpdate</name>
+        <dataType>String</dataType>
+        <expression>IF( ISPICKVAL({!$Record.StageName},&quot;Offboarding&quot;),
+	&quot;👋&quot;,&quot;&quot;
+)
++ IF( TEXT({!$Record.Remediation_Status__c}) &lt;&gt; &quot;&quot;,
+	&quot;👁️👄👁️&quot;, &quot;&quot;
+)
++ IF(
+	OR(
+		CASESAFEID( {!$Record.RecordType.Id} )  = &apos;0126g0000001y5uAAA&apos;,
+		CASESAFEID( {!$Record.RecordType.Id} ) = &apos;0126g000000228rAAA&apos;,
+		CASESAFEID( {!$Record.RecordType.Id}) = &apos;0126g0000001y5zAAA&apos;
+		
+	),
+	&quot;🚀&quot;, &quot;&quot;
+)
++ IF(CASESAFEID( {!$Record.RecordType.Id}) = &apos;0126g0000002TGjAAM&apos;,
+	&quot;🅰️&quot;, &quot;&quot;
+)
++ IF(CASESAFEID( {!$Record.RecordType.Id} ) = &apos;0125x000000QOmRAAW&apos;,
+	&quot;🅱️&quot;, &quot;&quot;
+)
++ IF(
+	 INCLUDES({!$Record.Member_Flags__c},&quot;Don&apos;t Touch QBO&quot;),
+	 &quot;🇩&quot;,&quot;&quot;
+)
+
++ IF(
+	 INCLUDES({!$Record.Member_Flags__c},&quot;VIP&quot;),
+	 &quot;🤩&quot;,&quot;&quot;
+)</expression>
+    </formulas>
+    <formulas>
+        <name>Opp_Name</name>
+        <dataType>String</dataType>
+        <expression>{!$Record.Contact_Name__c} + &apos; | &apos; + {!$Record.Account.Name} + &apos; | &apos; + {!EmojiUpdate}</expression>
+    </formulas>
+    <interviewLabel>New: Emoji Update {!$Flow.CurrentDateTime}</interviewLabel>
+    <label>New: Emoji Update</label>
+    <processMetadataValues>
+        <name>BuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>CanvasMode</name>
+        <value>
+            <stringValue>FREE_FORM_CANVAS</stringValue>
+        </value>
+    </processMetadataValues>
+    <processMetadataValues>
+        <name>OriginBuilderType</name>
+        <value>
+            <stringValue>LightningFlowBuilder</stringValue>
+        </value>
+    </processMetadataValues>
+    <processType>AutoLaunchedFlow</processType>
+    <recordUpdates>
+        <name>Emoji_Update</name>
+        <label>Emoji Update</label>
+        <locationX>101</locationX>
+        <locationY>396</locationY>
+        <connector>
+            <targetReference>Update_Opp_Name</targetReference>
+        </connector>
+        <inputAssignments>
+            <field>Emoji_Update__c</field>
+            <value>
+                <elementReference>EmojiUpdate</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <recordUpdates>
+        <name>Update_Opp_Name</name>
+        <label>Update Opp Name</label>
+        <locationX>222</locationX>
+        <locationY>560</locationY>
+        <filterLogic>and</filterLogic>
+        <filters>
+            <field>Record_Type_Name__c</field>
+            <operator>NotEqualTo</operator>
+            <value>
+                <elementReference>TaxReturn</elementReference>
+            </value>
+        </filters>
+        <inputAssignments>
+            <field>Name</field>
+            <value>
+                <elementReference>Opp_Name</elementReference>
+            </value>
+        </inputAssignments>
+        <inputReference>$Record</inputReference>
+    </recordUpdates>
+    <start>
+        <locationX>36</locationX>
+        <locationY>50</locationY>
+        <connector>
+            <targetReference>Emoji_Update</targetReference>
+        </connector>
+        <filterLogic>1 OR 2</filterLogic>
+        <filters>
+            <field>StageName</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <filters>
+            <field>Contact_Name__c</field>
+            <operator>IsChanged</operator>
+            <value>
+                <booleanValue>true</booleanValue>
+            </value>
+        </filters>
+        <object>Opportunity</object>
+        <recordTriggerType>CreateAndUpdate</recordTriggerType>
+        <triggerType>RecordAfterSave</triggerType>
+    </start>
+    <status>Active</status>
+    <textTemplates>
+        <name>OppName</name>
+        <isViewedAsPlainText>true</isViewedAsPlainText>
+        <text>{!$Record.Contact_Name__c} &amp; &quot; | &quot; &amp; {!$Record.Account.Name} &amp; &quot; | &quot; &amp; {!Emoji_Update}</text>
+    </textTemplates>
+</Flow>
