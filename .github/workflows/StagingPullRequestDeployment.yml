@@ -12,9 +12,13 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: '14'
+      - name: Extract branch name
+          shell: bash
+          run: echo "##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})"
+          id: extract_branch
       - name: Checking the branch and the package file
         run: |
-          fullName=${{ github.head_ref || github.ref_name }}
+          fullName=${{ steps.extract_branch.outputs.branch }}
 
           echo "Full branch name ${fullName}"
           reducedName=$(echo $fullName | grep -o "${{github.event.pull_request.head.label}}")
