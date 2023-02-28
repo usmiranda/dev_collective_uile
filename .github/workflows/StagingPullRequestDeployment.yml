@@ -2,7 +2,7 @@ name: Uat-Pull-Request-Deployment
 on:
   pull_request:
     types: [closed]
-    branches: [DEV1]
+    branches: [DEV]
 jobs:
   UatPullRequestDeployment:
     if: github.event.pull_request.merged == true
