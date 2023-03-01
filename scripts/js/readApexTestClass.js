@@ -27,7 +27,7 @@ async function getApexTestClass(manifestpath){
     if(classes){
         for(var i = 0; i < classes.length; i++){
             classNameTmp = classes[i];
-            classNameTmp+= 'Test'
+            classNameTmp+= '_Test'
             //console.log('classNameTmp ', classNameTmp)
             try {
                 fileContentTmp = fs.readFileSync(classesPath+"/"+classNameTmp+".cls", "utf8");
