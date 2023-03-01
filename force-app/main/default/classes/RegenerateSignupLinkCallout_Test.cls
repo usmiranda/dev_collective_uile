@@ -19,7 +19,7 @@ public class RegenerateSignupLinkCallout_Test {
         cs.url__c = 'https://somefakeurl.net';
         cs.Token__c = '432kr32jhk3k2j432kjh4';        
         insert cs;            
-        system.debug('1113');
+        system.debug('11135');
     }         
     
     private class MockOk implements HttpCalloutMock {

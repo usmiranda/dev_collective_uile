@@ -9,5 +9,9 @@
 		<members>InboundMessage_Test</members>
 		<name>ApexClass</name>
 	</types>
+	<types>
+		<members>Opportunity.Onboarding_Fee_Status__c</members>
+		<name>CustomField</name>
+	</types>
 	<version>55.0</version>
 </Package>
