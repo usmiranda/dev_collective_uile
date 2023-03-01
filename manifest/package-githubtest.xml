@@ -5,8 +5,8 @@
 		<members>RegenerateSignupLinkCallout_Test</members>
 		<members>OutboundMessage</members>
 		<members>OutboundMessage_Test</members>
-		<members>InboundMessage</members>
-		<members>InboundMessage_Test</members>
+		<members>InboundMessageAPI</members>
+		<members>InboundMessageAPI_Test</members>
 		<name>ApexClass</name>
 	</types>
 	<types>

@@ -4,6 +4,7 @@ on:
     branches: [githubtest]
     paths:
       - "force-app/**"
+      - "manifest/**"
 jobs:
   StagingPullRequestDeployment:
     runs-on: ubuntu-latest
