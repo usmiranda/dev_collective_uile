@@ -66,9 +66,8 @@ jobs:
         run: rm -rf Deploy
       - name: Converting the package
         run: sfdx force:source:convert -r force-app/ -d Deploy -x "${{ env.PACKAGE_FILE_NAME }}"
-      -name: Retrieve all info from Prod
-        run: | 
-          sfdx force:mdapi:retrieve -r force-app/ -k package-general.xml
+      - name: Retrieve all info from Prod
+        run: sfdx force:mdapi:retrieve -r force-app/ -k package-general.xml
       - name: Deploying the package file
         #if: github.event.pull_request.merged == true
         run: |
