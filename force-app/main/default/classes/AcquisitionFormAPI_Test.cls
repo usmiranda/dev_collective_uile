@@ -8,7 +8,7 @@ public class AcquisitionFormAPI_Test {
             HTTPResponse res = new HTTPResponse();
             res.setStatus('OK');
             res.setStatusCode(201);
-            res.setBody('{"email": "ewewewe@collective.com","frontend_url": "https://collective.heroku.com/signup-link/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9","backend_url":"https://collective.com/","token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9"}');
+            res.setBody('{"email": "eweaaaawewe@collective.com","frontend_url": "https://collective.heroku.com/signup-link/eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9","backend_url":"https://collective.com/","token": "eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9"}');
             return res;
         }
     }
