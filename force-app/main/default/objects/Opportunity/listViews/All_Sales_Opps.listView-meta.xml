@@ -20,7 +20,7 @@
     <filters>
         <field>OPPORTUNITY.RECORDTYPE</field>
         <operation>equals</operation>
-        <value>Opportunity.Post_Payment,Opportunity.Sales</value>
+        <value>Opportunity.Post_Payment,Opportunity.Sales,Opportunity.Takeover</value>
     </filters>
     <label>All Sales Opps</label>
 </ListView>

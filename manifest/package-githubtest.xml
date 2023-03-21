@@ -3,7 +3,15 @@
 	<types>
 		<members>RegenerateSignupLinkCallout</members>
 		<members>RegenerateSignupLinkCallout_Test</members>
+		<members>OutboundMessage</members>
+		<members>OutboundMessage_Test</members>
+		<members>InboundMessageAPI</members>
+		<members>InboundMessageAPI_Test</members>
 		<name>ApexClass</name>
+	</types>
+	<types>
+		<members>Opportunity.Onboarding_Fee_Status__c</members>
+		<name>CustomField</name>
 	</types>
 	<version>55.0</version>
 </Package>

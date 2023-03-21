@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ForecastingFilter xmlns="http://soap.sforce.com/2006/04/metadata">
+    <filterLogic>1</filterLogic>
+    <forecastingType>Marketing_Forecast</forecastingType>
+    <forecastingTypeSource>FTS_Marketing_Forecast7sy5x000000Gmb7AAC532643400245109</forecastingTypeSource>
+    <isProtected>false</isProtected>
+    <masterLabel>FF_Marketing_Forecast0hl5x000000GmbRAAS811337762363525</masterLabel>
+</ForecastingFilter>

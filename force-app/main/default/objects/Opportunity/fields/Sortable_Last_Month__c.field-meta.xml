@@ -2,29 +2,11 @@
 <CustomField xmlns="http://soap.sforce.com/2006/04/metadata">
     <fullName>Sortable_Last_Month__c</fullName>
     <externalId>false</externalId>
-    <formula>TEXT(
-	if(
-		month(
-		today())=1,
-		YEAR(TODAY())-1,
-		YEAR(TODAY())
-	)
-)
+    <formula>TEXT(YEAR(TODAY()))
+&amp; 
+IF(MONTH(TODAY())-1&gt;9,&quot;-&quot;,&quot;-0&quot;)
 &amp;
-IF(
-MONTH(TODAY())&gt;9,
-&quot;-&quot;,
-&quot;-0&quot;
-)
-&amp;
-TEXT
-(
-	if(
-		MONTH(TODAY())=1,
-		12,
-		MONTH(TODAY())-1
-	)
-)</formula>
+TEXT(MONTH(TODAY())-1)</formula>
     <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
     <label>Sortable Last Month</label>
     <required>false</required>

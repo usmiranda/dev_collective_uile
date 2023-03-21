@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>eng@collective.com</contactEmail>
+    <label>Git continuous integration</label>
+    <oauthConfig>
+        <callbackUrl>http://localhost:1717/OauthRedirect</callbackUrl>
+        <certificate>MIIDwTCCAqkCFEJeIaCOWb/xuS56DJM05TQgoRYeMA0GCSqGSIb3DQEBCwUAMIGcMQswCQYDVQQGEwJVUzETMBEGA1UECAwKQ2FsaWZvcm5pYTEWMBQGA1UEBwwNU2FuIEZyYW5jaXNjbzETMBEGA1UECgwKQ29sbGVjdGl2ZTETMBEGA1UECwwKQ29sbGVjdGl2ZTETMBEGA1UEAwwKQ29sbGVjdGl2ZTEhMB8GCSqGSIb3DQEJARYSZW5nQGNvbGxlY3RpdmUuY29tMB4XDTIyMDYxMzE2Mzg0NVoXDTIzMDYxMzE2Mzg0NVowgZwxCzAJBgNVBAYTAlVTMRMwEQYDVQQIDApDYWxpZm9ybmlhMRYwFAYDVQQHDA1TYW4gRnJhbmNpc2NvMRMwEQYDVQQKDApDb2xsZWN0aXZlMRMwEQYDVQQLDApDb2xsZWN0aXZlMRMwEQYDVQQDDApDb2xsZWN0aXZlMSEwHwYJKoZIhvcNAQkBFhJlbmdAY29sbGVjdGl2ZS5jb20wggEiMA0GCSqGSIb3DQEBAQUAA4IBDwAwggEKAoIBAQCawDF9dNfIrU7he2vPg/3J6++VVrX8E91ipt6KX434jaKCIirERBOg+quxRof8kMKFG5zg3lH1RiWwmNYMfzSihx/ciprOp9lt/OU+Zb7SOHhcHj/FH5yfm8bZ4u7cbfnF/96MUz1ie/pnWf6ueD79JkGWF7APcAYLVqkb5h0Dhsqk/nGD7aNs8WP/Eh65+U2MtmapfqHU7/D5bIcDth831O+39bsKFxBRL4nxC0r3m//RDz/c+Yqe+LJZHjKJWCZKqyLQkUjp5/JgevGgMliv5aynwLxo7RN5pWUA+b48smhTm2pM6w9S1KqzbOC148DQjHwkTRDK9NhkSp8YUZ69AgMBAAEwDQYJKoZIhvcNAQELBQADggEBAJClDdgJU+MNa7PRcAjWr5C3kvc3FuJRDGhzf28oVy6X+bjYPYh/Fu9T+pTzH8b2Dhu5lPTJiD3Wvj865FddQ+gI1vTVjD4clGh3bDp4i0yR3z4w8srxE65pG7+P/Sk1HEsz6qMRPyWKj8nTmO4YRnMczTtHvKx8+ytUJE+GK1qR3g2E62dvetnF5xKXxu2xw6B/6wjr05Q9Rk2wEp/BY53TNg8x6LmqKH1OxUqL9JNzn5BJ+f/khOXyNPHvrJ5bCtUiWu/74D8eTCqeYY6pRXqIemTVc7kwcKRzHDmSL2SK02Rk+qJuh85af00ajrdOBaXaz2ZEeJ42UAiyLkIn8uk=</certificate>
+        <consumerKey>3MVG9_4NR96cWRpFPlYgUVb3xkIP7ptfMmHn8jwoG2igJGLlaeaBiymPvzUu1ssalpayFYXY2AmeKyLLeB8Dq</consumerKey>
+        <isAdminApproved>true</isAdminApproved>
+        <isClientCredentialEnabled>false</isClientCredentialEnabled>
+        <isCodeCredentialEnabled>false</isCodeCredentialEnabled>
+        <isCodeCredentialPostOnly>false</isCodeCredentialPostOnly>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isSecretRequiredForRefreshToken>false</isSecretRequiredForRefreshToken>
+        <scopes>Basic</scopes>
+        <scopes>Api</scopes>
+        <scopes>Web</scopes>
+        <scopes>RefreshToken</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>BYPASS</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+    <profileName>API User</profileName>
+    <profileName>System Administrator</profileName>
+</ConnectedApp>

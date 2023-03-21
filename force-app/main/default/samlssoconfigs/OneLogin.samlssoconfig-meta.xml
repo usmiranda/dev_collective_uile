@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SamlSsoConfig xmlns="http://soap.sforce.com/2006/04/metadata">
+    <identityLocation>SubjectNameId</identityLocation>
+    <identityMapping>Username</identityMapping>
+    <issuer>https://app.onelogin.com/saml/metadata/fe6a464d-d84a-4dac-95ab-a5d3e4183406</issuer>
+    <loginUrl>https://collective.onelogin.com/trust/saml2/http-post/sso/fe6a464d-d84a-4dac-95ab-a5d3e4183406</loginUrl>
+    <name>OneLogin</name>
+    <oauthTokenEndpoint>https://collect-hub--devuile.sandbox.my.salesforce.com/services/oauth2/token</oauthTokenEndpoint>
+    <redirectBinding>false</redirectBinding>
+    <requestSignatureMethod>1</requestSignatureMethod>
+    <requestSigningCertId>0P15x000000EagQ</requestSigningCertId>
+    <salesforceLoginUrl>https://collect-hub--devuile.sandbox.my.salesforce.com</salesforceLoginUrl>
+    <samlEntityId>https://saml.salesforce.com</samlEntityId>
+    <samlVersion>SAML2_0</samlVersion>
+    <singleLogoutBinding>PostBinding</singleLogoutBinding>
+    <singleLogoutUrl>https://collective.onelogin.com/trust/saml2/http-redirect/slo/1657764</singleLogoutUrl>
+    <useConfigRequestMethod>false</useConfigRequestMethod>
+    <useSameDigestAlgoForSigning>false</useSameDigestAlgoForSigning>
+    <userProvisioning>false</userProvisioning>
+    <validationCert>MIIEojCCA4qgAwIBAgIUMMJLJ7traqqBG0rCG3lqZrjXamYwDQYJKoZIhvcNAQEFBQAwgYQxCzAJBgNVBAYTAlVTMQswCQYDVQQIDAJDQTEWMBQGA1UEBwwNU2FuIEZyYW5jaXNjbzEdMBsGA1UECgwUQ29sbGVjdGl2ZSBIdWIsIEluYy4xFTATBgNVBAsMDE9uZUxvZ2luIElkUDEaMBgGA1UEAwwRT25lTG9naW4gQWNjb3VudCAwHhcNMjExMTIzMjE1NDQzWhcNMjYxMTIzMjE1NDQzWjCBhDELMAkGA1UEBhMCVVMxCzAJBgNVBAgMAkNBMRYwFAYDVQQHDA1TYW4gRnJhbmNpc2NvMR0wGwYDVQQKDBRDb2xsZWN0aXZlIEh1YiwgSW5jLjEVMBMGA1UECwwMT25lTG9naW4gSWRQMRowGAYDVQQDDBFPbmVMb2dpbiBBY2NvdW50IDCCASIwDQYJKoZIhvcNAQEBBQADggEPADCCAQoCggEBAOLxVw2CV7tIofzALq3+D6f0RhZF1bmDP5v6ZLq4Z1rU642imKfcMTXX09UXJmHjxER4h3rbg1AFB0d4Jx+HCYUTEToueHtsqud5LFMlrD2fPCxlH7t4+6Ztv6vZRDoDSsp4dEACjdYwRsNuZ+C4gKs+NdWXskkhXepfgiMG+IgmRkvObsqrbN0PT1LC2TFG3BEL0nuQ5mnJ7Chp1oW+SVb1VUDzg//Bndzixq330HLH/n4L0xaDFXdb3m6FPUCEF/MpmTOZ8NqRgKmq0X9ho5sasUj94cgqBX3WR4FxtY3mKgBpHa0T3bUfY7Q3W40FFofj0B+ohu1vZVNQQjQTESsCAwEAAaOCAQgwggEEMAwGA1UdEwEB/wQCMAAwHQYDVR0OBBYEFKgeIU+0pT7xBPZIltgNEKTFPf/eMIHEBgNVHSMEgbwwgbmAFKgeIU+0pT7xBPZIltgNEKTFPf/eoYGKpIGHMIGEMQswCQYDVQQGEwJVUzELMAkGA1UECAwCQ0ExFjAUBgNVBAcMDVNhbiBGcmFuY2lzY28xHTAbBgNVBAoMFENvbGxlY3RpdmUgSHViLCBJbmMuMRUwEwYDVQQLDAxPbmVMb2dpbiBJZFAxGjAYBgNVBAMMEU9uZUxvZ2luIEFjY291bnQgghQwwksnu2tqqoEbSsIbeWpmuNdqZjAOBgNVHQ8BAf8EBAMCB4AwDQYJKoZIhvcNAQEFBQADggEBAGSR9AL/Tt7maZuF8SUM0ccy0+5m7uo2wsLQV9+usGr0yeOj2dZA3q0NAJ98TwW7e8rCP13ZfuPH/NajcOUlOBcnFxZDSX6mQIUexJwjAJyvVsQ5QJIPUZuWlzF2sG5B4xT45kdgbfqXTqhgt2GNpsU7LGixCc9/RES4thZa1q4N3GzmpkWL9e4LDMCNDkiZJXCB/oVXfzsxmEXePBZOgoF7qL/bEYIeBqIWW20AHiitq283j6Ir5kHfpzTKyP+13RgBye0LMIhc1b4EXB7hrBhUFNoRZscPOF2IQYUuicMS+MBpxV+Tx4iv4bpgza9PWZQalgt1tmFJ1oMeN/KJkAI=</validationCert>
+</SamlSsoConfig>

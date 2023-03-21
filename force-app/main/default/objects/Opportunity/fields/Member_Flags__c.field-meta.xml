@@ -38,24 +38,9 @@
                 <label>1040 Opt Out</label>
             </value>
             <value>
-                <fullName>1040 Opt Out - PY Unfiled Returns</fullName>
-                <default>false</default>
-                <label>1040 Opt Out - PY Unfiled Returns</label>
-            </value>
-            <value>
                 <fullName>Foreign Activity Acknowledgement Received</fullName>
                 <default>false</default>
                 <label>Foreign Activity Acknowledgement Received</label>
-            </value>
-            <value>
-                <fullName>Re-Domesticating</fullName>
-                <default>false</default>
-                <label>Re-Domesticating</label>
-            </value>
-            <value>
-                <fullName>Dormant Member Churn Candidate</fullName>
-                <default>false</default>
-                <label>Dormant Member Churn Candidate</label>
             </value>
         </valueSetDefinition>
     </valueSet>

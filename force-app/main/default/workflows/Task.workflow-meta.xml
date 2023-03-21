@@ -25,6 +25,10 @@
             <type>user</type>
         </recipients>
         <recipients>
+            <recipient>hamad@collective.com</recipient>
+            <type>user</type>
+        </recipients>
+        <recipients>
             <recipient>jacob@collective.com</recipient>
             <type>user</type>
         </recipients>
@@ -54,10 +58,6 @@
         </recipients>
         <recipients>
             <recipient>sconde@collective.com</recipient>
-            <type>user</type>
-        </recipients>
-        <recipients>
-            <recipient>sfdcautomation@collective.com</recipient>
             <type>user</type>
         </recipients>
         <recipients>

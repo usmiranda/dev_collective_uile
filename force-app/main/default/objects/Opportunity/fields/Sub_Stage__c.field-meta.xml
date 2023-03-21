@@ -5,7 +5,7 @@
     <label>Sub-Stage</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
-    <trackHistory>true</trackHistory>
+    <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
     <type>Picklist</type>
     <valueSet>
@@ -29,11 +29,6 @@
                 <label>Call Scheduled</label>
             </value>
             <value>
-                <fullName>Collective needs to confirm info</fullName>
-                <default>false</default>
-                <label>Collective needs to confirm info</label>
-            </value>
-            <value>
                 <fullName>Could not close</fullName>
                 <default>false</default>
                 <label>Could not close</label>
@@ -42,21 +37,6 @@
                 <fullName>Disqualified</fullName>
                 <default>false</default>
                 <label>Disqualified</label>
-            </value>
-            <value>
-                <fullName>Finalizing Upcoming Client contract</fullName>
-                <default>false</default>
-                <label>Finalizing Upcoming Client contract</label>
-            </value>
-            <value>
-                <fullName>Needs time to review materials</fullName>
-                <default>false</default>
-                <label>Needs time to review materials</label>
-            </value>
-            <value>
-                <fullName>Needs to talk to spouse/partner</fullName>
-                <default>false</default>
-                <label>Needs to talk to spouse/partner</label>
             </value>
             <value>
                 <fullName>Never Responded</fullName>
@@ -72,31 +52,6 @@
                 <fullName>Not Ready</fullName>
                 <default>false</default>
                 <label>Not Ready</label>
-            </value>
-            <value>
-                <fullName>Prospect needs to provide more info</fullName>
-                <default>false</default>
-                <label>Prospect needs to provide more info</label>
-            </value>
-            <value>
-                <fullName>Re-domesticating LLC</fullName>
-                <default>false</default>
-                <label>Re-domesticating LLC</label>
-            </value>
-            <value>
-                <fullName>Reviewing with financial advisor</fullName>
-                <default>false</default>
-                <label>Reviewing with financial advisor</label>
-            </value>
-            <value>
-                <fullName>Shopping Around</fullName>
-                <default>false</default>
-                <label>Shopping Around</label>
-            </value>
-            <value>
-                <fullName>Traveling</fullName>
-                <default>false</default>
-                <label>Traveling</label>
             </value>
             <value>
                 <fullName>Trying to Schedule</fullName>
@@ -139,42 +94,6 @@
         <valueSettings>
             <controllingFieldValue>Closed Lost</controllingFieldValue>
             <valueName>Not Ready</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Follow Up</controllingFieldValue>
-            <valueName>Collective needs to confirm info</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Follow Up</controllingFieldValue>
-            <valueName>Finalizing Upcoming Client contract</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Follow Up</controllingFieldValue>
-            <valueName>Needs time to review materials</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Follow Up</controllingFieldValue>
-            <valueName>Needs to talk to spouse/partner</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Follow Up</controllingFieldValue>
-            <valueName>Prospect needs to provide more info</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Follow Up</controllingFieldValue>
-            <valueName>Re-domesticating LLC</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Follow Up</controllingFieldValue>
-            <valueName>Reviewing with financial advisor</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Follow Up</controllingFieldValue>
-            <valueName>Shopping Around</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Follow Up</controllingFieldValue>
-            <valueName>Traveling</valueName>
         </valueSettings>
     </valueSet>
 </CustomField>

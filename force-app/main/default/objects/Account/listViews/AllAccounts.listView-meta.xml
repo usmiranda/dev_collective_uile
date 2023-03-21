@@ -12,15 +12,6 @@
     <columns>ACCOUNT.CREATED_DATE</columns>
     <columns>Member_Ops__c</columns>
     <columns>ACCOUNT.LAST_UPDATE</columns>
-    <columns>Tax_Advisor__c</columns>
-    <columns>Tax_Manager__c</columns>
-    <columns>MRM__c</columns>
-    <columns>Member_Admin__c</columns>
     <filterScope>Everything</filterScope>
-    <filters>
-        <field>MRM__c</field>
-        <operation>contains</operation>
-        <value>Tyrone</value>
-    </filters>
     <label>All Accounts</label>
 </ListView>

@@ -1,6 +1,7 @@
 name: Staging-Pull-Request-Deployment
 on:
-  push:
+  pull_request:
+    types: [closed]
     branches: [githubtest]
     paths:
       - "force-app/**"
@@ -46,7 +47,7 @@ jobs:
             echo "There is no test classes"
             SFDX_RUN_TEST_LEVEL="-l NoTestRun"
           else
-            SFDX_RUN_TEST_LEVEL="-l RunSpecifiedTests -r ${{ env.SFDX_SPECIFIC_TEST_FOUND }}"
+            SFDX_RUN_TEST_LEVEL="-l RunLocalTests"
           fi
           echo "SFDX_RUN_TEST_LEVEL=$SFDX_RUN_TEST_LEVEL" >> $GITHUB_ENV;
       - name: Printing specific test classes found
@@ -60,7 +61,7 @@ jobs:
           SERVER_KEY_CERTIFICATE: ${{ secrets.SERVER_KEY_CERTIFICATE }}
         run: |
           echo "$SERVER_KEY_CERTIFICATE" > ./JWT/connectionFile
-          sfdx auth:jwt:grant -i $DEV_CONSUMER_KEY -f JWT/connectionFile -u $DEV_USER_ADMIN -s -r $DEV_INSTANCE_URL -a DeploymetOrg
+          sfdx auth:jwt:grant -i $DEV_CONSUMER_KEY -f JWT/connectionFile -u $DEV_USER_ADMIN -s -r $DEV_INSTANCE_URL -a DeploymentOrg
           rm -rf JWT
       - name: Removing existing older folder
         run: rm -rf Deploy
@@ -69,5 +70,6 @@ jobs:
       - name: Deploying the package file
         if: github.event.pull_request.merged == true
         run: |
+          echo "pull request merged?-> ${{github.event.pull_request.merged}}"
           echo "Doing the real deployment in the environment"
-          sfdx force:mdapi:deploy -d Deploy/ -w -1 ${{ env.SFDX_RUN_TEST_LEVEL }}
+          sfdx force:mdapi:deploy -c -d Deploy/ -w -1 ${{ env.SFDX_RUN_TEST_LEVEL }}

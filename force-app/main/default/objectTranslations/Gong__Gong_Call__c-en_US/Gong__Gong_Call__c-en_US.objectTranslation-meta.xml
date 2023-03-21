@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fieldSets>
+        <label></label>
+        <name>Gong__Account_Related_Calls</name>
+    </fieldSets>
+    <fieldSets>
+        <label></label>
+        <name>Gong__Contact_Participated_Calls</name>
+    </fieldSets>
+    <fieldSets>
+        <label></label>
+        <name>Gong__Lead_Participated_Calls</name>
+    </fieldSets>
+    <fieldSets>
+        <label></label>
+        <name>Gong__Opp_Related_Calls</name>
+    </fieldSets>
+    <webLinks>
+        <label></label>
+        <name>Gong__View_Call_Button</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Gong__View_Call_link</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Gong__View_Transcript_button</name>
+    </webLinks>
+    <webLinks>
+        <label></label>
+        <name>Gong__View_Transcript_link</name>
+    </webLinks>
+</CustomObjectTranslation>

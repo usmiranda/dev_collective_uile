@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CanvasMetadata xmlns="http://soap.sforce.com/2006/04/metadata">
+    <accessMethod>Post</accessMethod>
+    <canvasUrl>https://2515d35c.ngrok.io/call?id=681975012463064973</canvasUrl>
+    <locationOptions>VF,AR,PL</locationOptions>
+    <samlInitiationMethod>0</samlInitiationMethod>
+</CanvasMetadata>
