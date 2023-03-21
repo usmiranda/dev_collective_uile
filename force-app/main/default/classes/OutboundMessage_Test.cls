@@ -32,14 +32,14 @@ public class OutboundMessage_Test {
     @testSetup static void setupData() {
         
         //create our test data
-        Account testAccount = New Account(name = ACCOUNT_NAME);
-        insert testAccount;
+       // Account testAccount = New Account(name = ACCOUNT_NAME);
+       // insert testAccount;
         
-        Contact testContact = New Contact(AccountId = testAccount.Id, FirstName = 'Test', LastName = 'Account', Email = 'testAccount@testing.net');
+        Contact testContact = New Contact(/*AccountId = testAccount.Id,*/ FirstName = 'Test', LastName = 'Account', Email = 'testAccount'+Math.rint(11) +'@testing.net',Intro_Call_Taker_Email__c = [SELECT Id, Email FROM User WHERE Profile.Name = 'System Administrator' LIMIT 1].Email,Calendly_Intro_Call_Date__c = Date.today());
         insert testContact;
         
-        Opportunity testOpp = New Opportunity(AccountId = testAccount.Id, Name = 'Test', StageName = 'Eligible', CloseDate = Date.today(), recordtypeid= '0126g0000001y5pAAA', Business_Solution_Advisor__c = Userinfo.getUserId(), Tax_Advisor__c = Userinfo.getUserId(), Tax_Team_Manager__c = Userinfo.getUserId(), Accounting_Advisor__c = Userinfo.getUserId(), Accounting_Manager__c =  Userinfo.getUserId());
-        insert testOpp;
+       // Opportunity testOpp = New Opportunity(AccountId = testAccount.Id, Name = 'Test', StageName = 'Eligible', CloseDate = Date.today(), recordtypeid= '0126g0000001y5pAAA', Business_Solution_Advisor__c = Userinfo.getUserId(), Tax_Advisor__c = Userinfo.getUserId(), Tax_Team_Manager__c = Userinfo.getUserId(), Accounting_Advisor__c = Userinfo.getUserId(), Accounting_Manager__c =  Userinfo.getUserId());
+       // insert testOpp;
         
         Connection_Settings__c cs = new Connection_Settings__c();
         cs.Name = 'Django';
@@ -122,6 +122,7 @@ public class OutboundMessage_Test {
         Opportunity testOppty = [Select Id, Name, StageName from Opportunity where Account.Name = : ACCOUNT_NAME limit 1];
         System.debug('testOppty: ' + testOppty);
         testOppty.StageName = STAGE_NAME;
+        testOppty.Plan__c = PLAN;
         update testOppty;
         
         return testOppty.Id;
