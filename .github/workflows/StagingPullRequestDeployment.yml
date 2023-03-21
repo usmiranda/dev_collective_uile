@@ -2,7 +2,7 @@ name: Staging-Pull-Request-Deployment
 on:
   pull_request:
     types: [closed]
-    branches: [githubtest]
+    branches: [main]
     paths:
       - "force-app/**"
 jobs:
