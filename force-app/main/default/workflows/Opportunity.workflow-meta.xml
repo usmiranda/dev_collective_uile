@@ -146,11 +146,11 @@
         <description>Transition Plan Submitted</description>
         <protected>false</protected>
         <recipients>
-            <recipient>jacob@collective.com</recipient>
+            <recipient>hamad@collective.com</recipient>
             <type>user</type>
         </recipients>
         <recipients>
-            <recipient>sfdcautomation@collective.com</recipient>
+            <recipient>jacob@collective.com</recipient>
             <type>user</type>
         </recipients>
         <senderType>DefaultWorkflowUser</senderType>
@@ -254,7 +254,7 @@ IF(CASESAFEID( RecordTypeId ) = &apos;0126g0000002TGjAAM&apos;,5,
         <fields>Offboarding_Initiated_Date__c</fields>
         <fields>StageName</fields>
         <includeSessionId>true</includeSessionId>
-        <integrationUser>sfdcautomation@collective.com</integrationUser>
+        <integrationUser>hamad@collective.com</integrationUser>
         <name>HS OB Msg Churn</name>
         <protected>false</protected>
         <useDeadLetterQueue>false</useDeadLetterQueue>
@@ -262,7 +262,7 @@ IF(CASESAFEID( RecordTypeId ) = &apos;0126g0000002TGjAAM&apos;,5,
     <outboundMessages>
         <fullName>HS_Ob_Msg_Opp</fullName>
         <apiVersion>55.0</apiVersion>
-        <endpointUrl>https://hooks.zapier.com/hooks/catch/10968837/b0u8v5n/</endpointUrl>
+        <endpointUrl>https://hooks.zapier.com/hooks/catch/9428824/b0u8v5n/</endpointUrl>
         <fields>Churn_Sub_Types__c</fields>
         <fields>Churn_Type__c</fields>
         <fields>Confirm_Payment_At__c</fields>
@@ -277,7 +277,7 @@ IF(CASESAFEID( RecordTypeId ) = &apos;0126g0000002TGjAAM&apos;,5,
         <fields>Sub_Stage_Reason__c</fields>
         <fields>Sub_Stage__c</fields>
         <includeSessionId>false</includeSessionId>
-        <integrationUser>sfdcautomation@collective.com</integrationUser>
+        <integrationUser>hamad@collective.com</integrationUser>
         <name>HS Ob Msg Opp</name>
         <protected>false</protected>
         <useDeadLetterQueue>false</useDeadLetterQueue>

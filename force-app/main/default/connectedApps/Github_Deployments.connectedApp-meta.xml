@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ConnectedApp xmlns="http://soap.sforce.com/2006/04/metadata">
+    <contactEmail>umiranda@collective.com</contactEmail>
+    <label>Github Deployments</label>
+    <oauthConfig>
+        <callbackUrl>http://localhost:1717/OauthRedirect</callbackUrl>
+        <certificate>MIIFwTCCA6kCFDj1iXWX6f/YegRwIc+9ZhKq5D2ZMA0GCSqGSIb3DQEBCwUAMIGcMQswCQYDVQQGEwJVUzETMBEGA1UECAwKQ2FsaWZvcm5pYTEWMBQGA1UEBwwNU2FuIEZyYW5jaXNjbzETMBEGA1UECgwKQ29sbGVjdGl2ZTEMMAoGA1UECwwDSHViMRUwEwYDVQQDDAxVaWxlIE1pcmFuZGExJjAkBgkqhkiG9w0BCQEWF3VtaXJhbmRhQGNvbGxlY3RpdmUuY29tMB4XDTIzMDIyODIxMjQxN1oXDTI0MDIyODIxMjQxN1owgZwxCzAJBgNVBAYTAlVTMRMwEQYDVQQIDApDYWxpZm9ybmlhMRYwFAYDVQQHDA1TYW4gRnJhbmNpc2NvMRMwEQYDVQQKDApDb2xsZWN0aXZlMQwwCgYDVQQLDANIdWIxFTATBgNVBAMMDFVpbGUgTWlyYW5kYTEmMCQGCSqGSIb3DQEJARYXdW1pcmFuZGFAY29sbGVjdGl2ZS5jb20wggIiMA0GCSqGSIb3DQEBAQUAA4ICDwAwggIKAoICAQCj1RLkRMYR15T4U7p/q7bs7BaXa1FACq2qz7wFVQicJvPVMwIlczUF8AVdH2aYGekRwSsOyIHmXnSkRwXXG+3Z8IRHgWB6Snn/QyjEfGeBOF7ajaw8gmJie59T0HwGxHBcIb/weh0R4++gu+ihXCac0mdpzcYAIveAOg+GY3ChTayZWPHP93iByVRE7djJZOmwl7hkRHoKdloBZQt9fVtfcc2A3B5oRcgvYsc0m5q1Fl4xL4Cy77M0O/I/bRUZJu7ZVffI1QeUQOOE/wuS+vywXabccJceJruLiU7A6WQRzxiWwXmVGOyvyboi6HPXrVmHh/2/0ur1dL2zyjxxAzng40KGHcaTU1hlRTW5h2JvTqv7S0Gq1AuLKDPYr8tO7AmVOrq7YE7XZH8DE8dzfHVMIILrC5tMIhBb+szOwYoPQZ+Nmc+B5dHguG11a7RUfk771URv3NBFQaDK81PZBtll9+8z6y7yFIcJcD0k5+oBl1907gg4CDBikKFaSadi83K5KBUS8upjrqVhEVFoF+63JcbIvOP8JYQRaaCvV/nhFR4vBeGgG168ZpPc7ZT9l+PoZOmAjpohhYihClPElUvz3lmDCaEJEDSh1UJwRMJpbISW0QB9Km3G0aFgc0c8crTLswRHaBtQ2muj7Xdj/zPszgzlOk3V4Un/yObLab+SzQIDAQABMA0GCSqGSIb3DQEBCwUAA4ICAQBWx8S4j0QJ3bou/HVdJ6tklfLAj4uV4x2cAtOF2JQonYz43qo0A4n9NqPuGCB6MecT8dVIbNsJhHriD2beXsqQsrh/LVIhhusfE5XJZFVDuGcNfjUJr/J2YD5g8tEuF1lwF//ucpAnpNvbigtH8zcZK1YPAesAlReEsrz3+GLpJw9Kg+HBnSzOAnXedYtm+akf7Sw5yu2paq4TzqpBRv0Lr7chDKIFdXt0iUKspCyfp1xGY8ork3+1z/6SFNCwUJT5Z/LcHP9/SbPiRDbtp11BxeO+vHO8cAhM8NJmvGiuTNA/mzEYEDZiQazwRrQAI7Z7lFhpCjiujJdXLlEr2BBaP08oqGB1zwr/UX38seuXUS9DxpvIzf1bUUDz9WHkmMGF8Hv4fcPzxtv7aS99zsZGOR1HGsXPrg7QZcyJPHwPuvLBMvY1T+qksfYDAu4RVMlJ1JXA+S2hGH16rxR2d/F/vPWIZhbhRf5QgaCNumDmMwEf/4nnO5TmzHFVdIKLqOw0cktj6ThLaoe/9v98J1aM5W890gf5pY4Sic4CKzXjD8vaZAcG0IE5zzPFfVzySjniCEHnxUEgtoQ7oLR7htCFIqv+jDoWeXyGwlh1KKtB1JduZro+Y4w3h3MB0S4uLLQMDLrrvDljPV234QVHSxAe9jm8uv08wqjW86pRjB7SRA==</certificate>
+        <consumerKey>3MVG9_4NR96cWRpGejcy0JQRGktTPLS0_MpKonXCKh4MCEXRN.TzQxusUnjIW5pHOHOUPfZZbI2nyeYgXqRcJ</consumerKey>
+        <isAdminApproved>true</isAdminApproved>
+        <isClientCredentialEnabled>false</isClientCredentialEnabled>
+        <isCodeCredentialEnabled>false</isCodeCredentialEnabled>
+        <isCodeCredentialPostOnly>false</isCodeCredentialPostOnly>
+        <isConsumerSecretOptional>false</isConsumerSecretOptional>
+        <isIntrospectAllTokens>false</isIntrospectAllTokens>
+        <isSecretRequiredForRefreshToken>false</isSecretRequiredForRefreshToken>
+        <scopes>Api</scopes>
+        <scopes>Web</scopes>
+        <scopes>RefreshToken</scopes>
+    </oauthConfig>
+    <oauthPolicy>
+        <ipRelaxation>ENFORCE</ipRelaxation>
+        <refreshTokenPolicy>infinite</refreshTokenPolicy>
+    </oauthPolicy>
+    <profileName>System Administrator</profileName>
+</ConnectedApp>

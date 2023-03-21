@@ -10,12 +10,10 @@
  */
 public class OutboundMessage {
 
-    public static String finalOpportunityId;
-    public static String responseRequest;    
-    public static String eventTypeFinal;    
     
     @InvocableMethod(label='Process Outbound Platform Event Data' description='Sends a CNCF Cloud message for each FlowInput passed in' category='Outbound Message' callout=true)
   	public static void processOutboundMessage(List<OutboundMessageVars> requests) {
+    	system.debug('Inside processOutboundMessage');    
         system.debug(requests);
         //loop through all the records passed in to the flow and send a payload to the django endpoint
         Set<String> recordIds = New Set<String>();
@@ -152,54 +150,17 @@ public class OutboundMessage {
         request.setBody(calloutData.stringify());
         HttpResponse response = http.send(request);
         // If the request is successful, parse the JSON response.
-        if(response.getStatusCode() == 200 || response.getStatusCode() == 201) {
+        if(response.getStatusCode() == 200) {
             system.debug(response.getBody());
             // Deserialize the JSON string into collections of primitive data types.
             //resString = response.getBody(); //JSON.deserializeUntyped()
             resString = 'success';
-            if(eventTypeFinal == 'com_collective_onboarding_fee_status'){
-                updateOnboardingFee();
-            }
         }else if (response.getStatusCode() == 400){
             resString = 'error ' + response.getStatusCode();
             //throw new error
         }
         return resString;
     }
-    
-    @AuraEnabled()
-    public static String callFlow(String opportunityId){
-    
-        finalOpportunityId = opportunityId;
-       	List<OutboundMessageVars> otbMessageVars = new List<OutboundMessageVars>();
-        
-        OutboundMessageVars newOtbMessageVar = new OutboundMessageVars();
-        newOtbMessageVar.recordId = opportunityId;
-        newOtbMessageVar.eventType = 'com_collective_onboarding_fee_status';
-        eventTypeFinal = 'com_collective_onboarding_fee_status';   
-        
-        otbMessageVars.add(newOtbMessageVar);
-
-       	processOutboundMessage(otbMessageVars); 
-        
-        return responseRequest;
-    }   
-    
-    public static void updateOnboardingFee(){
-        Opportunity opp = [Select Id, Name, Onboarding_Fee_Status__c from Opportunity where Id = : finalOpportunityId limit 1];
-        if (opp != null){
-            if(opp.Onboarding_Fee_Status__c == 'Waived'){
-                opp.Onboarding_Fee_Status__c = 'Included';                
-                responseRequest = 'Add Fee request is being processed';
-            }
-            else if(opp.Onboarding_Fee_Status__c == '' || opp.Onboarding_Fee_Status__c == null || opp.Onboarding_Fee_Status__c == 'Included' || opp.Onboarding_Fee_Status__c == 'Included Requested'){
-                opp.Onboarding_Fee_Status__c = 'Waived';
-                responseRequest = 'Waive request is being processed';
-            }            
-            
-            update opp;
-        }
-    }        
     
     
     //input details that comes to apex from flow

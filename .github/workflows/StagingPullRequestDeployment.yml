@@ -1,6 +1,7 @@
 name: Staging-Pull-Request-Deployment
 on:
-  push:
+  pull_request:
+    types: [closed]
     branches: [githubtest]
     paths:
       - "force-app/**"
@@ -46,7 +47,7 @@ jobs:
             echo "There is no test classes"
             SFDX_RUN_TEST_LEVEL="-l NoTestRun"
           else
-            SFDX_RUN_TEST_LEVEL="-l RunSpecifiedTests -r ${{ env.SFDX_SPECIFIC_TEST_FOUND }}"
+            SFDX_RUN_TEST_LEVEL="-l RunLocalTests"
           fi
           echo "SFDX_RUN_TEST_LEVEL=$SFDX_RUN_TEST_LEVEL" >> $GITHUB_ENV;
       - name: Printing specific test classes found
@@ -66,11 +67,9 @@ jobs:
         run: rm -rf Deploy
       - name: Converting the package
         run: sfdx force:source:convert -r force-app/ -d Deploy -x "${{ env.PACKAGE_FILE_NAME }}"
-      - name: Retrieve all info from Prod
-        run: sfdx force:mdapi:retrieve -r force-app/ -k manifest/package-general.xml
       - name: Deploying the package file
-        #if: github.event.pull_request.merged == true
+        if: github.event.pull_request.merged == true
         run: |
           echo "pull request merged?-> ${{github.event.pull_request.merged}}"
           echo "Doing the real deployment in the environment"
-        #  sfdx force:mdapi:deploy -d Deploy/ -w -1 ${{ env.SFDX_RUN_TEST_LEVEL }}
+          sfdx force:mdapi:deploy -c -d Deploy/ -w -1 ${{ env.SFDX_RUN_TEST_LEVEL }}

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GlobalValueSet xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customValue>
+        <fullName>Not Created</fullName>
+        <default>true</default>
+        <label>Not Created</label>
+    </customValue>
+    <customValue>
+        <fullName>Created</fullName>
+        <default>false</default>
+        <label>Created</label>
+    </customValue>
+    <customValue>
+        <fullName>Paid</fullName>
+        <default>false</default>
+        <label>Paid</label>
+    </customValue>
+    <customValue>
+        <fullName>Missed</fullName>
+        <default>false</default>
+        <label>Missed</label>
+    </customValue>
+    <masterLabel>Estimate Status</masterLabel>
+    <sorted>false</sorted>
+</GlobalValueSet>

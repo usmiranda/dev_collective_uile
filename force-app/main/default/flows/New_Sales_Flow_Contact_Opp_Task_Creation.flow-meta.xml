@@ -225,7 +225,7 @@
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
             <name>NewContact</name>
-            <conditionLogic>(1 AND 2 AND 3 AND 4) OR (1 AND 11 AND (5 OR 6 OR 7 OR 8 OR 9 OR 10))</conditionLogic>
+            <conditionLogic>(1 AND 2 AND 3 AND 4) OR (1 AND (5 OR 6 OR 7 OR 8 OR 9 OR 10))</conditionLogic>
             <conditions>
                 <leftValueReference>ISNEW</leftValueReference>
                 <operator>EqualTo</operator>
@@ -296,13 +296,6 @@
                     <stringValue>Santos</stringValue>
                 </rightValue>
             </conditions>
-            <conditions>
-                <leftValueReference>$Record.Self_checkout_member__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
             <connector>
                 <targetReference>user_email</targetReference>
             </connector>
@@ -323,13 +316,6 @@
                 <operator>EqualTo</operator>
                 <rightValue>
                     <elementReference>eng_api_user_email</elementReference>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Self_checkout_member__c</leftValueReference>
-                <operator>EqualTo</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
                 </rightValue>
             </conditions>
             <label>Contact Created from BE</label>
@@ -684,62 +670,6 @@ IF(CONTAINS(LOWER({!Check_If_Account_is_Already_Created.Original_Entity_Type__c}
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordCreates>
-        <name>Copy_1_of_Create_Intro_Call_Task</name>
-        <label>Create Intro Call Task</label>
-        <locationX>578</locationX>
-        <locationY>2207</locationY>
-        <inputAssignments>
-            <field>Account__c</field>
-            <value>
-                <elementReference>Get_Opp.Account.Id</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>ActivityDate</field>
-            <value>
-                <elementReference>CloseDate</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Opportunity__c</field>
-            <value>
-                <elementReference>Get_Opp.Id</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>OwnerId</field>
-            <value>
-                <elementReference>$User.Id</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Plan__c</field>
-            <value>
-                <elementReference>Get_Opp.Plan__c</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Status</field>
-            <value>
-                <stringValue>Open</stringValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Subject</field>
-            <value>
-                <stringValue>Take Intro Call</stringValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>WhatId</field>
-            <value>
-                <elementReference>Get_Opp.Id</elementReference>
-            </value>
-        </inputAssignments>
-        <object>Task</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordCreates>
-    <recordCreates>
         <name>Create_Account</name>
         <label>Create Account</label>
         <locationX>314</locationX>
@@ -768,7 +698,7 @@ IF(CONTAINS(LOWER({!Check_If_Account_is_Already_Created.Original_Entity_Type__c}
         <inputAssignments>
             <field>MRM__c</field>
             <value>
-                <stringValue>0055x00000CDPm9AAH</stringValue>
+                <stringValue>0055x00000CCst7AAD</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -881,7 +811,7 @@ IF(CONTAINS(LOWER({!Check_If_Account_is_Already_Created.Original_Entity_Type__c}
         <inputAssignments>
             <field>MRM__c</field>
             <value>
-                <stringValue>0055x00000CDPm9AAH</stringValue>
+                <stringValue>0055x00000CCst7AAD</stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -2014,9 +1944,6 @@ IF(CONTAINS(LOWER({!Check_If_Account_is_Already_Created.Original_Entity_Type__c}
         <label>Update Opp stage to trying</label>
         <locationX>578</locationX>
         <locationY>2087</locationY>
-        <connector>
-            <targetReference>Copy_1_of_Create_Intro_Call_Task</targetReference>
-        </connector>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>

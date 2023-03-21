@@ -74,11 +74,6 @@
                 <label>Dissatisfied with Communication Times / Process</label>
             </value>
             <value>
-                <fullName>Initial Expectations Not Properly Set</fullName>
-                <default>false</default>
-                <label>Initial Expectations Not Properly Set</label>
-            </value>
-            <value>
                 <fullName>Took Job</fullName>
                 <default>false</default>
                 <label>Took Job</label>
@@ -172,10 +167,6 @@
         <valueSettings>
             <controllingFieldValue>Regrettable</controllingFieldValue>
             <valueName>Dissatisfied with Communication Times / Process</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Regrettable</controllingFieldValue>
-            <valueName>Initial Expectations Not Properly Set</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Regrettable</controllingFieldValue>

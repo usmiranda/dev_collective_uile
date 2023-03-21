@@ -3,11 +3,10 @@
     <fullName>All</fullName>
     <columns>NAME</columns>
     <columns>Active__c</columns>
-    <columns>User__c</columns>
-    <columns>Tax_Reviewer__c</columns>
-    <columns>Tax_Preparer__c</columns>
-    <columns>Type__c</columns>
+    <columns>CREATED_DATE</columns>
     <columns>Last_Assigned__c</columns>
+    <columns>Type__c</columns>
+    <columns>User__c</columns>
     <filterScope>Everything</filterScope>
     <label>All</label>
 </ListView>

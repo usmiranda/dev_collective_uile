@@ -9,12 +9,6 @@
     <columns>CORE.USERS.ACTIVE</columns>
     <columns>CORE.PROFILE.NAME</columns>
     <columns>MANAGER</columns>
-    <columns>CREATED_DATE</columns>
     <filterScope>Everything</filterScope>
-    <filters>
-        <field>CORE.USERS.ACTIVE</field>
-        <operation>equals</operation>
-        <value>1</value>
-    </filters>
     <label>Active Users</label>
 </ListView>

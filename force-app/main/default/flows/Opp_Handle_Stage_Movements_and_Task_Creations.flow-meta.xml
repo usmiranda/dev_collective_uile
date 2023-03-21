@@ -380,7 +380,7 @@
 </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_10_myRule_8_A2_6864221947</name>
+        <name>formula_10_myRule_8_A2_4391016154</name>
         <dataType>String</dataType>
         <expression>IF(ISBLANK({!myVariable_current.Business_Solution_Advisor__c} ),
 &apos;0055x00000A9Q6GAAV&apos;,
@@ -394,7 +394,7 @@
 	&quot;Verify Formation Details&quot;+&quot;  |  &quot;+ [Opportunity].Account.Name </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_11_myRule_8_A2_0783040469</name>
+        <name>formula_11_myRule_8_A2_0687107202</name>
         <dataType>String</dataType>
         <expression>
 	&quot;Verify Formation Details&quot;+&quot;  |  &quot;+ {!myVariable_current.Account.Name}</expression>
@@ -407,7 +407,7 @@
 </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_12_myRule_8_A1_7817755289</name>
+        <name>formula_12_myRule_8_A1_5929075897</name>
         <dataType>String</dataType>
         <expression>CASESAFEID(&quot;0126g0000001y5u&quot;)</expression>
     </formulas>
@@ -418,7 +418,7 @@
                 <stringValue>TODAY()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_15_myRule_14_A1_4025374430</name>
+        <name>formula_15_myRule_14_A1_3952096070</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -432,7 +432,7 @@
 </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_16_myRule_14_A1_8631236977</name>
+        <name>formula_16_myRule_14_A1_0547544538</name>
         <dataType>String</dataType>
         <expression>IF(ISBLANK({!myVariable_current.Business_Solution_Advisor__c} ),
 &apos;0055x00000A9Q6GAAV&apos;,
@@ -445,7 +445,7 @@
                 <stringValue>&quot;Receive Entity Information&quot; +&quot;  |  &quot;+ [Opportunity].Account.Name </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_17_myRule_14_A1_8577288473</name>
+        <name>formula_17_myRule_14_A1_7747762317</name>
         <dataType>String</dataType>
         <expression>&quot;Receive Entity Information&quot; +&quot;  |  &quot;+ {!myVariable_current.Account.Name}</expression>
     </formulas>
@@ -456,7 +456,7 @@
                 <stringValue>TODAY() + 5</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_20_myRule_19_A1_8552425183</name>
+        <name>formula_20_myRule_19_A1_5242772958</name>
         <dataType>Date</dataType>
         <expression>TODAY() + 5</expression>
     </formulas>
@@ -467,7 +467,7 @@
                 <stringValue>&quot;File 2553 | &quot; &amp; [Opportunity].Name </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_21_myRule_19_A1_3823402745</name>
+        <name>formula_21_myRule_19_A1_1395838989</name>
         <dataType>String</dataType>
         <expression>&quot;File 2553 | &quot; &amp; {!myVariable_current.Name}</expression>
     </formulas>
@@ -478,7 +478,7 @@
                 <stringValue>TODAY() + 7</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_24_myRule_23_A1_7573475953</name>
+        <name>formula_24_myRule_23_A1_9755135715</name>
         <dataType>Date</dataType>
         <expression>TODAY() + 7</expression>
     </formulas>
@@ -486,12 +486,12 @@
         <processMetadataValues>
             <name>originalFormula</name>
             <value>
-                <stringValue>&quot;File NJ S Election | &quot; &amp; [Opportunity].Name</stringValue>
+                <stringValue>&quot;File NJ/NY S Election | &quot; &amp; [Opportunity].Name</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_25_myRule_23_A1_4978852235</name>
+        <name>formula_25_myRule_23_A1_3702166939</name>
         <dataType>String</dataType>
-        <expression>&quot;File NJ S Election | &quot; &amp; {!myVariable_current.Name}</expression>
+        <expression>&quot;File NJ/NY S Election | &quot; &amp; {!myVariable_current.Name}</expression>
     </formulas>
     <formulas>
         <processMetadataValues>
@@ -500,7 +500,7 @@
                 <stringValue>TODAY() + 200</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_28_myRule_27_A1_1985911046</name>
+        <name>formula_28_myRule_27_A1_5034484621</name>
         <dataType>Date</dataType>
         <expression>TODAY() + 200</expression>
     </formulas>
@@ -511,7 +511,7 @@
                 <stringValue>&quot;Receipt 2553 Confirmation Letter | &quot; &amp; [Opportunity].Name </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_29_myRule_27_A1_4559518498</name>
+        <name>formula_29_myRule_27_A1_5242782011</name>
         <dataType>String</dataType>
         <expression>&quot;Receipt 2553 Confirmation Letter | &quot; &amp; {!myVariable_current.Name}</expression>
     </formulas>
@@ -527,7 +527,7 @@
 )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_2_myRule_1_A1_5675669951</name>
+        <name>formula_2_myRule_1_A1_4149859374</name>
         <dataType>String</dataType>
         <expression>CASE(TEXT({!myVariable_current.StageName}),
 	&quot;Setup Accounting Software&quot; , &quot;Confirm Training Call Scheduled&quot;,
@@ -543,7 +543,7 @@
                 <stringValue>TODAY() + 7</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_32_myRule_31_A1_5055958300</name>
+        <name>formula_32_myRule_31_A1_0487673710</name>
         <dataType>Date</dataType>
         <expression>TODAY() + 7</expression>
     </formulas>
@@ -554,7 +554,7 @@
                 <stringValue>&quot;Mail LLC Forms | &quot; &amp;  [Opportunity].Account.Name </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_33_myRule_31_A1_5390642454</name>
+        <name>formula_33_myRule_31_A1_9561546914</name>
         <dataType>String</dataType>
         <expression>&quot;Mail LLC Forms | &quot; &amp;  {!myVariable_current.Account.Name}</expression>
     </formulas>
@@ -587,7 +587,7 @@
 )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_36_myRule_35_A1_2799653333</name>
+        <name>formula_36_myRule_35_A1_2680554669</name>
         <dataType>Date</dataType>
         <expression>CASE(
 	TEXT({!myVariable_current.StageName}),
@@ -655,7 +655,7 @@
 )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_37_myRule_35_A1_5896064692</name>
+        <name>formula_37_myRule_35_A1_0220240187</name>
         <dataType>String</dataType>
         <expression>CASE(
 	TEXT({!myVariable_current.StageName}),
@@ -701,7 +701,7 @@
                 <stringValue>TEXT([Opportunity].StageName) +&quot;  |  &quot;+ [Opportunity].Account.Name </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_38_myRule_35_A1_7948743985</name>
+        <name>formula_38_myRule_35_A1_8021769533</name>
         <dataType>String</dataType>
         <expression>TEXT({!myVariable_current.StageName}) +&quot;  |  &quot;+ {!myVariable_current.Account.Name}</expression>
     </formulas>
@@ -712,7 +712,7 @@
                 <stringValue>TODAY()+7</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_41_myRule_40_A2_8177823309</name>
+        <name>formula_41_myRule_40_A2_4022632910</name>
         <dataType>Date</dataType>
         <expression>TODAY()+7</expression>
     </formulas>
@@ -723,7 +723,7 @@
                 <stringValue>&quot; First Reconcile&quot;+&quot;  |  &quot;+ [Opportunity].Account.Name </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_42_myRule_40_A2_5401838797</name>
+        <name>formula_42_myRule_40_A2_1315596993</name>
         <dataType>String</dataType>
         <expression>&quot; First Reconcile&quot;+&quot;  |  &quot;+ {!myVariable_current.Account.Name}</expression>
     </formulas>
@@ -734,7 +734,7 @@
                 <stringValue>TODAY()+7</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_43_myRule_40_A1_3642020395</name>
+        <name>formula_43_myRule_40_A1_4952724472</name>
         <dataType>Date</dataType>
         <expression>TODAY()+7</expression>
     </formulas>
@@ -745,7 +745,7 @@
                 <stringValue>&quot; First Payroll&quot;+&quot;  |  &quot;+ [Opportunity].Account.Name </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_44_myRule_40_A1_0759935752</name>
+        <name>formula_44_myRule_40_A1_4734870289</name>
         <dataType>String</dataType>
         <expression>&quot; First Payroll&quot;+&quot;  |  &quot;+ {!myVariable_current.Account.Name}</expression>
     </formulas>
@@ -756,7 +756,7 @@
                 <stringValue>TODAY()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_47_myRule_46_A2_8825421816</name>
+        <name>formula_47_myRule_46_A2_2300908660</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -767,7 +767,7 @@
                 <stringValue>TODAY()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_48_myRule_46_A2_7234511522</name>
+        <name>formula_48_myRule_46_A2_9812673892</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -778,7 +778,7 @@
                 <stringValue>$User.Id </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_49_myRule_46_A2_7564443559</name>
+        <name>formula_49_myRule_46_A2_1344422502</name>
         <dataType>String</dataType>
         <expression>{!$User.Id}</expression>
     </formulas>
@@ -789,7 +789,7 @@
                 <stringValue>&quot;Take Intro Call  |  &quot;+ [Opportunity].Account.Name </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_50_myRule_46_A2_0570489609</name>
+        <name>formula_50_myRule_46_A2_2881310462</name>
         <dataType>String</dataType>
         <expression>&quot;Take Intro Call  |  &quot;+ {!myVariable_current.Account.Name}</expression>
     </formulas>
@@ -800,7 +800,7 @@
                 <stringValue>IF( ISPICKVAL([Opportunity].Zoom_Call_Outcome__c , &quot;Lost Contact&quot;)  , &quot;Lost Contact&quot;, null) </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_51_myRule_46_A1_3414711374</name>
+        <name>formula_51_myRule_46_A1_2772675393</name>
         <dataType>String</dataType>
         <expression>IF( ISPICKVAL({!myVariable_current.Zoom_Call_Outcome__c} , &quot;Lost Contact&quot;)  , &quot;Lost Contact&quot;, null)</expression>
     </formulas>
@@ -811,7 +811,7 @@
                 <stringValue>NOW()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_52_myRule_46_A1_3978860562</name>
+        <name>formula_52_myRule_46_A1_1472668804</name>
         <dataType>DateTime</dataType>
         <expression>NOW()</expression>
     </formulas>
@@ -822,7 +822,7 @@
                 <stringValue>$User.Id</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_53_myRule_46_A1_4754443278</name>
+        <name>formula_53_myRule_46_A1_9619407429</name>
         <dataType>String</dataType>
         <expression>{!$User.Id}</expression>
     </formulas>
@@ -833,7 +833,7 @@
                 <stringValue>IF( ISPICKVAL([Opportunity].Zoom_Call_Outcome__c , &quot;Lost Contact&quot;)  , &quot;Closed Lost&quot;, &quot;Take Intro Call&quot;) </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_54_myRule_46_A1_3784825668</name>
+        <name>formula_54_myRule_46_A1_8130287770</name>
         <dataType>String</dataType>
         <expression>IF( ISPICKVAL({!myVariable_current.Zoom_Call_Outcome__c} , &quot;Lost Contact&quot;)  , &quot;Closed Lost&quot;, &quot;Take Intro Call&quot;)</expression>
     </formulas>
@@ -844,7 +844,7 @@
                 <stringValue>$User.Id </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_55_myRule_46_A1_6439133650</name>
+        <name>formula_55_myRule_46_A1_1039564399</name>
         <dataType>String</dataType>
         <expression>{!$User.Id}</expression>
     </formulas>
@@ -855,7 +855,7 @@
                 <stringValue>TODAY() + 7</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_58_myRule_57_A1_1487042297</name>
+        <name>formula_58_myRule_57_A1_3450347468</name>
         <dataType>Date</dataType>
         <expression>TODAY() + 7</expression>
     </formulas>
@@ -866,7 +866,7 @@
                 <stringValue>&quot;File NY S Election | &quot; &amp; [Opportunity].Name</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_59_myRule_57_A1_1738423280</name>
+        <name>formula_59_myRule_57_A1_0581881498</name>
         <dataType>String</dataType>
         <expression>&quot;File NY S Election | &quot; &amp; {!myVariable_current.Name}</expression>
     </formulas>
@@ -883,7 +883,7 @@
 )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_5_myRule_4_A1_4329970777</name>
+        <name>formula_5_myRule_4_A1_1836730188</name>
         <dataType>String</dataType>
         <expression>IF(	
 	NOT(ISPICKVAL({!myVariable_current.Plan__c},&quot;SP -&gt; SC&quot;)),
@@ -905,7 +905,7 @@
 </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_6_myRule_4_A1_0213316405</name>
+        <name>formula_6_myRule_4_A1_7692762228</name>
         <dataType>String</dataType>
         <expression>IF(
 	ISPICKVAL({!myVariable_current.Plan__c} ,&quot;SP -&gt; SC&quot;),
@@ -920,7 +920,7 @@
                 <stringValue>TODAY()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_9_myRule_8_A2_8700574606</name>
+        <name>formula_9_myRule_8_A2_7188029427</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -1006,7 +1006,7 @@
                 <stringValue>AND(
 	ISCHANGED([Opportunity].LTC_Subject__c),
 	NOT(ISBLANK([Opportunity].LTC_Subject__c)),
-	CONTAINS([Opportunity].LTC_Subject__c,&quot;Register as Employer (NJ)&quot;),
+	CONTAINS([Opportunity].LTC_Subject__c,&quot;File 2553&quot;),
 	[Opportunity].Account.State_of_Business__c  = &quot;NJ&quot;     
 )</stringValue>
             </value>
@@ -1016,7 +1016,7 @@
         <expression>AND(
 	ISCHANGED({!myVariable_current.LTC_Subject__c}),
 	NOT(ISBLANK({!myVariable_current.LTC_Subject__c})),
-	CONTAINS({!myVariable_current.LTC_Subject__c},&quot;Register as Employer (NJ)&quot;),
+	CONTAINS({!myVariable_current.LTC_Subject__c},&quot;File 2553&quot;),
 	{!myVariable_current.Account.State_of_Business__c}  = &quot;NJ&quot;     
 )</expression>
     </formulas>
@@ -1218,7 +1218,7 @@ ISPICKVAL({!myVariable_current.StageName} , &quot;Rebuild Books&quot;)
         {!myVariable_current.Record_Type_Name__c} &lt;&gt; &quot;Post-Payment&quot;
 )</expression>
     </formulas>
-    <interviewLabel>Opp_Handle_Stage_Movements_and_Task_Creations-71_InterviewLabel</interviewLabel>
+    <interviewLabel>Opp_Handle_Stage_Movements_and_Task_Creations-68_InterviewLabel</interviewLabel>
     <label>Opp: Handle Stage Movements and Task Creations</label>
     <processMetadataValues>
         <name>ObjectType</name>
@@ -1322,7 +1322,7 @@ ISPICKVAL({!myVariable_current.StageName} , &quot;Rebuild Books&quot;)
             </processMetadataValues>
             <field>ActivityDate</field>
             <value>
-                <elementReference>formula_15_myRule_14_A1_4025374430</elementReference>
+                <elementReference>formula_15_myRule_14_A1_3952096070</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1394,7 +1394,7 @@ ISPICKVAL({!myVariable_current.StageName} , &quot;Rebuild Books&quot;)
             </processMetadataValues>
             <field>OwnerId</field>
             <value>
-                <elementReference>formula_16_myRule_14_A1_8631236977</elementReference>
+                <elementReference>formula_16_myRule_14_A1_0547544538</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1526,7 +1526,7 @@ ISPICKVAL({!myVariable_current.StageName} , &quot;Rebuild Books&quot;)
             </processMetadataValues>
             <field>Subject</field>
             <value>
-                <elementReference>formula_17_myRule_14_A1_8577288473</elementReference>
+                <elementReference>formula_17_myRule_14_A1_7747762317</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1608,7 +1608,7 @@ ISPICKVAL({!myVariable_current.StageName} , &quot;Rebuild Books&quot;)
             </processMetadataValues>
             <field>ActivityDate</field>
             <value>
-                <elementReference>formula_20_myRule_19_A1_8552425183</elementReference>
+                <elementReference>formula_20_myRule_19_A1_5242772958</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1716,7 +1716,7 @@ ISPICKVAL({!myVariable_current.StageName} , &quot;Rebuild Books&quot;)
             </processMetadataValues>
             <field>Subject</field>
             <value>
-                <elementReference>formula_21_myRule_19_A1_3823402745</elementReference>
+                <elementReference>formula_21_myRule_19_A1_1395838989</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1834,7 +1834,7 @@ ISPICKVAL({!myVariable_current.StageName} , &quot;Rebuild Books&quot;)
             </processMetadataValues>
             <field>ActivityDate</field>
             <value>
-                <elementReference>formula_24_myRule_23_A1_7573475953</elementReference>
+                <elementReference>formula_24_myRule_23_A1_9755135715</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -2032,7 +2032,7 @@ ISPICKVAL({!myVariable_current.StageName} , &quot;Rebuild Books&quot;)
             </processMetadataValues>
             <field>Subject</field>
             <value>
-                <elementReference>formula_25_myRule_23_A1_4978852235</elementReference>
+                <elementReference>formula_25_myRule_23_A1_3702166939</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -2114,7 +2114,7 @@ ISPICKVAL({!myVariable_current.StageName} , &quot;Rebuild Books&quot;)
             </processMetadataValues>
             <field>ActivityDate</field>
             <value>
-                <elementReference>formula_28_myRule_27_A1_1985911046</elementReference>
+                <elementReference>formula_28_myRule_27_A1_5034484621</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -2222,7 +2222,7 @@ ISPICKVAL({!myVariable_current.StageName} , &quot;Rebuild Books&quot;)
             </processMetadataValues>
             <field>Subject</field>
             <value>
-                <elementReference>formula_29_myRule_27_A1_4559518498</elementReference>
+                <elementReference>formula_29_myRule_27_A1_5242782011</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -2340,7 +2340,7 @@ ISPICKVAL({!myVariable_current.StageName} , &quot;Rebuild Books&quot;)
             </processMetadataValues>
             <field>ActivityDate</field>
             <value>
-                <elementReference>formula_32_myRule_31_A1_5055958300</elementReference>
+                <elementReference>formula_32_myRule_31_A1_0487673710</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -2538,7 +2538,7 @@ ISPICKVAL({!myVariable_current.StageName} , &quot;Rebuild Books&quot;)
             </processMetadataValues>
             <field>Subject</field>
             <value>
-                <elementReference>formula_33_myRule_31_A1_5390642454</elementReference>
+                <elementReference>formula_33_myRule_31_A1_9561546914</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -2656,7 +2656,7 @@ ISPICKVAL({!myVariable_current.StageName} , &quot;Rebuild Books&quot;)
             </processMetadataValues>
             <field>ActivityDate</field>
             <value>
-                <elementReference>formula_36_myRule_35_A1_2799653333</elementReference>
+                <elementReference>formula_36_myRule_35_A1_2680554669</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -2728,7 +2728,7 @@ ISPICKVAL({!myVariable_current.StageName} , &quot;Rebuild Books&quot;)
             </processMetadataValues>
             <field>OwnerId</field>
             <value>
-                <elementReference>formula_37_myRule_35_A1_5896064692</elementReference>
+                <elementReference>formula_37_myRule_35_A1_0220240187</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -2836,7 +2836,7 @@ ISPICKVAL({!myVariable_current.StageName} , &quot;Rebuild Books&quot;)
             </processMetadataValues>
             <field>Subject</field>
             <value>
-                <elementReference>formula_38_myRule_35_A1_7948743985</elementReference>
+                <elementReference>formula_38_myRule_35_A1_8021769533</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -2954,7 +2954,7 @@ ISPICKVAL({!myVariable_current.StageName} , &quot;Rebuild Books&quot;)
             </processMetadataValues>
             <field>ActivityDate</field>
             <value>
-                <elementReference>formula_43_myRule_40_A1_3642020395</elementReference>
+                <elementReference>formula_43_myRule_40_A1_4952724472</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -3116,7 +3116,7 @@ ISPICKVAL({!myVariable_current.StageName} , &quot;Rebuild Books&quot;)
             </processMetadataValues>
             <field>Subject</field>
             <value>
-                <elementReference>formula_44_myRule_40_A1_0759935752</elementReference>
+                <elementReference>formula_44_myRule_40_A1_4734870289</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -3234,7 +3234,7 @@ ISPICKVAL({!myVariable_current.StageName} , &quot;Rebuild Books&quot;)
             </processMetadataValues>
             <field>ActivityDate</field>
             <value>
-                <elementReference>formula_41_myRule_40_A2_8177823309</elementReference>
+                <elementReference>formula_41_myRule_40_A2_4022632910</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -3396,7 +3396,7 @@ ISPICKVAL({!myVariable_current.StageName} , &quot;Rebuild Books&quot;)
             </processMetadataValues>
             <field>Subject</field>
             <value>
-                <elementReference>formula_42_myRule_40_A2_5401838797</elementReference>
+                <elementReference>formula_42_myRule_40_A2_1315596993</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -3511,7 +3511,7 @@ ISPICKVAL({!myVariable_current.StageName} , &quot;Rebuild Books&quot;)
             </processMetadataValues>
             <field>ActivityDate</field>
             <value>
-                <elementReference>formula_47_myRule_46_A2_8825421816</elementReference>
+                <elementReference>formula_47_myRule_46_A2_2300908660</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -3547,7 +3547,7 @@ ISPICKVAL({!myVariable_current.StageName} , &quot;Rebuild Books&quot;)
             </processMetadataValues>
             <field>Confirmed_Call_Date__c</field>
             <value>
-                <elementReference>formula_48_myRule_46_A2_7234511522</elementReference>
+                <elementReference>formula_48_myRule_46_A2_9812673892</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -3685,7 +3685,7 @@ ISPICKVAL({!myVariable_current.StageName} , &quot;Rebuild Books&quot;)
             </processMetadataValues>
             <field>OwnerId</field>
             <value>
-                <elementReference>formula_49_myRule_46_A2_7564443559</elementReference>
+                <elementReference>formula_49_myRule_46_A2_1344422502</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -3853,7 +3853,7 @@ ISPICKVAL({!myVariable_current.StageName} , &quot;Rebuild Books&quot;)
             </processMetadataValues>
             <field>Subject</field>
             <value>
-                <elementReference>formula_50_myRule_46_A2_0570489609</elementReference>
+                <elementReference>formula_50_myRule_46_A2_2881310462</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -3968,7 +3968,7 @@ ISPICKVAL({!myVariable_current.StageName} , &quot;Rebuild Books&quot;)
             </processMetadataValues>
             <field>ActivityDate</field>
             <value>
-                <elementReference>formula_58_myRule_57_A1_1487042297</elementReference>
+                <elementReference>formula_58_myRule_57_A1_3450347468</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -4166,7 +4166,7 @@ ISPICKVAL({!myVariable_current.StageName} , &quot;Rebuild Books&quot;)
             </processMetadataValues>
             <field>Subject</field>
             <value>
-                <elementReference>formula_59_myRule_57_A1_1738423280</elementReference>
+                <elementReference>formula_59_myRule_57_A1_0581881498</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -4284,7 +4284,7 @@ ISPICKVAL({!myVariable_current.StageName} , &quot;Rebuild Books&quot;)
             </processMetadataValues>
             <field>ActivityDate</field>
             <value>
-                <elementReference>formula_9_myRule_8_A2_8700574606</elementReference>
+                <elementReference>formula_9_myRule_8_A2_7188029427</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -4356,7 +4356,7 @@ ISPICKVAL({!myVariable_current.StageName} , &quot;Rebuild Books&quot;)
             </processMetadataValues>
             <field>OwnerId</field>
             <value>
-                <elementReference>formula_10_myRule_8_A2_6864221947</elementReference>
+                <elementReference>formula_10_myRule_8_A2_4391016154</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -4488,7 +4488,7 @@ ISPICKVAL({!myVariable_current.StageName} , &quot;Rebuild Books&quot;)
             </processMetadataValues>
             <field>Subject</field>
             <value>
-                <elementReference>formula_11_myRule_8_A2_0783040469</elementReference>
+                <elementReference>formula_11_myRule_8_A2_0687107202</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -4608,7 +4608,7 @@ ISPICKVAL({!myVariable_current.StageName} , &quot;Rebuild Books&quot;)
             </processMetadataValues>
             <field>StageName</field>
             <value>
-                <elementReference>formula_2_myRule_1_A1_5675669951</elementReference>
+                <elementReference>formula_2_myRule_1_A1_4149859374</elementReference>
             </value>
         </inputAssignments>
         <object>Opportunity</object>
@@ -4692,7 +4692,7 @@ ISPICKVAL({!myVariable_current.StageName} , &quot;Rebuild Books&quot;)
             </processMetadataValues>
             <field>Closed_Lost_Reason__c</field>
             <value>
-                <elementReference>formula_51_myRule_46_A1_3414711374</elementReference>
+                <elementReference>formula_51_myRule_46_A1_2772675393</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -4728,7 +4728,7 @@ ISPICKVAL({!myVariable_current.StageName} , &quot;Rebuild Books&quot;)
             </processMetadataValues>
             <field>Intro_Call_Completed_Date__c</field>
             <value>
-                <elementReference>formula_52_myRule_46_A1_3978860562</elementReference>
+                <elementReference>formula_52_myRule_46_A1_1472668804</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -4764,7 +4764,7 @@ ISPICKVAL({!myVariable_current.StageName} , &quot;Rebuild Books&quot;)
             </processMetadataValues>
             <field>OwnerId</field>
             <value>
-                <elementReference>formula_53_myRule_46_A1_4754443278</elementReference>
+                <elementReference>formula_53_myRule_46_A1_9619407429</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -4800,7 +4800,7 @@ ISPICKVAL({!myVariable_current.StageName} , &quot;Rebuild Books&quot;)
             </processMetadataValues>
             <field>StageName</field>
             <value>
-                <elementReference>formula_54_myRule_46_A1_3784825668</elementReference>
+                <elementReference>formula_54_myRule_46_A1_8130287770</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -4836,7 +4836,7 @@ ISPICKVAL({!myVariable_current.StageName} , &quot;Rebuild Books&quot;)
             </processMetadataValues>
             <field>Tax_Advisor__c</field>
             <value>
-                <elementReference>formula_55_myRule_46_A1_6439133650</elementReference>
+                <elementReference>formula_55_myRule_46_A1_1039564399</elementReference>
             </value>
         </inputAssignments>
         <object>Opportunity</object>
@@ -4920,7 +4920,7 @@ ISPICKVAL({!myVariable_current.StageName} , &quot;Rebuild Books&quot;)
             </processMetadataValues>
             <field>RecordTypeId</field>
             <value>
-                <elementReference>formula_5_myRule_4_A1_4329970777</elementReference>
+                <elementReference>formula_5_myRule_4_A1_1836730188</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -4956,7 +4956,7 @@ ISPICKVAL({!myVariable_current.StageName} , &quot;Rebuild Books&quot;)
             </processMetadataValues>
             <field>StageName</field>
             <value>
-                <elementReference>formula_6_myRule_4_A1_0213316405</elementReference>
+                <elementReference>formula_6_myRule_4_A1_7692762228</elementReference>
             </value>
         </inputAssignments>
         <object>Opportunity</object>
@@ -5124,7 +5124,7 @@ ISPICKVAL({!myVariable_current.StageName} , &quot;Rebuild Books&quot;)
             </processMetadataValues>
             <field>RecordTypeId</field>
             <value>
-                <elementReference>formula_12_myRule_8_A1_7817755289</elementReference>
+                <elementReference>formula_12_myRule_8_A1_5929075897</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>

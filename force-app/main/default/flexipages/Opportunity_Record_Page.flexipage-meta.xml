@@ -270,81 +270,13 @@
         </itemInstances>
         <itemInstances>
             <componentInstance>
-                <componentName>lwcOnboardingFee</componentName>
-                <identifier>c_lwcOnboardingFee</identifier>
-                <visibilityRule>
-                    <booleanFilter>(1 OR 2) AND 3 AND 4</booleanFilter>
-                    <criteria>
-                        <leftValue>{!Record.Record_Type_Name__c}</leftValue>
-                        <operator>EQUAL</operator>
-                        <rightValue>New Business</rightValue>
-                    </criteria>
-                    <criteria>
-                        <leftValue>{!Record.Record_Type_Name__c}</leftValue>
-                        <operator>EQUAL</operator>
-                        <rightValue>Sales</rightValue>
-                    </criteria>
-                    <criteria>
-                        <leftValue>{!Record.Onboarding_Fee_Status__c}</leftValue>
-                        <operator>EQUAL</operator>
-                        <rightValue>Waived</rightValue>
-                    </criteria>
-                    <criteria>
-                        <leftValue>{!Record.Plan__c}</leftValue>
-                        <operator>NE</operator>
-                        <rightValue>SP -&gt; SC</rightValue>
-                    </criteria>
-                </visibilityRule>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
-                <componentName>lwcRemoveOnboardingFee</componentName>
-                <identifier>c_lwcRemoveOnboardingFee</identifier>
-                <visibilityRule>
-                    <booleanFilter>(1 OR 2) AND (3 OR 4) AND 5</booleanFilter>
-                    <criteria>
-                        <leftValue>{!Record.Record_Type_Name__c}</leftValue>
-                        <operator>EQUAL</operator>
-                        <rightValue>New Business</rightValue>
-                    </criteria>
-                    <criteria>
-                        <leftValue>{!Record.Record_Type_Name__c}</leftValue>
-                        <operator>EQUAL</operator>
-                        <rightValue>Sales</rightValue>
-                    </criteria>
-                    <criteria>
-                        <leftValue>{!Record.Onboarding_Fee_Status__c}</leftValue>
-                        <operator>EQUAL</operator>
-                        <rightValue>Included</rightValue>
-                    </criteria>
-                    <criteria>
-                        <leftValue>{!Record.Onboarding_Fee_Status__c}</leftValue>
-                        <operator>EQUAL</operator>
-                    </criteria>
-                    <criteria>
-                        <leftValue>{!Record.Plan__c}</leftValue>
-                        <operator>NE</operator>
-                        <rightValue>SP -&gt; SC</rightValue>
-                    </criteria>
-                </visibilityRule>
-            </componentInstance>
-        </itemInstances>
-        <itemInstances>
-            <componentInstance>
                 <componentName>lwcGenerateNewSignupLink</componentName>
                 <identifier>c_lwcGenerateNewSignupLink</identifier>
                 <visibilityRule>
-                    <booleanFilter>1 OR 2</booleanFilter>
                     <criteria>
                         <leftValue>{!Record.Record_Type_Name__c}</leftValue>
                         <operator>EQUAL</operator>
                         <rightValue>Sales</rightValue>
-                    </criteria>
-                    <criteria>
-                        <leftValue>{!Record.Record_Type_Name__c}</leftValue>
-                        <operator>EQUAL</operator>
-                        <rightValue>New Business</rightValue>
                     </criteria>
                 </visibilityRule>
             </componentInstance>
@@ -353,19 +285,6 @@
             <componentInstance>
                 <componentName>lwcRegenerateSignupLink</componentName>
                 <identifier>c_lwcRegenerateSignupLink1</identifier>
-                <visibilityRule>
-                    <booleanFilter>1 OR 2</booleanFilter>
-                    <criteria>
-                        <leftValue>{!Record.Record_Type_Name__c}</leftValue>
-                        <operator>EQUAL</operator>
-                        <rightValue>Sales</rightValue>
-                    </criteria>
-                    <criteria>
-                        <leftValue>{!Record.Record_Type_Name__c}</leftValue>
-                        <operator>EQUAL</operator>
-                        <rightValue>New Business</rightValue>
-                    </criteria>
-                </visibilityRule>
             </componentInstance>
         </itemInstances>
         <itemInstances>

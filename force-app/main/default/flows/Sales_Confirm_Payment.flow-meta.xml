@@ -20,7 +20,7 @@
     <assignments>
         <name>Close_tasks</name>
         <label>Close tasks</label>
-        <locationX>2514</locationX>
+        <locationX>1810</locationX>
         <locationY>815</locationY>
         <assignmentItems>
             <assignToReference>Loop_Over_CLosed_Lost_Tasks.Status</assignToReference>
@@ -52,82 +52,6 @@
         </assignmentItems>
         <connector>
             <targetReference>Tasks_to_update</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>Complete_Tasks_FOR</name>
-        <label>Complete Tasks FOR</label>
-        <locationX>754</locationX>
-        <locationY>1655</locationY>
-        <assignmentItems>
-            <assignToReference>FOR_Loop_Open_task.Status</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <stringValue>Completed</stringValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>FOR_Loop_Open_task.Intro_Call_Outcome__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <stringValue>Send Onboarding Email</stringValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>FOR_Loop_Open_task.Plan__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>$Record.Plan__c</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>FOR_Tasks_to_Update</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>Complete_Tasks_TO</name>
-        <label>Complete Tasks TO</label>
-        <locationX>1370</locationX>
-        <locationY>1775</locationY>
-        <assignmentItems>
-            <assignToReference>TO_Loop_Open_task.Status</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <stringValue>Completed</stringValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>TO_Loop_Open_task.Intro_Call_Outcome__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <stringValue>Send Onboarding Email</stringValue>
-            </value>
-        </assignmentItems>
-        <assignmentItems>
-            <assignToReference>TO_Loop_Open_task.Plan__c</assignToReference>
-            <operator>Assign</operator>
-            <value>
-                <elementReference>$Record.Plan__c</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>TO_Tasks_to_Update</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>FOR_Tasks_to_Update</name>
-        <label>FOR Tasks to Update</label>
-        <locationX>754</locationX>
-        <locationY>1775</locationY>
-        <assignmentItems>
-            <assignToReference>FORTasks</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <elementReference>FOR_Loop_Open_task</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>FOR_Loop_Open_task</targetReference>
         </connector>
     </assignments>
     <assignments>
@@ -163,7 +87,7 @@
     <assignments>
         <name>Tasks_to_update</name>
         <label>Tasks_to_update</label>
-        <locationX>2514</locationX>
+        <locationX>1810</locationX>
         <locationY>935</locationY>
         <assignmentItems>
             <assignToReference>tasks_to_update_flow</assignToReference>
@@ -174,22 +98,6 @@
         </assignmentItems>
         <connector>
             <targetReference>Loop_Over_CLosed_Lost_Tasks</targetReference>
-        </connector>
-    </assignments>
-    <assignments>
-        <name>TO_Tasks_to_Update</name>
-        <label>TO Tasks to Update</label>
-        <locationX>1370</locationX>
-        <locationY>1895</locationY>
-        <assignmentItems>
-            <assignToReference>TOTasks</assignToReference>
-            <operator>Add</operator>
-            <value>
-                <elementReference>TO_Loop_Open_task</elementReference>
-            </value>
-        </assignmentItems>
-        <connector>
-            <targetReference>TO_Loop_Open_task</targetReference>
         </connector>
     </assignments>
     <constants>
@@ -206,7 +114,7 @@
     <decisions>
         <name>Decision</name>
         <label>Decision</label>
-        <locationX>1568</locationX>
+        <locationX>1216</locationX>
         <locationY>335</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -351,7 +259,7 @@
     <decisions>
         <name>Found_open_tasks</name>
         <label>Found_open_tasks</label>
-        <locationX>2558</locationX>
+        <locationX>1854</locationX>
         <locationY>575</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -373,7 +281,7 @@
     <decisions>
         <name>Plan_to_Follow</name>
         <label>Plan to Follow</label>
-        <locationX>1304</locationX>
+        <locationX>842</locationX>
         <locationY>575</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -421,50 +329,6 @@
             <label>Takeover</label>
         </rules>
     </decisions>
-    <decisions>
-        <name>Task_Found_FOR</name>
-        <label>Task Found FOR</label>
-        <locationX>798</locationX>
-        <locationY>1415</locationY>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
-        <rules>
-            <name>Tasks_Found_FOR</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>Get_Open_Tasks_FOR</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>FOR_Loop_Open_task</targetReference>
-            </connector>
-            <label>Tasks Found FOR</label>
-        </rules>
-    </decisions>
-    <decisions>
-        <name>Task_Found_TO</name>
-        <label>Task Found TO</label>
-        <locationX>1414</locationX>
-        <locationY>1535</locationY>
-        <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
-        <rules>
-            <name>Tasks_Found_TO</name>
-            <conditionLogic>and</conditionLogic>
-            <conditions>
-                <leftValueReference>Get_Open_Tasks_TO</leftValueReference>
-                <operator>IsNull</operator>
-                <rightValue>
-                    <booleanValue>false</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>TO_Loop_Open_task</targetReference>
-            </connector>
-            <label>Tasks Found TO</label>
-        </rules>
-    </decisions>
     <environments>Default</environments>
     <formulas>
         <name>daysahead20</name>
@@ -497,27 +361,8 @@
         <dataType>Date</dataType>
         <expression>{!$Flow.CurrentDate}</expression>
     </formulas>
-    <formulas>
-        <name>ValidateFirstPayment</name>
-        <dataType>Date</dataType>
-        <expression>IF(ISNULL({!$Record.First_Payment_Date__c}), {!$Record.CloseDate}, {!$Record.First_Payment_Date__c})</expression>
-    </formulas>
     <interviewLabel>Sales - Confirm Payment {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Sales - Confirm Payment and Closed</label>
-    <loops>
-        <name>FOR_Loop_Open_task</name>
-        <label>FOR Loop Open task</label>
-        <locationX>666</locationX>
-        <locationY>1535</locationY>
-        <collectionReference>Get_Open_Tasks_FOR</collectionReference>
-        <iterationOrder>Asc</iterationOrder>
-        <nextValueConnector>
-            <targetReference>Complete_Tasks_FOR</targetReference>
-        </nextValueConnector>
-        <noMoreValuesConnector>
-            <targetReference>Close_Tasks_FOR</targetReference>
-        </noMoreValuesConnector>
-    </loops>
     <loops>
         <name>Loop_Open_Tasks</name>
         <label>Loop Open Tasks</label>
@@ -535,7 +380,7 @@
     <loops>
         <name>Loop_Over_CLosed_Lost_Tasks</name>
         <label>Loop Over CLosed Lost Tasks</label>
-        <locationX>2426</locationX>
+        <locationX>1722</locationX>
         <locationY>695</locationY>
         <collectionReference>GetTasks_ClosedWonOrLost</collectionReference>
         <iterationOrder>Asc</iterationOrder>
@@ -544,20 +389,6 @@
         </nextValueConnector>
         <noMoreValuesConnector>
             <targetReference>Update_CLosed_Lost_Tasks_1</targetReference>
-        </noMoreValuesConnector>
-    </loops>
-    <loops>
-        <name>TO_Loop_Open_task</name>
-        <label>TO Loop Open task</label>
-        <locationX>1282</locationX>
-        <locationY>1655</locationY>
-        <collectionReference>Get_Open_Tasks_TO</collectionReference>
-        <iterationOrder>Asc</iterationOrder>
-        <nextValueConnector>
-            <targetReference>Complete_Tasks_TO</targetReference>
-        </nextValueConnector>
-        <noMoreValuesConnector>
-            <targetReference>Close_Tasks_TO</targetReference>
         </noMoreValuesConnector>
     </loops>
     <processMetadataValues>
@@ -582,7 +413,7 @@
     <recordCreates>
         <name>Create_Formation_Task</name>
         <label>Create Formation Task</label>
-        <locationX>2074</locationX>
+        <locationX>1370</locationX>
         <locationY>575</locationY>
         <inputAssignments>
             <field>Account__c</field>
@@ -644,7 +475,7 @@
     <recordCreates>
         <name>Create_Post_Payment_Opportunity</name>
         <label>Create Post-Payment Opportunity</label>
-        <locationX>798</locationX>
+        <locationX>578</locationX>
         <locationY>695</locationY>
         <connector>
             <targetReference>Get_User_RR_For</targetReference>
@@ -718,7 +549,7 @@
         <inputAssignments>
             <field>Member_Admin__c</field>
             <value>
-                <stringValue>0056g000003yiH3</stringValue>
+                <elementReference>$Record.Member_Admin__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -781,7 +612,7 @@
     <recordCreates>
         <name>Create_Takeover_Opportunity</name>
         <label>Create Takeover Opportunity</label>
-        <locationX>1414</locationX>
+        <locationX>842</locationX>
         <locationY>695</locationY>
         <connector>
             <targetReference>Get_User_RR_TO</targetReference>
@@ -861,7 +692,7 @@
         <inputAssignments>
             <field>Member_Admin__c</field>
             <value>
-                <stringValue>0056g000003yiH3</stringValue>
+                <elementReference>$Record.Member_Admin__c</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -924,7 +755,7 @@
     <recordCreates>
         <name>Create_Takeover_Task</name>
         <label>Create Takeover Task</label>
-        <locationX>1414</locationX>
+        <locationX>842</locationX>
         <locationY>1055</locationY>
         <connector>
             <targetReference>Update_Timestamp_RR_TO</targetReference>
@@ -987,76 +818,6 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordCreates>
     <recordLookups>
-        <name>Get_Open_Tasks_FOR</name>
-        <label>Get Open Tasks FOR</label>
-        <locationX>798</locationX>
-        <locationY>1295</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
-        <connector>
-            <targetReference>Task_Found_FOR</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>WhatId</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>$Record.Id</elementReference>
-            </value>
-        </filters>
-        <filters>
-            <field>Subject</field>
-            <operator>Contains</operator>
-            <value>
-                <stringValue>Take Intro Call</stringValue>
-            </value>
-        </filters>
-        <filters>
-            <field>Status</field>
-            <operator>EqualTo</operator>
-            <value>
-                <stringValue>Open</stringValue>
-            </value>
-        </filters>
-        <getFirstRecordOnly>false</getFirstRecordOnly>
-        <object>Task</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordLookups>
-    <recordLookups>
-        <name>Get_Open_Tasks_TO</name>
-        <label>Get Open Tasks TO</label>
-        <locationX>1414</locationX>
-        <locationY>1415</locationY>
-        <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
-        <connector>
-            <targetReference>Task_Found_TO</targetReference>
-        </connector>
-        <filterLogic>and</filterLogic>
-        <filters>
-            <field>WhatId</field>
-            <operator>EqualTo</operator>
-            <value>
-                <elementReference>$Record.Id</elementReference>
-            </value>
-        </filters>
-        <filters>
-            <field>Subject</field>
-            <operator>Contains</operator>
-            <value>
-                <stringValue>Take Intro Call</stringValue>
-            </value>
-        </filters>
-        <filters>
-            <field>Status</field>
-            <operator>EqualTo</operator>
-            <value>
-                <stringValue>Open</stringValue>
-            </value>
-        </filters>
-        <getFirstRecordOnly>false</getFirstRecordOnly>
-        <object>Task</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordLookups>
-    <recordLookups>
         <name>Get_Remaining_Open_Tasks</name>
         <label>Get Remaining Open Tasks</label>
         <locationX>182</locationX>
@@ -1094,7 +855,7 @@
     <recordLookups>
         <name>Get_User_RR_For</name>
         <label>Get User RR For</label>
-        <locationX>798</locationX>
+        <locationX>578</locationX>
         <locationY>815</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -1117,7 +878,7 @@
     <recordLookups>
         <name>Get_User_RR_TO</name>
         <label>Get User RR TO</label>
-        <locationX>1414</locationX>
+        <locationX>842</locationX>
         <locationY>815</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -1140,7 +901,7 @@
     <recordLookups>
         <name>GetTasks_ClosedWonOrLost</name>
         <label>GetTasks_ClosedWonOrLost</label>
-        <locationX>2558</locationX>
+        <locationX>1854</locationX>
         <locationY>455</locationY>
         <assignNullValuesIfNoRecordsFound>false</assignNullValuesIfNoRecordsFound>
         <connector>
@@ -1166,23 +927,9 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <recordUpdates>
-        <name>Close_Tasks_FOR</name>
-        <label>Close Tasks FOR</label>
-        <locationX>666</locationX>
-        <locationY>1991</locationY>
-        <inputReference>FORTasks</inputReference>
-    </recordUpdates>
-    <recordUpdates>
-        <name>Close_Tasks_TO</name>
-        <label>Close Tasks TO</label>
-        <locationX>1282</locationX>
-        <locationY>2111</locationY>
-        <inputReference>TOTasks</inputReference>
-    </recordUpdates>
-    <recordUpdates>
         <name>Update_CLosed_Lost_Tasks_1</name>
         <label>Update CLosed Lost Tasks_1</label>
-        <locationX>2426</locationX>
+        <locationX>1722</locationX>
         <locationY>1151</locationY>
         <inputReference>tasks_to_update_flow</inputReference>
     </recordUpdates>
@@ -1195,21 +942,9 @@
             <targetReference>Find_Open_Tasks</targetReference>
         </connector>
         <inputAssignments>
-            <field>CloseDate</field>
-            <value>
-                <elementReference>ValidateFirstPayment</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
             <field>Intro_Call_Completed_Date__c</field>
             <value>
                 <elementReference>Today_date</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Sub_Stage_Reason__c</field>
-            <value>
-                <stringValue></stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1223,7 +958,7 @@
     <recordUpdates>
         <name>Update_Post_Payment_to_Formation</name>
         <label>Update Post Payment to Formation</label>
-        <locationX>2074</locationX>
+        <locationX>1370</locationX>
         <locationY>455</locationY>
         <connector>
             <targetReference>Create_Formation_Task</targetReference>
@@ -1251,7 +986,7 @@
     <recordUpdates>
         <name>Update_PP_Opp_for_RR</name>
         <label>Update PP Opp for RR</label>
-        <locationX>798</locationX>
+        <locationX>578</locationX>
         <locationY>935</locationY>
         <connector>
             <targetReference>Update_TimeStamp_RR_For</targetReference>
@@ -1275,11 +1010,8 @@
     <recordUpdates>
         <name>Update_Primary_Opp_on_Account</name>
         <label>Update Primary Opp on Account</label>
-        <locationX>1414</locationX>
+        <locationX>842</locationX>
         <locationY>1295</locationY>
-        <connector>
-            <targetReference>Get_Open_Tasks_TO</targetReference>
-        </connector>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -1311,11 +1043,8 @@
     <recordUpdates>
         <name>Update_Primary_Opp_on_Account_Formation</name>
         <label>Update Primary Opp on Account_Formation</label>
-        <locationX>798</locationX>
+        <locationX>578</locationX>
         <locationY>1175</locationY>
-        <connector>
-            <targetReference>Get_Open_Tasks_FOR</targetReference>
-        </connector>
         <filterLogic>and</filterLogic>
         <filters>
             <field>Id</field>
@@ -1354,7 +1083,7 @@
     <recordUpdates>
         <name>Update_TimeStamp_RR_For</name>
         <label>Update TimeStamp RR For</label>
-        <locationX>798</locationX>
+        <locationX>578</locationX>
         <locationY>1055</locationY>
         <connector>
             <targetReference>Update_Primary_Opp_on_Account_Formation</targetReference>
@@ -1378,7 +1107,7 @@
     <recordUpdates>
         <name>Update_Timestamp_RR_TO</name>
         <label>Update Timestamp RR TO</label>
-        <locationX>1414</locationX>
+        <locationX>842</locationX>
         <locationY>1175</locationY>
         <connector>
             <targetReference>Update_Primary_Opp_on_Account</targetReference>
@@ -1402,27 +1131,15 @@
     <recordUpdates>
         <name>Update_to_Closed_Won</name>
         <label>Update to Closed Won</label>
-        <locationX>1304</locationX>
+        <locationX>842</locationX>
         <locationY>455</locationY>
         <connector>
             <targetReference>Plan_to_Follow</targetReference>
         </connector>
         <inputAssignments>
-            <field>CloseDate</field>
-            <value>
-                <elementReference>ValidateFirstPayment</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
             <field>StageName</field>
             <value>
                 <stringValue>Closed Won</stringValue>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Sub_Stage_Reason__c</field>
-            <value>
-                <stringValue></stringValue>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -1436,7 +1153,7 @@
     <recordUpdates>
         <name>Update_TO_Opp_for_RR</name>
         <label>Update TO Opp for RR</label>
-        <locationX>1414</locationX>
+        <locationX>842</locationX>
         <locationY>935</locationY>
         <connector>
             <targetReference>Create_Takeover_Task</targetReference>
@@ -1458,7 +1175,7 @@
         <object>Opportunity</object>
     </recordUpdates>
     <start>
-        <locationX>1442</locationX>
+        <locationX>1090</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Decision</targetReference>
@@ -1515,14 +1232,6 @@
         </value>
     </variables>
     <variables>
-        <name>FORTasks</name>
-        <dataType>SObject</dataType>
-        <isCollection>true</isCollection>
-        <isInput>false</isInput>
-        <isOutput>false</isOutput>
-        <objectType>Task</objectType>
-    </variables>
-    <variables>
         <name>main_opp</name>
         <dataType>SObject</dataType>
         <isCollection>false</isCollection>
@@ -1571,14 +1280,6 @@
     </variables>
     <variables>
         <name>tasks_to_update_flow</name>
-        <dataType>SObject</dataType>
-        <isCollection>true</isCollection>
-        <isInput>false</isInput>
-        <isOutput>false</isOutput>
-        <objectType>Task</objectType>
-    </variables>
-    <variables>
-        <name>TOTasks</name>
         <dataType>SObject</dataType>
         <isCollection>true</isCollection>
         <isInput>false</isInput>

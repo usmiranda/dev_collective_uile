@@ -55,10 +55,6 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Initial Expectations Not Properly Set</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Malicious Member</fullName>
             <default>false</default>
         </values>
@@ -442,10 +438,6 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>1040 Opt Out - PY Unfiled Returns</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Declined Bookkeeping</fullName>
             <default>false</default>
         </values>
@@ -454,19 +446,11 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Dormant Member Churn Candidate</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Foreign Activity Acknowledgement Received</fullName>
             <default>false</default>
         </values>
         <values>
             <fullName>Incidental Sales Tax</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Re-Domesticating</fullName>
             <default>false</default>
         </values>
         <values>
@@ -490,21 +474,6 @@
         </values>
         <values>
             <fullName>SP -%3E SC</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
-    <picklistValues>
-        <picklist>Pre_Call__c</picklist>
-        <values>
-            <fullName>Connected</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Did Not Connect</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Voicemail</fullName>
             <default>false</default>
         </values>
     </picklistValues>

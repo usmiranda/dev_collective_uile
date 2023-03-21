@@ -48,10 +48,6 @@
                 <behavior>Edit</behavior>
                 <field>GCLID__c</field>
             </layoutItems>
-            <layoutItems>
-                <behavior>Edit</behavior>
-                <field>Self_Checkout_Member__c</field>
-            </layoutItems>
         </layoutColumns>
         <layoutColumns>
             <layoutItems>
@@ -85,10 +81,6 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Closed_Lost_Reason__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>Onboarding_Fee_Status__c</field>
             </layoutItems>
         </layoutColumns>
         <style>TwoColumnsTopToBottom</style>
@@ -534,10 +526,6 @@
             <layoutItems>
                 <behavior>Edit</behavior>
                 <field>Setup_QBO_at__c</field>
-            </layoutItems>
-            <layoutItems>
-                <behavior>Readonly</behavior>
-                <field>Ad_ID__c</field>
             </layoutItems>
             <layoutItems>
                 <behavior>Edit</behavior>

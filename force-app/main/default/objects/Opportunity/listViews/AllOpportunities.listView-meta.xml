@@ -12,10 +12,5 @@
     <columns>CORE.USERS.FULL_NAME</columns>
     <columns>Business_Solution_Advisor__c</columns>
     <filterScope>Everything</filterScope>
-    <filters>
-        <field>OPPORTUNITY.STAGE_NAME</field>
-        <operation>equals</operation>
-        <value>Approve Transition</value>
-    </filters>
     <label>All Opportunities</label>
 </ListView>

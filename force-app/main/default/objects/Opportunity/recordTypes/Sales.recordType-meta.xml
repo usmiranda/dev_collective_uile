@@ -55,10 +55,6 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Initial Expectations Not Properly Set</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Malicious Member</fullName>
             <default>false</default>
         </values>
@@ -229,10 +225,6 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Not Interested %28ITR not included%29</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Not Interested %28Price Too High%29</fullName>
             <default>false</default>
         </values>
@@ -359,10 +351,6 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>BDR</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Billboard</fullName>
             <default>false</default>
         </values>
@@ -450,10 +438,6 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>1040 Opt Out - PY Unfiled Returns</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Declined Bookkeeping</fullName>
             <default>false</default>
         </values>
@@ -462,19 +446,11 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Dormant Member Churn Candidate</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Foreign Activity Acknowledgement Received</fullName>
             <default>false</default>
         </values>
         <values>
             <fullName>Incidental Sales Tax</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Re-Domesticating</fullName>
             <default>false</default>
         </values>
         <values>
@@ -498,21 +474,6 @@
         </values>
         <values>
             <fullName>SP -%3E SC</fullName>
-            <default>false</default>
-        </values>
-    </picklistValues>
-    <picklistValues>
-        <picklist>Pre_Call__c</picklist>
-        <values>
-            <fullName>Connected</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Did Not Connect</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Voicemail</fullName>
             <default>false</default>
         </values>
     </picklistValues>
@@ -597,10 +558,6 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Bad Online Review</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Considering self-employment</fullName>
             <default>false</default>
         </values>
@@ -642,10 +599,6 @@
         </values>
         <values>
             <fullName>Non-Citizen</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Not Interested %28ITR not included%29</fullName>
             <default>false</default>
         </values>
         <values>
@@ -716,27 +669,11 @@
             <default>false</default>
         </values>
         <values>
-            <fullName>Collective needs to confirm info</fullName>
-            <default>false</default>
-        </values>
-        <values>
             <fullName>Could not close</fullName>
             <default>false</default>
         </values>
         <values>
             <fullName>Disqualified</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Finalizing Upcoming Client contract</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Needs time to review materials</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Needs to talk to spouse%2Fpartner</fullName>
             <default>false</default>
         </values>
         <values>
@@ -749,26 +686,6 @@
         </values>
         <values>
             <fullName>Not Ready</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Prospect needs to provide more info</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Re-domesticating LLC</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Reviewing with financial advisor</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Shopping Around</fullName>
-            <default>false</default>
-        </values>
-        <values>
-            <fullName>Traveling</fullName>
             <default>false</default>
         </values>
         <values>

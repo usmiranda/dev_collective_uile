@@ -131,11 +131,6 @@
                 <default>false</default>
                 <label>Not Interested (Remain LLC/SP)</label>
             </value>
-            <value>
-                <fullName>Not Interested (ITR not included)</fullName>
-                <default>false</default>
-                <label>Not Interested (ITR not included)</label>
-            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>

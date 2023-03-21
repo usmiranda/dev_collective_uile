@@ -921,7 +921,7 @@
                 <stringValue>TODAY() + 5</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_100_myRule_99_A1_8231705807</name>
+        <name>formula_100_myRule_99_A1_7545380143</name>
         <dataType>Date</dataType>
         <expression>TODAY() + 5</expression>
     </formulas>
@@ -932,7 +932,7 @@
                 <stringValue>&quot;Confirm Receipt of Signed 2553 | &quot; &amp; [Opportunity].Account.Name </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_101_myRule_99_A1_9624456864</name>
+        <name>formula_101_myRule_99_A1_8414361691</name>
         <dataType>String</dataType>
         <expression>&quot;Confirm Receipt of Signed 2553 | &quot; &amp; {!myVariable_current.Account.Name}</expression>
     </formulas>
@@ -943,7 +943,7 @@
                 <stringValue>&quot;Take Training Call&quot;+&quot;  |  &quot;+ [Opportunity].Account.Name </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_104_myRule_103_A2_1043167969</name>
+        <name>formula_104_myRule_103_A2_3309091466</name>
         <dataType>String</dataType>
         <expression>&quot;Take Training Call&quot;+&quot;  |  &quot;+ {!myVariable_current.Account.Name}</expression>
     </formulas>
@@ -954,7 +954,7 @@
                 <stringValue>TEXT([Opportunity].StageName) +&quot;  |  &quot;+ [Opportunity].Account.Name </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_107_myRule_106_A1_6770007440</name>
+        <name>formula_107_myRule_106_A1_3063002379</name>
         <dataType>String</dataType>
         <expression>TEXT({!myVariable_current.StageName}) +&quot;  |  &quot;+ {!myVariable_current.Account.Name}</expression>
     </formulas>
@@ -965,7 +965,7 @@
                 <stringValue>&quot;Setup Gusto | &quot;+ [Opportunity].Account.Name </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_10_myRule_7_A4_8024235770</name>
+        <name>formula_10_myRule_7_A4_4758432886</name>
         <dataType>String</dataType>
         <expression>&quot;Setup Gusto | &quot;+ {!myVariable_current.Account.Name}</expression>
     </formulas>
@@ -976,7 +976,7 @@
                 <stringValue>&quot;Setup Accounting Software | &quot; &amp; [Opportunity].Account.Name </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_11_myRule_7_A3_9497585247</name>
+        <name>formula_11_myRule_7_A3_0435842069</name>
         <dataType>String</dataType>
         <expression>&quot;Setup Accounting Software | &quot; &amp; {!myVariable_current.Account.Name}</expression>
     </formulas>
@@ -987,7 +987,7 @@
                 <stringValue>CASESAFEID(&quot;0126g0000001y5z&quot;)</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_12_myRule_7_A2_9351113387</name>
+        <name>formula_12_myRule_7_A2_8630656004</name>
         <dataType>String</dataType>
         <expression>CASESAFEID(&quot;0126g0000001y5z&quot;)</expression>
     </formulas>
@@ -998,7 +998,7 @@
                 <stringValue>TODAY()+7</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_15_myRule_14_A4_9772631145</name>
+        <name>formula_15_myRule_14_A4_8058249732</name>
         <dataType>Date</dataType>
         <expression>TODAY()+7</expression>
     </formulas>
@@ -1009,7 +1009,7 @@
                 <stringValue>&quot;Rebuild Tax Returns | &quot; &amp; [Opportunity].Name</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_16_myRule_14_A4_4503076898</name>
+        <name>formula_16_myRule_14_A4_5832015988</name>
         <dataType>String</dataType>
         <expression>&quot;Rebuild Tax Returns | &quot; &amp; {!myVariable_current.Name}</expression>
     </formulas>
@@ -1020,7 +1020,7 @@
                 <stringValue>TODAY()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_17_myRule_14_A2_8917993447</name>
+        <name>formula_17_myRule_14_A2_2764835811</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -1036,7 +1036,7 @@ CASESAFEID(&quot;0125x000000QOmRAAW&quot;)
 ), CASESAFEID(&quot;0125x000000QOmRAAW&quot;)) </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_18_myRule_14_A2_8664166161</name>
+        <name>formula_18_myRule_14_A2_5294048247</name>
         <dataType>String</dataType>
         <expression>IF({!myVariable_current.First_Payment_Date__c} &lt; DATE(2021,12,01) , CASE(
 {!myVariable_current.Account.BK_Plan__c}  ,
@@ -1052,7 +1052,7 @@ CASESAFEID(&quot;0125x000000QOmRAAW&quot;)
                 <stringValue>TODAY()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_19_myRule_14_A2_6077377856</name>
+        <name>formula_19_myRule_14_A2_7009746882</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -1068,7 +1068,7 @@ CASESAFEID(&quot;0125x000000QOmRAAW&quot;)
 ), &quot;Review Client&quot;) </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_20_myRule_14_A2_9794411651</name>
+        <name>formula_20_myRule_14_A2_8818318989</name>
         <dataType>String</dataType>
         <expression>IF({!myVariable_current.First_Payment_Date__c} &lt; DATE(2021,12,01), CASE(
 {!myVariable_current.Account.BK_Plan__c}  ,
@@ -1085,7 +1085,7 @@ CASESAFEID(&quot;0125x000000QOmRAAW&quot;)
 ISPICKVAL([Opportunity].Remediation_Status__c , &quot;Client Moving - New State&quot;),TODAY()+7,TODAY())</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_25_myRule_24_A1_1304089600</name>
+        <name>formula_25_myRule_24_A1_3979850391</name>
         <dataType>Date</dataType>
         <expression>IF(
 ISPICKVAL({!myVariable_current.Remediation_Status__c} , &quot;Client Moving - New State&quot;),TODAY()+7,TODAY())</expression>
@@ -1097,7 +1097,7 @@ ISPICKVAL({!myVariable_current.Remediation_Status__c} , &quot;Client Moving - Ne
                 <stringValue>[Opportunity].Remediation_Owner__c </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_26_myRule_24_A1_1863081066</name>
+        <name>formula_26_myRule_24_A1_6127277173</name>
         <dataType>String</dataType>
         <expression>{!myVariable_current.Remediation_Owner__c}</expression>
     </formulas>
@@ -1114,7 +1114,7 @@ TEXT([Opportunity].Remediation_Status__c)
 )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_27_myRule_24_A1_5974908641</name>
+        <name>formula_27_myRule_24_A1_3333958266</name>
         <dataType>String</dataType>
         <expression>
 IF(
@@ -1136,7 +1136,7 @@ NOW(),
 </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_30_myRule_29_A1_8801777997</name>
+        <name>formula_30_myRule_29_A1_7452337082</name>
         <dataType>DateTime</dataType>
         <expression>IF(
 ISPICKVAL({!myVariable_current.StageName},&quot;Check QBO for Financials&quot;),
@@ -1155,7 +1155,7 @@ NOW(),
 )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_31_myRule_29_A1_3678941488</name>
+        <name>formula_31_myRule_29_A1_2092218496</name>
         <dataType>DateTime</dataType>
         <expression>IF(
 ISPICKVAL({!myVariable_current.StageName},&quot;Receive Entity Information&quot;),
@@ -1174,7 +1174,7 @@ NOW(),
 )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_32_myRule_29_A1_3006111143</name>
+        <name>formula_32_myRule_29_A1_7257420803</name>
         <dataType>DateTime</dataType>
         <expression>IF(
 ISPICKVAL({!myVariable_current.StageName},&quot;Confirm Acceptance&quot;),
@@ -1193,7 +1193,7 @@ NOW(),
 )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_33_myRule_29_A1_2412610793</name>
+        <name>formula_33_myRule_29_A1_4971024644</name>
         <dataType>Date</dataType>
         <expression>IF(
 ISPICKVAL({!myVariable_current.StageName},&quot;Confirm Esignature Completed&quot;),
@@ -1212,7 +1212,7 @@ NOW(),
 )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_34_myRule_29_A1_0996284424</name>
+        <name>formula_34_myRule_29_A1_1209728161</name>
         <dataType>DateTime</dataType>
         <expression>IF(
 ISPICKVAL({!myVariable_current.StageName},&quot;Confirm Organizer Receipt&quot;),
@@ -1231,7 +1231,7 @@ NOW(),
 )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_35_myRule_29_A1_9177677899</name>
+        <name>formula_35_myRule_29_A1_2214057451</name>
         <dataType>DateTime</dataType>
         <expression>IF(
 ISPICKVAL({!myVariable_current.StageName},&quot;Confirm Payment&quot;),
@@ -1251,7 +1251,7 @@ NOW(),
 </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_36_myRule_29_A1_8976750457</name>
+        <name>formula_36_myRule_29_A1_3992793199</name>
         <dataType>DateTime</dataType>
         <expression>IF(
 ISPICKVAL({!myVariable_current.StageName},&quot;Confirm Training Call Scheduled&quot;),
@@ -1270,7 +1270,7 @@ NOW(),
 )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_37_myRule_29_A1_9440066342</name>
+        <name>formula_37_myRule_29_A1_9373004847</name>
         <dataType>DateTime</dataType>
         <expression>IF(
 ISPICKVAL({!myVariable_current.StageName},&quot;File Return&quot;),
@@ -1285,7 +1285,7 @@ NOW(),
                 <stringValue>NOW()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_38_myRule_29_A1_0738679699</name>
+        <name>formula_38_myRule_29_A1_8802201781</name>
         <dataType>DateTime</dataType>
         <expression>NOW()</expression>
     </formulas>
@@ -1304,7 +1304,7 @@ PRIORVALUE([Opportunity].StageName )
 </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_39_myRule_29_A1_1564252168</name>
+        <name>formula_39_myRule_29_A1_9179438981</name>
         <dataType>String</dataType>
         <expression>IF(
 ISPICKVAL({!myVariable_current.StageName} ,&quot;Receive Entity Information&quot;),
@@ -1323,7 +1323,7 @@ NOW(),
 )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_40_myRule_29_A1_2634430446</name>
+        <name>formula_40_myRule_29_A1_0183548155</name>
         <dataType>DateTime</dataType>
         <expression>IF(
 ISPICKVAL({!myVariable_current.StageName},&quot;Pre-Screen&quot;),
@@ -1342,7 +1342,7 @@ NOW(),
 )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_41_myRule_29_A1_2818481817</name>
+        <name>formula_41_myRule_29_A1_0552674756</name>
         <dataType>DateTime</dataType>
         <expression>IF(
 ISPICKVAL({!myVariable_current.StageName},&quot;Prepare Tax Return&quot;),
@@ -1362,7 +1362,7 @@ NOW(),
 </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_42_myRule_29_A1_6994843213</name>
+        <name>formula_42_myRule_29_A1_3435160001</name>
         <dataType>DateTime</dataType>
         <expression>IF(
 ISPICKVAL({!myVariable_current.StageName},&quot;Pull &amp; Store Reports &amp; W2s&quot;),
@@ -1381,7 +1381,7 @@ NOW(),
 )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_43_myRule_29_A1_5195134218</name>
+        <name>formula_43_myRule_29_A1_2864906063</name>
         <dataType>DateTime</dataType>
         <expression>IF(
 ISPICKVAL({!myVariable_current.StageName},&quot;Rebuild Books&quot;),
@@ -1400,7 +1400,7 @@ NOW(),
 )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_44_myRule_29_A1_0093039962</name>
+        <name>formula_44_myRule_29_A1_3564994720</name>
         <dataType>DateTime</dataType>
         <expression>IF(
 ISPICKVAL({!myVariable_current.StageName},&quot;Return Delivery&quot;),
@@ -1419,7 +1419,7 @@ NOW(),
 )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_45_myRule_29_A1_2353782678</name>
+        <name>formula_45_myRule_29_A1_8645083699</name>
         <dataType>DateTime</dataType>
         <expression>IF(
 ISPICKVAL({!myVariable_current.StageName},&quot;Start Return&quot;),
@@ -1438,7 +1438,7 @@ NOW(),
 )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_46_myRule_29_A1_4293144597</name>
+        <name>formula_46_myRule_29_A1_2277242255</name>
         <dataType>DateTime</dataType>
         <expression>IF(
 ISPICKVAL({!myVariable_current.StageName},&quot;Take Training Call&quot;),
@@ -1457,7 +1457,7 @@ TODAY(),
 )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_51_myRule_50_A1_9067644151</name>
+        <name>formula_51_myRule_50_A1_2118244177</name>
         <dataType>Date</dataType>
         <expression>IF(
 ISBLANK(TEXT({!myVariable_current.Remediation_Status__c})),
@@ -1476,7 +1476,7 @@ TODAY(),
 )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_52_myRule_50_A1_8907787646</name>
+        <name>formula_52_myRule_50_A1_8796598906</name>
         <dataType>Date</dataType>
         <expression>IF(
 NOT(ISBLANK(TEXT({!myVariable_current.Remediation_Status__c}))),
@@ -1493,7 +1493,7 @@ TODAY()+3 , TODAY()+45
 )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_57_myRule_56_A1_4264063384</name>
+        <name>formula_57_myRule_56_A1_8534330696</name>
         <dataType>Date</dataType>
         <expression>IF(CONTAINS({!myVariable_current.Last_Completed_Task__c} ,&quot;Client Moving New State | Clarify Plan |&quot;),
 TODAY()+3 , TODAY()+45 
@@ -1508,7 +1508,7 @@ TODAY()+3 , TODAY()+45
 )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_58_myRule_56_A1_1354483927</name>
+        <name>formula_58_myRule_56_A1_9916329946</name>
         <dataType>String</dataType>
         <expression>IF(CONTAINS({!myVariable_current.Last_Completed_Task__c} ,&quot;Client Moving New State | Clarify Plan |&quot;),
 &quot;Client Moving New State | Review Plan&quot;&amp;&quot; | &quot;&amp;{!myVariable_current.Account.Name} , &quot;Client Moving New State | Finalize&quot;&amp;&quot; | &quot;&amp;{!myVariable_current.Account.Name} 
@@ -1521,7 +1521,7 @@ TODAY()+3 , TODAY()+45
                 <stringValue>&quot;Submit Offboarding Plan | &quot; &amp; [Opportunity].Name</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_61_myRule_60_A3_0254703016</name>
+        <name>formula_61_myRule_60_A3_2840311049</name>
         <dataType>String</dataType>
         <expression>&quot;Submit Offboarding Plan | &quot; &amp; {!myVariable_current.Name}</expression>
     </formulas>
@@ -1532,7 +1532,7 @@ TODAY()+3 , TODAY()+45
                 <stringValue>TODAY()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_62_myRule_60_A2_1059325104</name>
+        <name>formula_62_myRule_60_A2_9844167601</name>
         <dataType>Date</dataType>
         <expression>TODAY()</expression>
     </formulas>
@@ -1543,7 +1543,7 @@ TODAY()+3 , TODAY()+45
                 <stringValue>&quot;Send Separation Email 2 | &quot; &amp; [Opportunity].Name</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_65_myRule_64_A1_2372055853</name>
+        <name>formula_65_myRule_64_A1_3209331585</name>
         <dataType>String</dataType>
         <expression>&quot;Send Separation Email 2 | &quot; &amp; {!myVariable_current.Name}</expression>
     </formulas>
@@ -1554,7 +1554,7 @@ TODAY()+3 , TODAY()+45
                 <stringValue>TODAY()+5</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_68_myRule_67_A1_7477376727</name>
+        <name>formula_68_myRule_67_A1_7498210718</name>
         <dataType>Date</dataType>
         <expression>TODAY()+5</expression>
     </formulas>
@@ -1565,7 +1565,7 @@ TODAY()+3 , TODAY()+45
                 <stringValue>&quot;File &quot;+[Opportunity].ITR_Extension_Year_C__c + &quot; ITR Extension | &quot;+[Opportunity].Account.Name </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_69_myRule_67_A1_7294858720</name>
+        <name>formula_69_myRule_67_A1_3969900250</name>
         <dataType>String</dataType>
         <expression>&quot;File &quot;+{!myVariable_current.ITR_Extension_Year_C__c} + &quot; ITR Extension | &quot;+{!myVariable_current.Account.Name}</expression>
     </formulas>
@@ -1576,7 +1576,7 @@ TODAY()+3 , TODAY()+45
                 <stringValue>TODAY()+5</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_72_myRule_71_A1_7135240867</name>
+        <name>formula_72_myRule_71_A1_2915170384</name>
         <dataType>Date</dataType>
         <expression>TODAY()+5</expression>
     </formulas>
@@ -1587,7 +1587,7 @@ TODAY()+3 , TODAY()+45
                 <stringValue>&quot;File &quot;+[Opportunity].BTR_Extension_Year__c  + &quot; BTR Extension | &quot;+[Opportunity].Account.Name </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_73_myRule_71_A1_2507226212</name>
+        <name>formula_73_myRule_71_A1_5587588638</name>
         <dataType>String</dataType>
         <expression>&quot;File &quot;+{!myVariable_current.BTR_Extension_Year__c}  + &quot; BTR Extension | &quot;+{!myVariable_current.Account.Name}</expression>
     </formulas>
@@ -1598,7 +1598,7 @@ TODAY()+3 , TODAY()+45
                 <stringValue>NOW()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_76_myRule_75_A3_3082450967</name>
+        <name>formula_76_myRule_75_A3_4993834471</name>
         <dataType>DateTime</dataType>
         <expression>NOW()</expression>
     </formulas>
@@ -1609,7 +1609,7 @@ TODAY()+3 , TODAY()+45
                 <stringValue>LEFT([Opportunity].Transition_Plan_Link__c ,LEN([Opportunity].Transition_Plan_Link__c )-4)+&quot;approve&quot;</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_77_myRule_75_A1_8298039951</name>
+        <name>formula_77_myRule_75_A1_3727030650</name>
         <dataType>String</dataType>
         <expression>LEFT({!myVariable_current.Transition_Plan_Link__c} ,LEN({!myVariable_current.Transition_Plan_Link__c} )-4)+&quot;approve&quot;</expression>
     </formulas>
@@ -1620,7 +1620,7 @@ TODAY()+3 , TODAY()+45
                 <stringValue>NOW()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_82_myRule_81_A1_1342383911</name>
+        <name>formula_82_myRule_81_A1_9394883843</name>
         <dataType>DateTime</dataType>
         <expression>NOW()</expression>
     </formulas>
@@ -1631,7 +1631,7 @@ TODAY()+3 , TODAY()+45
                 <stringValue>IF([Opportunity].RecordType.Name = &quot;Running_A&quot;,CASESAFEID(&quot;0055x00000BUHS2AAP&quot;),CASESAFEID(&quot;0056g000004v4QcAAI&quot;))</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_87_myRule_86_A1_4385169205</name>
+        <name>formula_87_myRule_86_A1_8400345464</name>
         <dataType>String</dataType>
         <expression>IF({!myVariable_current.RecordType.Name} = &quot;Running_A&quot;,CASESAFEID(&quot;0055x00000BUHS2AAP&quot;),CASESAFEID(&quot;0056g000004v4QcAAI&quot;))</expression>
     </formulas>
@@ -1642,7 +1642,7 @@ TODAY()+3 , TODAY()+45
                 <stringValue>NOW()</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_8_myRule_7_A5_8698969287</name>
+        <name>formula_8_myRule_7_A5_8108607328</name>
         <dataType>DateTime</dataType>
         <expression>NOW()</expression>
     </formulas>
@@ -1653,7 +1653,7 @@ TODAY()+3 , TODAY()+45
                 <stringValue>RIGHT(([Opportunity].Name) ,3)</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_90_myRule_89_A1_2623043149</name>
+        <name>formula_90_myRule_89_A1_5026416298</name>
         <dataType>String</dataType>
         <expression>RIGHT(({!myVariable_current.Name}) ,3)</expression>
     </formulas>
@@ -1669,7 +1669,7 @@ IF(CONTAINS([Opportunity].Name ,&quot;2023&quot;),&quot;2023&quot;,
 &quot;&quot;))))</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_91_myRule_89_A1_2497339528</name>
+        <name>formula_91_myRule_89_A1_6233298691</name>
         <dataType>String</dataType>
         <expression>IF(CONTAINS({!myVariable_current.Name} ,&quot;2020&quot;),&quot;2020&quot;,
 IF(CONTAINS({!myVariable_current.Name} ,&quot;2021&quot;),&quot;2021&quot;,
@@ -1685,7 +1685,7 @@ IF(CONTAINS({!myVariable_current.Name} ,&quot;2023&quot;),&quot;2023&quot;,
                 <stringValue>[Opportunity].Contact_Name__c &amp;&quot; | &quot;&amp; [Opportunity].Account.Name &amp; &quot; | &quot; &amp;  &quot; &quot; &amp; [Opportunity].Tax_Return_Year__c &amp;&quot; &quot; &amp;TEXT([Opportunity].Tax_Return_Type__c )</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_94_myRule_93_A1_8761749794</name>
+        <name>formula_94_myRule_93_A1_5307756578</name>
         <dataType>String</dataType>
         <expression>{!myVariable_current.Contact_Name__c} &amp;&quot; | &quot;&amp; {!myVariable_current.Account.Name} &amp; &quot; | &quot; &amp;  &quot; &quot; &amp; {!myVariable_current.Tax_Return_Year__c} &amp;&quot; &quot; &amp;TEXT({!myVariable_current.Tax_Return_Type__c} )</expression>
     </formulas>
@@ -1696,7 +1696,7 @@ IF(CONTAINS({!myVariable_current.Name} ,&quot;2023&quot;),&quot;2023&quot;,
                 <stringValue>&quot;Correct Transition Plan | &quot; &amp; [Opportunity].Name </stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_97_myRule_96_A1_7947056276</name>
+        <name>formula_97_myRule_96_A1_5798886749</name>
         <dataType>String</dataType>
         <expression>&quot;Correct Transition Plan | &quot; &amp; {!myVariable_current.Name}</expression>
     </formulas>
@@ -1707,7 +1707,7 @@ IF(CONTAINS({!myVariable_current.Name} ,&quot;2023&quot;),&quot;2023&quot;,
                 <stringValue>TODAY()+7</stringValue>
             </value>
         </processMetadataValues>
-        <name>formula_9_myRule_7_A4_5606587575</name>
+        <name>formula_9_myRule_7_A4_5854075661</name>
         <dataType>Date</dataType>
         <expression>TODAY()+7</expression>
     </formulas>
@@ -2064,8 +2064,7 @@ NOT(ISBLANK({!myVariable_current.ITR_Extension_Year_C__c} ))
 	ISPICKVAL([Opportunity].StageName,&quot;Completed&quot;),
         ISPICKVAL([Opportunity].StageName,&quot;Processing Approval&quot;)
         ),
-	ISPICKVAL([Opportunity].Kickoff_Stage__c,&quot;Completed&quot;),
-        NOT(ISPICKVAL([Opportunity].Account.Status__c  ,&quot;Client&quot;))
+	ISPICKVAL([Opportunity].Kickoff_Stage__c,&quot;Completed&quot;)
 	)
 
 </stringValue>
@@ -2082,8 +2081,7 @@ NOT(ISBLANK({!myVariable_current.ITR_Extension_Year_C__c} ))
 	ISPICKVAL({!myVariable_current.StageName},&quot;Completed&quot;),
         ISPICKVAL({!myVariable_current.StageName},&quot;Processing Approval&quot;)
         ),
-	ISPICKVAL({!myVariable_current.Kickoff_Stage__c},&quot;Completed&quot;),
-        NOT(ISPICKVAL({!myVariable_current.Account.Status__c}  ,&quot;Client&quot;))
+	ISPICKVAL({!myVariable_current.Kickoff_Stage__c},&quot;Completed&quot;)
 	)</expression>
     </formulas>
     <formulas>
@@ -2307,7 +2305,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
 	)
 )</expression>
     </formulas>
-    <interviewLabel>Opp_Housekeeping-228_InterviewLabel</interviewLabel>
+    <interviewLabel>Opp_Housekeeping-227_InterviewLabel</interviewLabel>
     <label>Opp: Housekeeping</label>
     <processMetadataValues>
         <name>ObjectType</name>
@@ -2609,7 +2607,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>Subject</field>
             <value>
-                <elementReference>formula_104_myRule_103_A2_1043167969</elementReference>
+                <elementReference>formula_104_myRule_103_A2_3309091466</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -2925,7 +2923,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>Subject</field>
             <value>
-                <elementReference>formula_107_myRule_106_A1_6770007440</elementReference>
+                <elementReference>formula_107_myRule_106_A1_3063002379</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -3125,7 +3123,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>ActivityDate</field>
             <value>
-                <elementReference>formula_15_myRule_14_A4_9772631145</elementReference>
+                <elementReference>formula_15_myRule_14_A4_8058249732</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -3287,7 +3285,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>Subject</field>
             <value>
-                <elementReference>formula_16_myRule_14_A4_4503076898</elementReference>
+                <elementReference>formula_16_myRule_14_A4_5832015988</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -3405,7 +3403,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>ActivityDate</field>
             <value>
-                <elementReference>formula_25_myRule_24_A1_1304089600</elementReference>
+                <elementReference>formula_25_myRule_24_A1_3979850391</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -3471,7 +3469,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>OwnerId</field>
             <value>
-                <elementReference>formula_26_myRule_24_A1_1863081066</elementReference>
+                <elementReference>formula_26_myRule_24_A1_6127277173</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -3603,7 +3601,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>Subject</field>
             <value>
-                <elementReference>formula_27_myRule_24_A1_5974908641</elementReference>
+                <elementReference>formula_27_myRule_24_A1_3333958266</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -3721,7 +3719,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>ActivityDate</field>
             <value>
-                <elementReference>formula_57_myRule_56_A1_4264063384</elementReference>
+                <elementReference>formula_57_myRule_56_A1_8534330696</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -3883,7 +3881,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>Subject</field>
             <value>
-                <elementReference>formula_58_myRule_56_A1_1354483927</elementReference>
+                <elementReference>formula_58_myRule_56_A1_9916329946</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -4139,7 +4137,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>Subject</field>
             <value>
-                <elementReference>formula_61_myRule_60_A3_0254703016</elementReference>
+                <elementReference>formula_61_myRule_60_A3_2840311049</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -4401,7 +4399,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>Subject</field>
             <value>
-                <elementReference>formula_65_myRule_64_A1_2372055853</elementReference>
+                <elementReference>formula_65_myRule_64_A1_3209331585</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -4519,7 +4517,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>ActivityDate</field>
             <value>
-                <elementReference>formula_68_myRule_67_A1_7477376727</elementReference>
+                <elementReference>formula_68_myRule_67_A1_7498210718</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -4681,7 +4679,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>Subject</field>
             <value>
-                <elementReference>formula_69_myRule_67_A1_7294858720</elementReference>
+                <elementReference>formula_69_myRule_67_A1_3969900250</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -4799,7 +4797,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>ActivityDate</field>
             <value>
-                <elementReference>formula_72_myRule_71_A1_7135240867</elementReference>
+                <elementReference>formula_72_myRule_71_A1_2915170384</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -4961,7 +4959,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>Subject</field>
             <value>
-                <elementReference>formula_73_myRule_71_A1_2507226212</elementReference>
+                <elementReference>formula_73_myRule_71_A1_5587588638</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -5175,7 +5173,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>Subject</field>
             <value>
-                <elementReference>formula_11_myRule_7_A3_9497585247</elementReference>
+                <elementReference>formula_11_myRule_7_A3_0435842069</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -5293,7 +5291,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>ActivityDate</field>
             <value>
-                <elementReference>formula_9_myRule_7_A4_5606587575</elementReference>
+                <elementReference>formula_9_myRule_7_A4_5854075661</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -5455,7 +5453,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>Subject</field>
             <value>
-                <elementReference>formula_10_myRule_7_A4_8024235770</elementReference>
+                <elementReference>formula_10_myRule_7_A4_4758432886</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -5745,7 +5743,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>Subject</field>
             <value>
-                <elementReference>formula_97_myRule_96_A1_7947056276</elementReference>
+                <elementReference>formula_97_myRule_96_A1_5798886749</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -5827,7 +5825,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>ActivityDate</field>
             <value>
-                <elementReference>formula_100_myRule_99_A1_8231705807</elementReference>
+                <elementReference>formula_100_myRule_99_A1_7545380143</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -5935,7 +5933,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>Subject</field>
             <value>
-                <elementReference>formula_101_myRule_99_A1_9624456864</elementReference>
+                <elementReference>formula_101_myRule_99_A1_8414361691</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -6304,7 +6302,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>Last_Offered_BK_Plan__c</field>
             <value>
-                <elementReference>formula_17_myRule_14_A2_8917993447</elementReference>
+                <elementReference>formula_17_myRule_14_A2_2764835811</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -6340,7 +6338,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>RecordTypeId</field>
             <value>
-                <elementReference>formula_18_myRule_14_A2_8664166161</elementReference>
+                <elementReference>formula_18_myRule_14_A2_5294048247</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -6376,7 +6374,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>Running_Start_Date__c</field>
             <value>
-                <elementReference>formula_19_myRule_14_A2_6077377856</elementReference>
+                <elementReference>formula_19_myRule_14_A2_7009746882</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -6412,7 +6410,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>StageName</field>
             <value>
-                <elementReference>formula_20_myRule_14_A2_9794411651</elementReference>
+                <elementReference>formula_20_myRule_14_A2_8818318989</elementReference>
             </value>
         </inputAssignments>
         <object>Opportunity</object>
@@ -6838,7 +6836,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>Check_QBO_for_Financials_at__c</field>
             <value>
-                <elementReference>formula_30_myRule_29_A1_8801777997</elementReference>
+                <elementReference>formula_30_myRule_29_A1_7452337082</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -6874,7 +6872,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>Closed_Won_at__c</field>
             <value>
-                <elementReference>formula_31_myRule_29_A1_3678941488</elementReference>
+                <elementReference>formula_31_myRule_29_A1_2092218496</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -6910,7 +6908,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>Confirm_Acceptance_at__c</field>
             <value>
-                <elementReference>formula_32_myRule_29_A1_3006111143</elementReference>
+                <elementReference>formula_32_myRule_29_A1_7257420803</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -6946,7 +6944,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>Confirm_Esignature_Completed__c</field>
             <value>
-                <elementReference>formula_33_myRule_29_A1_2412610793</elementReference>
+                <elementReference>formula_33_myRule_29_A1_4971024644</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -6982,7 +6980,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>Confirm_Organizer_Receipt_at__c</field>
             <value>
-                <elementReference>formula_34_myRule_29_A1_0996284424</elementReference>
+                <elementReference>formula_34_myRule_29_A1_1209728161</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -7018,7 +7016,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>Confirm_Payment_At__c</field>
             <value>
-                <elementReference>formula_35_myRule_29_A1_9177677899</elementReference>
+                <elementReference>formula_35_myRule_29_A1_2214057451</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -7054,7 +7052,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>Confirm_Training_Call_Scheduled_at__c</field>
             <value>
-                <elementReference>formula_36_myRule_29_A1_8976750457</elementReference>
+                <elementReference>formula_36_myRule_29_A1_3992793199</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -7090,7 +7088,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>File_Return_at__c</field>
             <value>
-                <elementReference>formula_37_myRule_29_A1_9440066342</elementReference>
+                <elementReference>formula_37_myRule_29_A1_9373004847</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -7126,7 +7124,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>Last_Stage_Changed_At__c</field>
             <value>
-                <elementReference>formula_38_myRule_29_A1_0738679699</elementReference>
+                <elementReference>formula_38_myRule_29_A1_8802201781</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -7162,7 +7160,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>Last_Stage__c</field>
             <value>
-                <elementReference>formula_39_myRule_29_A1_1564252168</elementReference>
+                <elementReference>formula_39_myRule_29_A1_9179438981</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -7198,7 +7196,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>Pre_Screen_at__c</field>
             <value>
-                <elementReference>formula_40_myRule_29_A1_2634430446</elementReference>
+                <elementReference>formula_40_myRule_29_A1_0183548155</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -7234,7 +7232,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>Prepare_Tax_Return_at__c</field>
             <value>
-                <elementReference>formula_41_myRule_29_A1_2818481817</elementReference>
+                <elementReference>formula_41_myRule_29_A1_0552674756</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -7270,7 +7268,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>Pull_Store_Reports_W2s_at__c</field>
             <value>
-                <elementReference>formula_42_myRule_29_A1_6994843213</elementReference>
+                <elementReference>formula_42_myRule_29_A1_3435160001</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -7306,7 +7304,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>Rebuild_Books_at__c</field>
             <value>
-                <elementReference>formula_43_myRule_29_A1_5195134218</elementReference>
+                <elementReference>formula_43_myRule_29_A1_2864906063</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -7342,7 +7340,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>Return_Delivery_at__c</field>
             <value>
-                <elementReference>formula_44_myRule_29_A1_0093039962</elementReference>
+                <elementReference>formula_44_myRule_29_A1_3564994720</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -7378,7 +7376,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>Start_Return_at__c</field>
             <value>
-                <elementReference>formula_45_myRule_29_A1_2353782678</elementReference>
+                <elementReference>formula_45_myRule_29_A1_8645083699</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -7414,7 +7412,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>Take_Training_Call_at__c</field>
             <value>
-                <elementReference>formula_46_myRule_29_A1_4293144597</elementReference>
+                <elementReference>formula_46_myRule_29_A1_2277242255</elementReference>
             </value>
         </inputAssignments>
         <object>Opportunity</object>
@@ -8008,7 +8006,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>Remediation_Completed_Date__c</field>
             <value>
-                <elementReference>formula_51_myRule_50_A1_9067644151</elementReference>
+                <elementReference>formula_51_myRule_50_A1_2118244177</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -8044,7 +8042,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>Remediation_Start_Date__c</field>
             <value>
-                <elementReference>formula_52_myRule_50_A1_8907787646</elementReference>
+                <elementReference>formula_52_myRule_50_A1_8796598906</elementReference>
             </value>
         </inputAssignments>
         <object>Opportunity</object>
@@ -8332,7 +8330,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>Offboarding_Initiated_Date__c</field>
             <value>
-                <elementReference>formula_62_myRule_60_A2_1059325104</elementReference>
+                <elementReference>formula_62_myRule_60_A2_9844167601</elementReference>
             </value>
         </inputAssignments>
         <object>Opportunity</object>
@@ -8416,7 +8414,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>Transition_Plan_Link__c</field>
             <value>
-                <elementReference>formula_77_myRule_75_A1_8298039951</elementReference>
+                <elementReference>formula_77_myRule_75_A1_3727030650</elementReference>
             </value>
         </inputAssignments>
         <object>Opportunity</object>
@@ -8500,7 +8498,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>Transition_Submitted__c</field>
             <value>
-                <elementReference>formula_76_myRule_75_A3_3082450967</elementReference>
+                <elementReference>formula_76_myRule_75_A3_4993834471</elementReference>
             </value>
         </inputAssignments>
         <object>Opportunity</object>
@@ -8752,7 +8750,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>RecordTypeId</field>
             <value>
-                <elementReference>formula_12_myRule_7_A2_9351113387</elementReference>
+                <elementReference>formula_12_myRule_7_A2_8630656004</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -8872,7 +8870,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>Setup_QBO_at__c</field>
             <value>
-                <elementReference>formula_8_myRule_7_A5_8698969287</elementReference>
+                <elementReference>formula_8_myRule_7_A5_8108607328</elementReference>
             </value>
         </inputAssignments>
         <object>Opportunity</object>
@@ -8956,7 +8954,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>Transition_Approved_At__c</field>
             <value>
-                <elementReference>formula_82_myRule_81_A1_1342383911</elementReference>
+                <elementReference>formula_82_myRule_81_A1_9394883843</elementReference>
             </value>
         </inputAssignments>
         <object>Opportunity</object>
@@ -9040,7 +9038,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>Accounting_Advisor__c</field>
             <value>
-                <elementReference>formula_87_myRule_86_A1_4385169205</elementReference>
+                <elementReference>formula_87_myRule_86_A1_8400345464</elementReference>
             </value>
         </inputAssignments>
         <object>Opportunity</object>
@@ -9124,7 +9122,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>Tax_Return_Type__c</field>
             <value>
-                <elementReference>formula_90_myRule_89_A1_2623043149</elementReference>
+                <elementReference>formula_90_myRule_89_A1_5026416298</elementReference>
             </value>
         </inputAssignments>
         <inputAssignments>
@@ -9160,7 +9158,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>Tax_Return_Year__c</field>
             <value>
-                <elementReference>formula_91_myRule_89_A1_2497339528</elementReference>
+                <elementReference>formula_91_myRule_89_A1_6233298691</elementReference>
             </value>
         </inputAssignments>
         <object>Opportunity</object>
@@ -9244,7 +9242,7 @@ ISPICKVAL({!myVariable_current.Transition_Plan_Status__c} ,&quot;Correcting&quot
             </processMetadataValues>
             <field>Name</field>
             <value>
-                <elementReference>formula_94_myRule_93_A1_8761749794</elementReference>
+                <elementReference>formula_94_myRule_93_A1_5307756578</elementReference>
             </value>
         </inputAssignments>
         <object>Opportunity</object>

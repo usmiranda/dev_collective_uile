@@ -20,11 +20,9 @@
         <fields>Do_Not_Contact__c</fields>
         <fields>Email</fields>
         <fields>Facebook__c</fields>
-        <fields>FirstName</fields>
         <fields>Has_Ever_Attended_Webinar__c</fields>
         <fields>Id</fields>
         <fields>Instagram__c</fields>
-        <fields>LastName</fields>
         <fields>LinkedIn__c</fields>
         <fields>MobilePhone</fields>
         <fields>Preferred_Name__c</fields>
@@ -33,7 +31,7 @@
         <fields>Tc_Services_Type__c</fields>
         <fields>Tc_State__c</fields>
         <includeSessionId>true</includeSessionId>
-        <integrationUser>sfdcautomation@collective.com</integrationUser>
+        <integrationUser>hamad@collective.com</integrationUser>
         <name>HS OB Msg Contact</name>
         <protected>false</protected>
         <useDeadLetterQueue>false</useDeadLetterQueue>

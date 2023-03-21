@@ -4,7 +4,7 @@
     <decisions>
         <name>Check_Account_Changes</name>
         <label>Check Account Changes</label>
-        <locationX>314</locationX>
+        <locationX>182</locationX>
         <locationY>335</locationY>
         <defaultConnectorLabel>Default Outcome</defaultConnectorLabel>
         <rules>
@@ -29,85 +29,8 @@
             </connector>
             <label>Check if Dropbox Folder Changed</label>
         </rules>
-        <rules>
-            <name>Check_Account_Team_Changes</name>
-            <conditionLogic>or</conditionLogic>
-            <conditions>
-                <leftValueReference>$Record.Member_Admin__c</leftValueReference>
-                <operator>IsChanged</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.MRM__c</leftValueReference>
-                <operator>IsChanged</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Member_Ops__c</leftValueReference>
-                <operator>IsChanged</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Business_Solution_Advisor__c</leftValueReference>
-                <operator>IsChanged</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Accounting_Manager__c</leftValueReference>
-                <operator>IsChanged</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Tax_Advisor__c</leftValueReference>
-                <operator>IsChanged</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Accounting_Advisor__c</leftValueReference>
-                <operator>IsChanged</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <conditions>
-                <leftValueReference>$Record.Tax_Manager__c</leftValueReference>
-                <operator>IsChanged</operator>
-                <rightValue>
-                    <booleanValue>true</booleanValue>
-                </rightValue>
-            </conditions>
-            <connector>
-                <targetReference>Create_Outbound_Message</targetReference>
-            </connector>
-            <label>Check Account Team Changes</label>
-        </rules>
     </decisions>
     <description>Include dropbox file request update code</description>
-    <environments>Default</environments>
-    <formulas>
-        <name>EventTypeFormula</name>
-        <dataType>String</dataType>
-        <expression>IF(ISCHANGED({!$Record.Member_Admin__c}),&quot;com_collective_member_memberadmin_updated&quot;,
-		IF(ISCHANGED({!$Record.MRM__c}),&quot;com_collective_member_mrm_updated&quot;,
-			IF(ISCHANGED({!$Record.Member_Ops__c}),&quot;com_collective_member_memberops_updated&quot;,
-				IF(ISCHANGED({!$Record.Business_Solution_Advisor__c}),&quot;com_collective_member_busadvisor_updated&quot;,
-					IF(ISCHANGED({!$Record.Accounting_Manager__c}),&quot;com_collective_member_accmanager_updated&quot;,
-						IF(ISCHANGED({!$Record.Tax_Advisor__c}),&quot;com_collective_member_taxpreparer_updated&quot;,
-							IF(ISCHANGED({!$Record.Accounting_Advisor__c}),&quot;com_collective_member_accadvisor_updated&quot;,
-								IF(ISCHANGED({!$Record.Tax_Manager__c}),&quot;com_collective_member_taxreviewer_updated&quot;,&quot;&quot;))))))))</expression>
-    </formulas>
     <interviewLabel>Account After Update {!$Flow.CurrentDateTime}</interviewLabel>
     <label>Account After Update</label>
     <loops>
@@ -140,26 +63,6 @@
         </value>
     </processMetadataValues>
     <processType>AutoLaunchedFlow</processType>
-    <recordCreates>
-        <name>Create_Outbound_Message</name>
-        <label>Create Outbound Message</label>
-        <locationX>314</locationX>
-        <locationY>455</locationY>
-        <inputAssignments>
-            <field>Task_Id__c</field>
-            <value>
-                <elementReference>$Record.Id</elementReference>
-            </value>
-        </inputAssignments>
-        <inputAssignments>
-            <field>Type__c</field>
-            <value>
-                <elementReference>EventTypeFormula</elementReference>
-            </value>
-        </inputAssignments>
-        <object>Outbound_Message__e</object>
-        <storeOutputAutomatically>true</storeOutputAutomatically>
-    </recordCreates>
     <recordLookups>
         <name>Get_Related_Dropbox_File_Requests</name>
         <label>Get Related Dropbox File Requests</label>
@@ -182,7 +85,7 @@
         <storeOutputAutomatically>true</storeOutputAutomatically>
     </recordLookups>
     <start>
-        <locationX>188</locationX>
+        <locationX>56</locationX>
         <locationY>0</locationY>
         <connector>
             <targetReference>Check_Account_Changes</targetReference>

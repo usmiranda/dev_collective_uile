@@ -5,7 +5,7 @@
     <label>Sub-Stage Reason</label>
     <required>false</required>
     <trackFeedHistory>false</trackFeedHistory>
-    <trackHistory>true</trackHistory>
+    <trackHistory>false</trackHistory>
     <trackTrending>false</trackTrending>
     <type>MultiselectPicklist</type>
     <valueSet>
@@ -14,34 +14,79 @@
         <valueSetDefinition>
             <sorted>false</sorted>
             <value>
-                <fullName>Accrual Accounting Needed</fullName>
-                <default>false</default>
-                <label>Accrual Accounting Needed</label>
-            </value>
-            <value>
-                <fullName>Bad Fit</fullName>
-                <default>false</default>
-                <label>Bad Fit</label>
-            </value>
-            <value>
-                <fullName>Bad Online Review</fullName>
-                <default>false</default>
-                <label>Bad Online Review</label>
-            </value>
-            <value>
                 <fullName>Considering self-employment</fullName>
                 <default>false</default>
                 <label>Considering self-employment</label>
             </value>
             <value>
-                <fullName>Crypto</fullName>
+                <fullName>Looking for next project</fullName>
                 <default>false</default>
-                <label>Crypto</label>
+                <label>Looking for next project</label>
             </value>
             <value>
-                <fullName>Dislikes all-inclusive</fullName>
+                <fullName>Wants to Remain - LLC/Sole-P/1099</fullName>
                 <default>false</default>
-                <label>Dislikes all-inclusive</label>
+                <label>Wants to Remain - LLC/Sole-P/1099</label>
+            </value>
+            <value>
+                <fullName>Wants to Use Local CPA</fullName>
+                <default>false</default>
+                <label>Wants to Use Local CPA</label>
+            </value>
+            <value>
+                <fullName>Using other FinTech Services</fullName>
+                <default>false</default>
+                <label>Using other FinTech Services</label>
+            </value>
+            <value>
+                <fullName>Price Too High</fullName>
+                <default>false</default>
+                <label>Price Too High</label>
+            </value>
+            <value>
+                <fullName>Unsupported Entity - Inc./S-Corp</fullName>
+                <default>false</default>
+                <label>Unsupported Entity - Inc./S-Corp</label>
+            </value>
+            <value>
+                <fullName>Unsupported Entity - MM LLC</fullName>
+                <default>false</default>
+                <label>Unsupported Entity - MM LLC</label>
+            </value>
+            <value>
+                <fullName>Job requires PLLC</fullName>
+                <default>false</default>
+                <label>Job requires PLLC</label>
+            </value>
+            <value>
+                <fullName>Unsupported State</fullName>
+                <default>false</default>
+                <label>Unsupported State</label>
+            </value>
+            <value>
+                <fullName>Low Self-Employed Profit</fullName>
+                <default>false</default>
+                <label>Low Self-Employed Profit</label>
+            </value>
+            <value>
+                <fullName>Unfiled Tax Returns</fullName>
+                <default>false</default>
+                <label>Unfiled Tax Returns</label>
+            </value>
+            <value>
+                <fullName>Unsupported Profession</fullName>
+                <default>false</default>
+                <label>Unsupported Profession</label>
+            </value>
+            <value>
+                <fullName>Sales Tax</fullName>
+                <default>false</default>
+                <label>Sales Tax</label>
+            </value>
+            <value>
+                <fullName>Non-Citizen</fullName>
+                <default>false</default>
+                <label>Non-Citizen</label>
             </value>
             <value>
                 <fullName>Employees</fullName>
@@ -59,49 +104,9 @@
                 <label>Inventory</label>
             </value>
             <value>
-                <fullName>Job requires PLLC</fullName>
-                <default>false</default>
-                <label>Job requires PLLC</label>
-            </value>
-            <value>
-                <fullName>Looking for next project</fullName>
-                <default>false</default>
-                <label>Looking for next project</label>
-            </value>
-            <value>
-                <fullName>Low Self-Employed Profit</fullName>
-                <default>false</default>
-                <label>Low Self-Employed Profit</label>
-            </value>
-            <value>
-                <fullName>Multiple Businesses</fullName>
-                <default>false</default>
-                <label>Multiple Businesses</label>
-            </value>
-            <value>
-                <fullName>Non-Citizen</fullName>
-                <default>false</default>
-                <label>Non-Citizen</label>
-            </value>
-            <value>
                 <fullName>Passive Income</fullName>
                 <default>false</default>
                 <label>Passive Income</label>
-            </value>
-            <value>
-                <fullName>Price Too High</fullName>
-                <default>false</default>
-                <label>Price Too High</label>
-            </value>
-            <value>
-                <fullName>Sales Tax</fullName>
-                <default>false</default>
-                <label>Sales Tax</label>
-            </value>
-            <value>
-                <fullName>Stopped Responding</fullName>
-                <default>false</default>
-                <label>Stopped Responding</label>
             </value>
             <value>
                 <fullName>Took W-2 Job</fullName>
@@ -109,49 +114,34 @@
                 <label>Took W-2 Job</label>
             </value>
             <value>
-                <fullName>Unfiled Tax Returns</fullName>
+                <fullName>Crypto</fullName>
                 <default>false</default>
-                <label>Unfiled Tax Returns</label>
+                <label>Crypto</label>
             </value>
             <value>
-                <fullName>Unsupported Entity - Inc./S-Corp</fullName>
+                <fullName>Accrual Accounting Needed</fullName>
                 <default>false</default>
-                <label>Unsupported Entity - Inc./S-Corp</label>
+                <label>Accrual Accounting Needed</label>
             </value>
             <value>
-                <fullName>Unsupported Entity - MM LLC</fullName>
+                <fullName>Multiple Businesses</fullName>
                 <default>false</default>
-                <label>Unsupported Entity - MM LLC</label>
+                <label>Multiple Businesses</label>
             </value>
             <value>
-                <fullName>Unsupported Profession</fullName>
+                <fullName>Dislikes all-inclusive</fullName>
                 <default>false</default>
-                <label>Unsupported Profession</label>
+                <label>Dislikes all-inclusive</label>
             </value>
             <value>
-                <fullName>Unsupported State</fullName>
+                <fullName>Stopped Responding</fullName>
                 <default>false</default>
-                <label>Unsupported State</label>
+                <label>Stopped Responding</label>
             </value>
             <value>
-                <fullName>Using other FinTech Services</fullName>
+                <fullName>Bad Fit</fullName>
                 <default>false</default>
-                <label>Using other FinTech Services</label>
-            </value>
-            <value>
-                <fullName>Wants to Remain - LLC/Sole-P/1099</fullName>
-                <default>false</default>
-                <label>Wants to Remain - LLC/Sole-P/1099</label>
-            </value>
-            <value>
-                <fullName>Wants to Use Local CPA</fullName>
-                <default>false</default>
-                <label>Wants to Use Local CPA</label>
-            </value>
-            <value>
-                <fullName>Not Interested (ITR not included)</fullName>
-                <default>false</default>
-                <label>Not Interested (ITR not included)</label>
+                <label>Bad Fit</label>
             </value>
         </valueSetDefinition>
         <valueSettings>
@@ -164,7 +154,15 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Could not close</controllingFieldValue>
-            <valueName>Bad Online Review</valueName>
+            <valueName>Wants to Remain - LLC/Sole-P/1099</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Could not close</controllingFieldValue>
+            <valueName>Wants to Use Local CPA</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Could not close</controllingFieldValue>
+            <valueName>Using other FinTech Services</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Could not close</controllingFieldValue>
@@ -175,32 +173,40 @@
             <valueName>Stopped Responding</valueName>
         </valueSettings>
         <valueSettings>
-            <controllingFieldValue>Could not close</controllingFieldValue>
-            <valueName>Using other FinTech Services</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Could not close</controllingFieldValue>
-            <valueName>Wants to Remain - LLC/Sole-P/1099</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Could not close</controllingFieldValue>
-            <valueName>Wants to Use Local CPA</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Could not close</controllingFieldValue>
-            <valueName>Not Interested (ITR not included)</valueName>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Unsupported Entity - Inc./S-Corp</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Disqualified</controllingFieldValue>
-            <valueName>Accrual Accounting Needed</valueName>
+            <valueName>Unsupported Entity - MM LLC</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Disqualified</controllingFieldValue>
-            <valueName>Bad Fit</valueName>
+            <valueName>Job requires PLLC</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Disqualified</controllingFieldValue>
-            <valueName>Crypto</valueName>
+            <valueName>Unsupported State</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Low Self-Employed Profit</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Unfiled Tax Returns</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Unsupported Profession</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Sales Tax</valueName>
+        </valueSettings>
+        <valueSettings>
+            <controllingFieldValue>Disqualified</controllingFieldValue>
+            <valueName>Non-Citizen</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Disqualified</controllingFieldValue>
@@ -216,27 +222,7 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Disqualified</controllingFieldValue>
-            <valueName>Job requires PLLC</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Disqualified</controllingFieldValue>
-            <valueName>Low Self-Employed Profit</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Disqualified</controllingFieldValue>
-            <valueName>Multiple Businesses</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Disqualified</controllingFieldValue>
-            <valueName>Non-Citizen</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Disqualified</controllingFieldValue>
             <valueName>Passive Income</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Disqualified</controllingFieldValue>
-            <valueName>Sales Tax</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Disqualified</controllingFieldValue>
@@ -244,23 +230,19 @@
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Disqualified</controllingFieldValue>
-            <valueName>Unfiled Tax Returns</valueName>
+            <valueName>Crypto</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Disqualified</controllingFieldValue>
-            <valueName>Unsupported Entity - Inc./S-Corp</valueName>
+            <valueName>Accrual Accounting Needed</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Disqualified</controllingFieldValue>
-            <valueName>Unsupported Entity - MM LLC</valueName>
+            <valueName>Multiple Businesses</valueName>
         </valueSettings>
         <valueSettings>
             <controllingFieldValue>Disqualified</controllingFieldValue>
-            <valueName>Unsupported Profession</valueName>
-        </valueSettings>
-        <valueSettings>
-            <controllingFieldValue>Disqualified</controllingFieldValue>
-            <valueName>Unsupported State</valueName>
+            <valueName>Bad Fit</valueName>
         </valueSettings>
     </valueSet>
     <visibleLines>5</visibleLines>
